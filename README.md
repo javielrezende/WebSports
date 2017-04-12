@@ -1,7 +1,7 @@
 # WebSports  
 **Projeto para implementação em quadras/ginásios.**  
 
-####Integrantes
+### Integrantes
 * Miguel Novack  
 * Roger Rezende
 * William Maich
