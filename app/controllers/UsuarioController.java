@@ -21,6 +21,7 @@ public class UsuarioController extends Controller {
     @Inject
     private FormFactory formFactory;
 
+
     public Result index() {
         return GO_HOME;
     }
