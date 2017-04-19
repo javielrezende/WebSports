@@ -1,0 +1,27 @@
+@(id: Long)(msg: String)(usuario: Usuario)
+
+@main("Cadastro de Usuarios - WebSports") {
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <h2>Editar Usuários</h2>
+                <hr>
+
+                        <form action="@routes.UsuarioController.update(id)" method="post">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input class="form-control" type="email" name="email" id="email" required value="@usuario.email">
+                            </div>
+                            <div class="form-group">
+                                <label for="senha">Senha</label>
+                                <input class="form-control" type="password" name="senha" id="senha" required value="@usuario.senha">
+                            </div>
+
+                            <input class="btn-primary btn" type="submit" value="Enviar">
+                        </form>
+                    </div>
+
+        </div>
+    </div>
+
+}

@@ -1,0 +1,37 @@
+@(usuarios: com.avaje.ebean.PagedList[Usuario])
+<div class="container">
+    <div class="row">
+        <div class="card">
+        <h2 style="display: inline-block">Listagem de Usuários Cadastrados</h2>
+        <a href="@routes.UsuarioController.create()" class="btn btn-primary pull-right btn-new">Novo</a>
+        <hr>
+            @if(usuarios.getTotalRowCount <= 0){
+            <h5>Nenhum usuário cadastrado</h5>
+            } else {
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <td>Email</td>
+                        <td>Senha</td>
+                        <td>Ações</td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                @for(usuario <- usuarios.getList) {
+                    <tr>
+                        <td>@usuario.email</td>
+                        <td>@usuario.senha</td>
+                        <td>
+                            <a class="btn btn-info btn-sm" href="@routes.UsuarioController.edit(usuario.id)" > Editar</a>
+                            <a class="btn btn-danger btn-sm" href="@routes.UsuarioController.delete(usuario.id)" onclick="confirm('Deseja Excluir?')"> Deletar</a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+
+            </table>
+            }
+        </div>
+    </div>
+</div>
