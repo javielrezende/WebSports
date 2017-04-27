@@ -1,0 +1,50 @@
+$primary-color: #556fe7;
+$secondary-color: #323c48;
+$terciary-color: #455161;
+$aside-size: 20vw;
+
+aside {
+	width: $aside-size;
+	max-width: $aside-size;
+	color: #fff;
+	background: $terciary-color;
+	position: fixed;
+	min-height: 100vh;
+	.icon {
+				width: 20px;
+				height: 20px;
+				display: inline-block;
+			}
+	.brand {
+		background: $primary-color;
+		padding: 30px 0;
+		width: $aside-size;
+	}
+	a {
+		display: block;
+		color: #fff;
+		text-decoration: none;
+	}
+
+	ul {
+		list-style-type: none;
+		li {
+			a {
+				background: $secondary-color;
+				padding: 30px 0;
+				width: $aside-size;
+			}
+		}
+	}
+
+	li {
+		li {
+
+			a {
+				background: transparent;
+				padding: 10px 0;
+
+			}
+		}
+	}
+}

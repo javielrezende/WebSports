@@ -23,7 +23,7 @@ public class UsuarioController extends Controller {
 
 
     public Result index() {
-        return GO_HOME;
+        return ok(views.html.funcionario.index.render());
     }
 
     public Result GO_HOME = Results.redirect(

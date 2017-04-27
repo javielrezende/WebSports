@@ -1,5 +1,6 @@
 
-
-@import "scss/_geral";
-@import "scss/_scss_flex_mixins.scss" ;
+@import "scss/_normalize";
+@import "scss/_scss_flex_mixins";
 @import "scss/_grid";
+@import "scss/_geral";
+@import "scss/_aside_funcionario";

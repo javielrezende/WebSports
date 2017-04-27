@@ -23,7 +23,7 @@ $flexboxgrid-max-width: 1200px !default;
 // -- Stop editing -- //
 //
 
-$gutter-compensation: $gutter-width * .5 * -1;
+$gutter-compensation: $gutter-width * .5 * 0;
 $half-gutter-width: $gutter-width * .5;
 
 .wrapper {
@@ -38,7 +38,12 @@ $half-gutter-width: $gutter-width * .5;
   padding-right: $outer-margin;
   padding-left: $outer-margin;
 }
-
+.flex {
+  @include flexbox();
+}
+.inline-flex {
+  @include inline-flex();
+}
 .row {
   box-sizing: border-box;
   @include flexbox();
