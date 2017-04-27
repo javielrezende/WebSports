@@ -4,7 +4,6 @@ import com.avaje.ebean.*;
 import play.data.validation.Constraints;
 
 import javax.persistence.*;
-import java.util.*;
 
 /**
  * Created by Miguel on 17/04/2017.
