@@ -7,7 +7,7 @@
 * William Maich
 
 ### Introdução
-Visando a dificuldade de proprietários de quadras esportivas, com o grande número de clientes, ter um controle de aluguéis e movimentação de caixa, o WebSports é um software que tem como objetivo auxiliar no controle de Quadras Poliesportivas, assim facilitando para o proprietário da quadra quanto o usuário, dando a comodidade para o usuário fazer reservas a distância e para o proprietário um controle melhor de suas quadras. O sistema permitirá gerenciar clientes, produtos, quadras e gastos.
+Visando a dificuldade de proprietários de quadras esportivas, com o grande número de clientes, ter um controle de aluguéis e movimentação de caixa, o WebSports é um software que tem como objetivo auxiliar no controle de Quadras Poliesportivas, assim facilitando tanto o proprietário da quadra quanto o usuário, oferecendo comodidade para fazer reservas à distância. O sistema permitirá gerenciar clientes, produtos, quadras e gastos.
 
 ### Tecnologias
 1. Para auxílio e diminuição do código, utilizamos o [Play! framework](https://www.playframework.com/).
