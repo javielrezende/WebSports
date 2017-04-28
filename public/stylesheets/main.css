@@ -2515,7 +2515,10 @@ template {
     order: 1; } }
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -2525,29 +2528,55 @@ aside {
   width: 20vw;
   max-width: 20vw;
   color: #fff;
-  background: #455161;
+  background: #4a525f;
   position: fixed;
   min-height: 100vh; }
   aside .icon {
     width: 20px;
     height: 20px;
-    display: inline-block; }
+    display: inline-block;
+    fill: #ffffff; }
   aside .brand {
-    background: #556fe7;
+    background: linear-gradient(to left, #5570e7, #805be8);
     padding: 30px 0;
     width: 20vw; }
+    aside .brand h2 {
+      font-weight: 700;
+      letter-spacing: -2px;
+      font-size: 30px; }
   aside a {
     display: block;
     color: #fff;
     text-decoration: none; }
   aside ul {
     list-style-type: none; }
-    aside ul li a {
-      background: #323c48;
-      padding: 30px 0;
-      width: 20vw; }
+    aside ul li {
+      position: relative; }
+      aside ul li a {
+        background: #262930;
+        padding: 30px 0;
+        width: 20vw; }
+        aside ul li a::after {
+          content: '';
+          display: block;
+          position: absolute;
+          height: 83.6px;
+          right: 0;
+          top: 0;
+          width: 5px;
+          opacity: 0;
+          -webkit-transition: opacity .5s ease-in-out;
+          transition: opacity .5s ease-in-out; }
+        aside ul li a:hover::after {
+          opacity: 1;
+          background: linear-gradient(to left, #5570e7, #805be8); }
   aside li li a {
     background: transparent;
     padding: 10px 0; }
+    aside li li a:hover:after {
+      height: 40px; }
+  aside .options p {
+    display: flex;
+    margin: 6px 0; }
 
 /*# sourceMappingURL=main.css.map */

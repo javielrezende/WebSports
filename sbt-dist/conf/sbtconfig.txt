@@ -1,6 +1,6 @@
 # Set the java args to high
 
--Xmx512M
+-Xmx2048M
 
 -XX:MaxPermSize=256m
 
