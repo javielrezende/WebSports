@@ -10,14 +10,21 @@ create table usuario (
   constraint pk_usuario primary key (id)
 );
 
+create table categoria (
+  id                            bigint auto_increment not null,
+  descricao                     varchar(255),
+  constraint pk_categoria primary key (id)
+);
+
 create table produtos (
   id                            bigint auto_increment not null,
   nome                          varchar(255),
   valor_compra                  double,
   preco_unitario                double,
   quantidade                    integer,
+  fornecedor                    varchar(255),
   copa_id                       integer,
-  categoria                     integer,
+  categoria_id                  integer,
   constraint pk_produtos primary key (id)
 );
 
@@ -25,6 +32,8 @@ create table produtos (
 # --- !Downs
 
 drop table if exists usuario;
+
+drop table if exists categoria;
 
 drop table if exists produtos;
 
