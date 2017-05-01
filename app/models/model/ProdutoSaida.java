@@ -23,7 +23,7 @@ public class ProdutoSaida extends Model{
     @ManyToOne
     @JoinColumn(name="produtos_id")
     public Produtos produtos_id;
-    
+
 
 
 }

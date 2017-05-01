@@ -18,7 +18,9 @@ public class Produtos extends Model{
     public double valorCompra;
     public double precoUnitario;
     public int quantidade;
-    public int copa_id;
+    @ManyToOne
+    @JoinColumn(name="copa_id")
+    public Copa copa_id;
     @ManyToOne
     @JoinColumn(name="categoria_id")
     public Categoria categoria_id;
