@@ -10,7 +10,7 @@ import javax.persistence.Id;
  */
 
 @Entity
-public class categoria extends Model {
+public class Categoria extends Model {
 
     @Id
     public long id;
