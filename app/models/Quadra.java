@@ -20,7 +20,8 @@ public class Quadra extends Model {
     @ManyToOne
     @JoinColumn(name="copa_id")
     public Copa copa_id;
-
+    @ManyToOne
+    @JoinColumn(name="tipoQuadra_id")
     public TipoQuadra tipoQuadra_id;
 
 
