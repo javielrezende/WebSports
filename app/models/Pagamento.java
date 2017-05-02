@@ -4,6 +4,8 @@ import com.avaje.ebean.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import java.sql.Date;
 
 /**
@@ -15,5 +17,7 @@ public class Pagamento extends Model{
     public Long id;
     public double valor;
     public Date dataPagamento;
-    public int tipoPagamento;
+    @ManyToOne
+    @JoinColumn(name = "tipoPagamento_id")
+    public Pagamento tipoPagamento_id;
 }
