@@ -23,5 +23,7 @@ public class Reserva extends Model{
     @JoinColumn(name = "quadra_id")
     public Quadra quadra_id;
     public Time qtdHoras;
+    @ManyToOne
+    @JoinColumn(name = "pagamento_id")
     public Pagamento pagamento_id;
 }
