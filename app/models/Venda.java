@@ -21,7 +21,7 @@ public class Venda extends Model{
     @JoinColumn(name = "pagamento_id")
     public Pagamento pagamento_id;
     public double valorTotal;
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "copa_id")
     public Copa copa_id;
 }
