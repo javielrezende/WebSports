@@ -2,10 +2,7 @@ package models;
 
 import com.avaje.ebean.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.sql.Date;
 
 /**
@@ -24,7 +21,7 @@ public class Venda extends Model{
     @JoinColumn(name = "pagamento_id")
     public Pagamento pagamento_id;
     public double valorTotal;
-    @ManyToOne
+    @OneToMany
     @JoinColumn(name = "copa_id")
     public Copa copa_id;
 }
