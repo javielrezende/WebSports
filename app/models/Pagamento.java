@@ -19,5 +19,5 @@ public class Pagamento extends Model{
     public Date dataPagamento;
     @ManyToOne
     @JoinColumn(name = "tipoPagamento_id")
-    public Pagamento tipoPagamento_id;
+    public TipoPagamento tipoPagamento_id;
 }
