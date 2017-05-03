@@ -17,7 +17,9 @@ public class Usuario extends Model {
     public String senha;
     public String email;
     public String cpf;
-    public int endereco_id;
+    @ManyToOne
+    @JoinColumn(name="endereco_id")
+    public Endereco endereco_id;
 
 
 
