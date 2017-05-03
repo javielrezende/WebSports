@@ -23,4 +23,10 @@ public class Usuario extends Model {
 
 
 
+    public static Find<Long,Usuario> find = new Find<Long,Usuario>(){};
+
+    public static PagedList<Usuario> page(int page, int pageSize) {
+        return find.findPagedList(page, pageSize);
+    }
+
 }
