@@ -18,6 +18,11 @@ public class Reserva extends Model{
     public Long id;
     public Date dataReserva;
     public Date dataEntrada;
+<<<<<<< HEAD
+=======
+    @ManyToOne
+    @JoinColumn(name = "usuario_id")
+>>>>>>> devModels
     public Usuario usuario_id;
     @ManyToOne
     @JoinColumn(name = "quadra_id")

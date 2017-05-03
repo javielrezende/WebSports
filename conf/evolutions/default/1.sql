@@ -3,6 +3,7 @@
 
 # --- !Ups
 
+<<<<<<< HEAD
 create table cargo (
   id                            bigint auto_increment not null,
   nome                          varchar(255),
@@ -16,12 +17,15 @@ create table carrinho (
   quantidade                    integer
 );
 
+=======
+>>>>>>> devModels
 create table categoria (
   id                            bigint auto_increment not null,
   descricao                     varchar(255),
   constraint pk_categoria primary key (id)
 );
 
+<<<<<<< HEAD
 create table cidade (
   id                            bigint auto_increment not null,
   nome                          varchar(255),
@@ -36,11 +40,14 @@ create table cliente (
   constraint pk_cliente primary key (id)
 );
 
+=======
+>>>>>>> devModels
 create table copa (
   id                            bigint auto_increment not null,
   constraint pk_copa primary key (id)
 );
 
+<<<<<<< HEAD
 create table endereco (
   id                            bigint auto_increment not null,
   rua                           varchar(255),
@@ -67,10 +74,13 @@ create table funcionario (
   constraint pk_funcionario primary key (id)
 );
 
+=======
+>>>>>>> devModels
 create table pagamento (
   id                            bigint auto_increment not null,
   valor                         double,
   data_pagamento                date,
+<<<<<<< HEAD
   tipopagamento_id              bigint,
   constraint pk_pagamento primary key (id)
 );
@@ -81,6 +91,12 @@ create table pais (
   constraint pk_pais primary key (id)
 );
 
+=======
+  tipo_pagamento                integer,
+  constraint pk_pagamento primary key (id)
+);
+
+>>>>>>> devModels
 create table produto_entrada (
   id                            bigint auto_increment not null,
   quantidade                    integer,
@@ -122,6 +138,7 @@ create table reserva (
   id                            bigint auto_increment not null,
   data_reserva                  date,
   data_entrada                  date,
+<<<<<<< HEAD
   usuario_id                    bigint,
   quadra_id                     bigint,
   qtd_horas                     time,
@@ -135,6 +152,13 @@ create table tipo_pagamento (
   constraint pk_tipo_pagamento primary key (id)
 );
 
+=======
+  quadra_id                     bigint,
+  qtd_horas                     time,
+  constraint pk_reserva primary key (id)
+);
+
+>>>>>>> devModels
 create table tipo_quadra (
   id                            bigint auto_increment not null,
   descricao                     varchar(255),
@@ -151,6 +175,7 @@ create table usuario (
   constraint pk_usuario primary key (id)
 );
 
+<<<<<<< HEAD
 create table venda (
   id                            bigint auto_increment not null,
   data_compra                   date,
@@ -186,6 +211,8 @@ create index ix_funcionario_cargo_id on funcionario (cargo_id);
 alter table pagamento add constraint fk_pagamento_tipopagamento_id foreign key (tipopagamento_id) references pagamento (id) on delete restrict on update restrict;
 create index ix_pagamento_tipopagamento_id on pagamento (tipopagamento_id);
 
+=======
+>>>>>>> devModels
 alter table produto_entrada add constraint fk_produto_entrada_produtos_id foreign key (produtos_id) references produtos (id) on delete restrict on update restrict;
 create index ix_produto_entrada_produtos_id on produto_entrada (produtos_id);
 
@@ -204,6 +231,7 @@ create index ix_quadra_copa_id on quadra (copa_id);
 alter table quadra add constraint fk_quadra_tipoquadra_id foreign key (tipoquadra_id) references tipo_quadra (id) on delete restrict on update restrict;
 create index ix_quadra_tipoquadra_id on quadra (tipoquadra_id);
 
+<<<<<<< HEAD
 alter table reserva add constraint fk_reserva_usuario_id foreign key (usuario_id) references usuario (id) on delete restrict on update restrict;
 create index ix_reserva_usuario_id on reserva (usuario_id);
 
@@ -253,6 +281,14 @@ drop index ix_funcionario_cargo_id on funcionario;
 alter table pagamento drop foreign key fk_pagamento_tipopagamento_id;
 drop index ix_pagamento_tipopagamento_id on pagamento;
 
+=======
+alter table reserva add constraint fk_reserva_quadra_id foreign key (quadra_id) references quadra (id) on delete restrict on update restrict;
+create index ix_reserva_quadra_id on reserva (quadra_id);
+
+
+# --- !Downs
+
+>>>>>>> devModels
 alter table produto_entrada drop foreign key fk_produto_entrada_produtos_id;
 drop index ix_produto_entrada_produtos_id on produto_entrada;
 
@@ -271,6 +307,7 @@ drop index ix_quadra_copa_id on quadra;
 alter table quadra drop foreign key fk_quadra_tipoquadra_id;
 drop index ix_quadra_tipoquadra_id on quadra;
 
+<<<<<<< HEAD
 alter table reserva drop foreign key fk_reserva_usuario_id;
 drop index ix_reserva_usuario_id on reserva;
 
@@ -314,6 +351,17 @@ drop table if exists pagamento;
 
 drop table if exists pais;
 
+=======
+alter table reserva drop foreign key fk_reserva_quadra_id;
+drop index ix_reserva_quadra_id on reserva;
+
+drop table if exists categoria;
+
+drop table if exists copa;
+
+drop table if exists pagamento;
+
+>>>>>>> devModels
 drop table if exists produto_entrada;
 
 drop table if exists produto_saida;
@@ -324,8 +372,11 @@ drop table if exists quadra;
 
 drop table if exists reserva;
 
+<<<<<<< HEAD
 drop table if exists tipo_pagamento;
 
+=======
+>>>>>>> devModels
 drop table if exists tipo_quadra;
 
 drop table if exists usuario;
