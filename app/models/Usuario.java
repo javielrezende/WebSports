@@ -13,16 +13,12 @@ import javax.persistence.*;
 public class Usuario extends Model {
     @Id
     public Long id;
-
-    @Constraints.Required
-    public String email;
-
-    @Constraints.Required
+    public String nome;
     public String senha;
+    public String email;
+    public String cpf;
+    public int endereco_id;
 
-    public static Find<Long,Usuario> find = new Find<Long,Usuario>(){};
 
-    public static PagedList<Usuario> page(int page, int pageSize) {
-        return find.findPagedList(page, pageSize);
-    }
+
 }
