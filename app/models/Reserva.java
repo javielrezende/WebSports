@@ -1,6 +1,7 @@
 package models;
 
 import com.avaje.ebean.Model;
+import play.data.format.Formats;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -16,7 +17,9 @@ import java.sql.Time;
 public class Reserva extends Model{
     @Id
     public Long id;
+    @Formats.DateTime(pattern="dd-MM-yyyy")
     public Date dataReserva;
+    @Formats.DateTime(pattern="dd-MM-yyyy")
     public Date dataEntrada;
 
     @ManyToOne

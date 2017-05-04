@@ -1,6 +1,7 @@
 package models;
 
 import com.avaje.ebean.Model;
+import play.data.format.Formats;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -19,6 +20,7 @@ public class ProdutoSaida extends Model{
     public long id;
     public int quantidade;
     public double valor;
+    @Formats.DateTime(pattern="dd-MM-yyyy")
     public Date dataSaida;
     @ManyToOne
     @JoinColumn(name="produtos_id")

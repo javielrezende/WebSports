@@ -12,8 +12,9 @@ import javax.persistence.ManyToOne;
  */
 @Entity
 public class Carrinho extends Model{
+
     @ManyToOne
-    @JoinColumn(name = "protutos_id")
+    @JoinColumn(name = "produtos_id")
     public Produtos produtos_id;
     @ManyToOne
     @JoinColumn(name = "venda_id")

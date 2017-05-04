@@ -15,7 +15,7 @@ public class Estado extends Model{
     @Id
     public Long id;
     public String nome;
-    public Character sigla;
+    public String sigla;
     @ManyToOne
     @JoinColumn(name = "pais_id")
     public Pais pais_id;
