@@ -14,5 +14,6 @@ public class Categoria extends Model {
 
     @Id
     public long id;
+
     public String descricao;
 }
