@@ -11,6 +11,6 @@ import javax.persistence.Id;
 @Entity
 public class Pais extends Model{
     @Id
-    public Long id;
+    public Integer id;
     public String nome;
 }

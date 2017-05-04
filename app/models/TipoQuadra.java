@@ -12,6 +12,6 @@ import javax.persistence.Id;
 public class TipoQuadra extends Model{
 
     @Id
-    public Long id;
+    public Integer id;
     public String descricao;
 }

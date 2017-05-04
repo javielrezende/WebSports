@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Estado extends Model{
     @Id
-    public Long id;
+    public Integer id;
     public String nome;
     public String sigla;
     @ManyToOne

@@ -13,7 +13,7 @@ import java.sql.Date;
 public class Venda extends Model{
 
     @Id
-    public Long id;
+    public Integer id;
     @Formats.DateTime(pattern="dd-MM-yyyy")
     public Date dataCompra;
     @ManyToOne

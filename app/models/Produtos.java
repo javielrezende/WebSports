@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class Produtos extends Model{
 
     @Id
-    public long id;
+    public Integer id;
     public String nome;
     public double valorCompra;
     public double precoUnitario;

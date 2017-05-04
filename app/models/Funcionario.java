@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Entity
 public class Funcionario extends Model{
     @Id
-    public Long id;
+    public Integer id;
     @OneToOne
     @JoinColumn(name = "usuario_id")
     public Usuario usuario_id;

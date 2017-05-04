@@ -12,7 +12,7 @@ import javax.persistence.Id;
 public class Cargo extends Model{
 
     @Id
-    public Long id;
+    public Integer id;
     public String nome;
     public Double salario;
 }

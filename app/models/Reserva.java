@@ -16,7 +16,7 @@ import java.sql.Time;
 @Entity
 public class Reserva extends Model{
     @Id
-    public Long id;
+    public Integer id;
     @Formats.DateTime(pattern="dd-MM-yyyy")
     public Date dataReserva;
     @Formats.DateTime(pattern="dd-MM-yyyy")

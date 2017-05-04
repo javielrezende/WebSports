@@ -4,165 +4,165 @@
 # --- !Ups
 
 create table cargo (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   nome                          varchar(255),
   salario                       double,
   constraint pk_cargo primary key (id)
 );
 
 create table carrinho (
-  protutos_id                   bigint,
-  venda_id                      bigint,
+  produtos_id                   integer,
+  venda_id                      integer,
   quantidade                    integer
 );
 
 create table categoria (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   descricao                     varchar(255),
   constraint pk_categoria primary key (id)
 );
 
 create table cidade (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   nome                          varchar(255),
-  estado_id                     bigint,
+  estado_id                     integer,
   constraint pk_cidade primary key (id)
 );
 
 create table cliente (
-  id                            bigint auto_increment not null,
-  usuario_id                    bigint,
+  id                            integer auto_increment not null,
+  usuario_id                    integer,
   constraint uq_cliente_usuario_id unique (usuario_id),
   constraint pk_cliente primary key (id)
 );
 
 create table copa (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   constraint pk_copa primary key (id)
 );
 
 create table endereco (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   rua                           varchar(255),
   numero                        integer,
   complemento                   varchar(255),
-  cidade_id                     bigint,
+  cidade_id                     integer,
   cep                           varchar(255),
   constraint pk_endereco primary key (id)
 );
 
 create table estado (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   nome                          varchar(255),
   sigla                         varchar(255),
-  pais_id                       bigint,
+  pais_id                       integer,
   constraint pk_estado primary key (id)
 );
 
 create table funcionario (
-  id                            bigint auto_increment not null,
-  usuario_id                    bigint,
-  cargo_id                      bigint,
+  id                            integer auto_increment not null,
+  usuario_id                    integer,
+  cargo_id                      integer,
   constraint uq_funcionario_usuario_id unique (usuario_id),
   constraint pk_funcionario primary key (id)
 );
 
 create table pagamento (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   valor                         double,
   data_pagamento                date,
-  tipopagamento_id              bigint,
+  tipopagamento_id              integer,
   constraint pk_pagamento primary key (id)
 );
 
 create table pais (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   nome                          varchar(255),
   constraint pk_pais primary key (id)
 );
 
 create table produto_entrada (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   quantidade                    integer,
   valor                         double,
   data_entrada                  date,
-  produtos_id                   bigint,
+  produtos_id                   integer,
   constraint pk_produto_entrada primary key (id)
 );
 
 create table produto_saida (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   quantidade                    integer,
   valor                         double,
   data_saida                    date,
-  produtos_id                   bigint,
+  produtos_id                   integer,
   constraint pk_produto_saida primary key (id)
 );
 
 create table produtos (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   nome                          varchar(255),
   valor_compra                  double,
   preco_unitario                double,
   quantidade                    integer,
-  copa_id                       bigint,
-  categoria_id                  bigint,
+  copa_id                       integer,
+  categoria_id                  integer,
   constraint pk_produtos primary key (id)
 );
 
 create table quadra (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   valor_locacao                 double,
-  copa_id                       bigint,
-  tipoquadra_id                 bigint,
+  copa_id                       integer,
+  tipoquadra_id                 integer,
   constraint pk_quadra primary key (id)
 );
 
 create table reserva (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   data_reserva                  date,
   data_entrada                  date,
-  usuario_id                    bigint,
-  quadra_id                     bigint,
+  usuario_id                    integer,
+  quadra_id                     integer,
   qtd_horas                     time,
-  pagamento_id                  bigint,
+  pagamento_id                  integer,
   constraint pk_reserva primary key (id)
 );
 
 create table tipo_pagamento (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   tipo                          varchar(255),
   constraint pk_tipo_pagamento primary key (id)
 );
 
 create table tipo_quadra (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   descricao                     varchar(255),
   constraint pk_tipo_quadra primary key (id)
 );
 
 create table usuario (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   nome                          varchar(255),
   senha                         varchar(255),
   email                         varchar(255),
   cpf                           varchar(255),
-  endereco_id                   bigint,
+  endereco_id                   integer,
   constraint pk_usuario primary key (id)
 );
 
 create table venda (
-  id                            bigint auto_increment not null,
+  id                            integer auto_increment not null,
   data_compra                   date,
-  usuario_id                    bigint,
-  pagamento_id                  bigint,
+  usuario_id                    integer,
+  pagamento_id                  integer,
   valor_total                   double,
-  copa_id                       bigint,
+  copa_id                       integer,
   constraint pk_venda primary key (id)
 );
 
-alter table carrinho add constraint fk_carrinho_protutos_id foreign key (protutos_id) references produtos (id) on delete restrict on update restrict;
-create index ix_carrinho_protutos_id on carrinho (protutos_id);
+alter table carrinho add constraint fk_carrinho_produtos_id foreign key (produtos_id) references produtos (id) on delete restrict on update restrict;
+create index ix_carrinho_produtos_id on carrinho (produtos_id);
 
 alter table carrinho add constraint fk_carrinho_venda_id foreign key (venda_id) references venda (id) on delete restrict on update restrict;
 create index ix_carrinho_venda_id on carrinho (venda_id);
@@ -228,8 +228,8 @@ create index ix_venda_copa_id on venda (copa_id);
 
 # --- !Downs
 
-alter table carrinho drop foreign key fk_carrinho_protutos_id;
-drop index ix_carrinho_protutos_id on carrinho;
+alter table carrinho drop foreign key fk_carrinho_produtos_id;
+drop index ix_carrinho_produtos_id on carrinho;
 
 alter table carrinho drop foreign key fk_carrinho_venda_id;
 drop index ix_carrinho_venda_id on carrinho;

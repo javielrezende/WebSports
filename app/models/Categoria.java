@@ -13,7 +13,7 @@ import javax.persistence.Id;
 public class Categoria extends Model {
 
     @Id
-    public long id;
+    public Integer  id;
 
     public String descricao;
 }

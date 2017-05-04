@@ -18,7 +18,7 @@ import java.sql.Date;
 public class ProdutoEntrada extends Model{
 
     @Id
-    public long id;
+    public Integer id;
     public int quantidade;
     public double valor;
     @Formats.DateTime(pattern="dd-MM-yyyy")

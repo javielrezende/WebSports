@@ -15,7 +15,7 @@ import java.sql.Date;
 @Entity
 public class Pagamento extends Model{
     @Id
-    public Long id;
+    public Integer id;
     public double valor;
     @Formats.DateTime(pattern="dd-MM-yyyy")
     public Date dataPagamento;

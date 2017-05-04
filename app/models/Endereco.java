@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Endereco extends Model{
     @Id
-    public Long id;
+    public Integer id;
     public String rua;
     public int numero;
     public String complemento;

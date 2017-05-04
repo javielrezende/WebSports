@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Cidade extends Model{
     @Id
-    public Long id;
+    public Integer id;
     public String nome;
     @ManyToOne
     @JoinColumn(name = "estado_id")

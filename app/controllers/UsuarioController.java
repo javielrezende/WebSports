@@ -27,7 +27,7 @@ public class UsuarioController extends Controller {
     }
 
     public Result GO_HOME = Results.redirect(
-            routes.UsuarioController.list(0)
+            routes.UsuarioController.index()
     );
 
     public Result create() {
@@ -45,12 +45,12 @@ public class UsuarioController extends Controller {
         return GO_HOME;
     }
 
-    public Result edit(Long id) {
+    public Result edit(Integer id) {
         Usuario user = Usuario.find.byId(id);
         return ok(views.html.formEdit.render(id, "", user));
     }
 
-    public Result update(Long id) {
+    public Result update(Integer id) {
         Form<Usuario> form = formFactory.form(Usuario.class);
         Usuario usuario = form.bindFromRequest().get();
         if (form.hasErrors()) {
@@ -77,7 +77,7 @@ public class UsuarioController extends Controller {
         return GO_HOME;
     }
 
-    public Result delete(Long id) {
+    public Result delete(Integer id) {
         Usuario.find.ref(id).delete();
         flash("success", "O usuario foi deletado");
         return GO_HOME;

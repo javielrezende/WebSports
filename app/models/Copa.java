@@ -13,7 +13,7 @@ import javax.persistence.Id;
 public class Copa extends Model{
 
     @Id
-    public long id;
+    public Integer id;
 
 
 }

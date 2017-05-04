@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Entity
 public class Usuario extends Model {
     @Id
-    public Long id;
+    public Integer id;
     public String nome;
     public String senha;
     public String email;
@@ -22,7 +22,7 @@ public class Usuario extends Model {
 
 
 
-    public static Find<Long,Usuario> find = new Find<Long,Usuario>(){};
+    public static Finder<Integer,Usuario> find = new Finder<>(Usuario.class);
 
     public static PagedList<Usuario> page(int page, int pageSize) {
         return find.findPagedList(page, pageSize);

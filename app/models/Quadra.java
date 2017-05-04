@@ -15,7 +15,7 @@ import javax.persistence.ManyToOne;
 public class Quadra extends Model {
 
     @Id
-    public Long id;
+    public Integer id;
     public double valorLocacao;
     @ManyToOne
     @JoinColumn(name="copa_id")
