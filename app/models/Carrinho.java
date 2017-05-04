@@ -3,7 +3,6 @@ package models;
 import com.avaje.ebean.Model;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
