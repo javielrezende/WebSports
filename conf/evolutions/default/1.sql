@@ -129,11 +129,10 @@ create table quadra (
 
 create table reserva (
   id                            integer auto_increment not null,
-  data_reserva                  date,
-  data_entrada                  date,
+  data_reserva                  datetime(6),
+  data_entrada                  datetime(6),
   usuario_id                    integer,
   quadra_id                     integer,
-  qtd_horas                     time,
   pagamento_id                  integer,
   constraint pk_reserva primary key (id)
 );
