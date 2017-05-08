@@ -10,7 +10,7 @@ import java.util.*;
  * Created by Miguel on 08/05/2017.
  */
 @Entity
-public class Calendario {
+public class Calendario extends Model {
 
     @Id
     public Integer id;
