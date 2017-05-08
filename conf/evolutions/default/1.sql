@@ -3,6 +3,15 @@
 
 # --- !Ups
 
+create table calendario (
+  id                            integer auto_increment not null,
+  title                         varchar(255),
+  start                         datetime(6),
+  end                           datetime(6),
+  color                         varchar(255),
+  constraint pk_calendario primary key (id)
+);
+
 create table cargo (
   id                            integer auto_increment not null,
   nome                          varchar(255),
@@ -291,6 +300,8 @@ drop index ix_venda_pagamento_id on venda;
 
 alter table venda drop foreign key fk_venda_copa_id;
 drop index ix_venda_copa_id on venda;
+
+drop table if exists calendario;
 
 drop table if exists cargo;
 

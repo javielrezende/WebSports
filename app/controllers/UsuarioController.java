@@ -23,7 +23,8 @@ public class UsuarioController extends Controller {
 
 
     public Result index() {
-        return ok(views.html.funcionario.index.render());
+        return TODO;
+        //return ok(views.html.funcionario.index.render());
     }
 
     public Result GO_HOME = Results.redirect(
@@ -56,6 +57,7 @@ public class UsuarioController extends Controller {
         if (form.hasErrors()) {
             return badRequest(views.html.form.render("Erro"));
         }
+
 
         Transaction txn = Ebean.beginTransaction();
         try {

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
 ========================================================================== */
@@ -447,8 +448,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   -webkit-flex-basis: auto;
   -moz-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -465,8 +466,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   -webkit-flex-basis: 8.33333%;
   -moz-flex-basis: 8.33333%;
   -ms-flex-preferred-size: 8.33333%;
@@ -484,8 +485,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   -webkit-flex-basis: 16.66667%;
   -moz-flex-basis: 16.66667%;
   -ms-flex-preferred-size: 16.66667%;
@@ -503,8 +504,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   -webkit-flex-basis: 25%;
   -moz-flex-basis: 25%;
   -ms-flex-preferred-size: 25%;
@@ -522,8 +523,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   -webkit-flex-basis: 33.33333%;
   -moz-flex-basis: 33.33333%;
   -ms-flex-preferred-size: 33.33333%;
@@ -541,8 +542,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   -webkit-flex-basis: 41.66667%;
   -moz-flex-basis: 41.66667%;
   -ms-flex-preferred-size: 41.66667%;
@@ -560,8 +561,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   -webkit-flex-basis: 50%;
   -moz-flex-basis: 50%;
   -ms-flex-preferred-size: 50%;
@@ -579,8 +580,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   -webkit-flex-basis: 58.33333%;
   -moz-flex-basis: 58.33333%;
   -ms-flex-preferred-size: 58.33333%;
@@ -598,8 +599,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   -webkit-flex-basis: 66.66667%;
   -moz-flex-basis: 66.66667%;
   -ms-flex-preferred-size: 66.66667%;
@@ -617,8 +618,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   -webkit-flex-basis: 75%;
   -moz-flex-basis: 75%;
   -ms-flex-preferred-size: 75%;
@@ -636,8 +637,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   -webkit-flex-basis: 83.33333%;
   -moz-flex-basis: 83.33333%;
   -ms-flex-preferred-size: 83.33333%;
@@ -655,8 +656,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   -webkit-flex-basis: 91.66667%;
   -moz-flex-basis: 91.66667%;
   -ms-flex-preferred-size: 91.66667%;
@@ -674,8 +675,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   -webkit-flex-basis: 100%;
   -moz-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
@@ -693,8 +694,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   margin-left: 0; }
 
 .col-xs-offset-1 {
@@ -708,8 +709,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   margin-left: 8.33333%; }
 
 .col-xs-offset-2 {
@@ -723,8 +724,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   margin-left: 16.66667%; }
 
 .col-xs-offset-3 {
@@ -738,8 +739,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   margin-left: 25%; }
 
 .col-xs-offset-4 {
@@ -753,8 +754,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   margin-left: 33.33333%; }
 
 .col-xs-offset-5 {
@@ -768,8 +769,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   margin-left: 41.66667%; }
 
 .col-xs-offset-6 {
@@ -783,8 +784,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   margin-left: 50%; }
 
 .col-xs-offset-7 {
@@ -798,8 +799,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   margin-left: 58.33333%; }
 
 .col-xs-offset-8 {
@@ -813,8 +814,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   margin-left: 66.66667%; }
 
 .col-xs-offset-9 {
@@ -828,8 +829,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   margin-left: 75%; }
 
 .col-xs-offset-10 {
@@ -843,8 +844,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   margin-left: 83.33333%; }
 
 .col-xs-offset-11 {
@@ -858,8 +859,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   margin-left: 91.66667%; }
 
 .col-xs-offset-12 {
@@ -873,8 +874,8 @@ template {
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
   margin-left: 100%; }
 
 .col-xs {
@@ -968,8 +969,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: auto;
     -moz-flex-basis: auto;
     -ms-flex-preferred-size: auto;
@@ -986,8 +987,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 8.33333%;
     -moz-flex-basis: 8.33333%;
     -ms-flex-preferred-size: 8.33333%;
@@ -1005,8 +1006,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 16.66667%;
     -moz-flex-basis: 16.66667%;
     -ms-flex-preferred-size: 16.66667%;
@@ -1024,8 +1025,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 25%;
     -moz-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
@@ -1043,8 +1044,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 33.33333%;
     -moz-flex-basis: 33.33333%;
     -ms-flex-preferred-size: 33.33333%;
@@ -1062,8 +1063,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 41.66667%;
     -moz-flex-basis: 41.66667%;
     -ms-flex-preferred-size: 41.66667%;
@@ -1081,8 +1082,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 50%;
     -moz-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
@@ -1100,8 +1101,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 58.33333%;
     -moz-flex-basis: 58.33333%;
     -ms-flex-preferred-size: 58.33333%;
@@ -1119,8 +1120,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 66.66667%;
     -moz-flex-basis: 66.66667%;
     -ms-flex-preferred-size: 66.66667%;
@@ -1138,8 +1139,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 75%;
     -moz-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
@@ -1157,8 +1158,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 83.33333%;
     -moz-flex-basis: 83.33333%;
     -ms-flex-preferred-size: 83.33333%;
@@ -1176,8 +1177,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 91.66667%;
     -moz-flex-basis: 91.66667%;
     -ms-flex-preferred-size: 91.66667%;
@@ -1195,8 +1196,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 100%;
     -moz-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -1214,8 +1215,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 0; }
 
   .col-sm-offset-1 {
@@ -1229,8 +1230,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 8.33333%; }
 
   .col-sm-offset-2 {
@@ -1244,8 +1245,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 16.66667%; }
 
   .col-sm-offset-3 {
@@ -1259,8 +1260,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 25%; }
 
   .col-sm-offset-4 {
@@ -1274,8 +1275,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 33.33333%; }
 
   .col-sm-offset-5 {
@@ -1289,8 +1290,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 41.66667%; }
 
   .col-sm-offset-6 {
@@ -1304,8 +1305,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 50%; }
 
   .col-sm-offset-7 {
@@ -1319,8 +1320,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 58.33333%; }
 
   .col-sm-offset-8 {
@@ -1334,8 +1335,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 66.66667%; }
 
   .col-sm-offset-9 {
@@ -1349,8 +1350,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 75%; }
 
   .col-sm-offset-10 {
@@ -1364,8 +1365,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 83.33333%; }
 
   .col-sm-offset-11 {
@@ -1379,8 +1380,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 91.66667%; }
 
   .col-sm-offset-12 {
@@ -1394,8 +1395,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 100%; }
 
   .col-sm {
@@ -1488,8 +1489,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: auto;
     -moz-flex-basis: auto;
     -ms-flex-preferred-size: auto;
@@ -1506,8 +1507,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 8.33333%;
     -moz-flex-basis: 8.33333%;
     -ms-flex-preferred-size: 8.33333%;
@@ -1525,8 +1526,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 16.66667%;
     -moz-flex-basis: 16.66667%;
     -ms-flex-preferred-size: 16.66667%;
@@ -1544,8 +1545,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 25%;
     -moz-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
@@ -1563,8 +1564,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 33.33333%;
     -moz-flex-basis: 33.33333%;
     -ms-flex-preferred-size: 33.33333%;
@@ -1582,8 +1583,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 41.66667%;
     -moz-flex-basis: 41.66667%;
     -ms-flex-preferred-size: 41.66667%;
@@ -1601,8 +1602,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 50%;
     -moz-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
@@ -1620,8 +1621,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 58.33333%;
     -moz-flex-basis: 58.33333%;
     -ms-flex-preferred-size: 58.33333%;
@@ -1639,8 +1640,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 66.66667%;
     -moz-flex-basis: 66.66667%;
     -ms-flex-preferred-size: 66.66667%;
@@ -1658,8 +1659,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 75%;
     -moz-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
@@ -1677,8 +1678,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 83.33333%;
     -moz-flex-basis: 83.33333%;
     -ms-flex-preferred-size: 83.33333%;
@@ -1696,8 +1697,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 91.66667%;
     -moz-flex-basis: 91.66667%;
     -ms-flex-preferred-size: 91.66667%;
@@ -1715,8 +1716,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 100%;
     -moz-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -1734,8 +1735,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 0; }
 
   .col-md-offset-1 {
@@ -1749,8 +1750,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 8.33333%; }
 
   .col-md-offset-2 {
@@ -1764,8 +1765,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 16.66667%; }
 
   .col-md-offset-3 {
@@ -1779,8 +1780,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 25%; }
 
   .col-md-offset-4 {
@@ -1794,8 +1795,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 33.33333%; }
 
   .col-md-offset-5 {
@@ -1809,8 +1810,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 41.66667%; }
 
   .col-md-offset-6 {
@@ -1824,8 +1825,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 50%; }
 
   .col-md-offset-7 {
@@ -1839,8 +1840,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 58.33333%; }
 
   .col-md-offset-8 {
@@ -1854,8 +1855,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 66.66667%; }
 
   .col-md-offset-9 {
@@ -1869,8 +1870,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 75%; }
 
   .col-md-offset-10 {
@@ -1884,8 +1885,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 83.33333%; }
 
   .col-md-offset-11 {
@@ -1899,8 +1900,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 91.66667%; }
 
   .col-md-offset-12 {
@@ -1914,8 +1915,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 100%; }
 
   .col-md {
@@ -2008,8 +2009,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: auto;
     -moz-flex-basis: auto;
     -ms-flex-preferred-size: auto;
@@ -2026,8 +2027,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 8.33333%;
     -moz-flex-basis: 8.33333%;
     -ms-flex-preferred-size: 8.33333%;
@@ -2045,8 +2046,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 16.66667%;
     -moz-flex-basis: 16.66667%;
     -ms-flex-preferred-size: 16.66667%;
@@ -2064,8 +2065,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 25%;
     -moz-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
@@ -2083,8 +2084,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 33.33333%;
     -moz-flex-basis: 33.33333%;
     -ms-flex-preferred-size: 33.33333%;
@@ -2102,8 +2103,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 41.66667%;
     -moz-flex-basis: 41.66667%;
     -ms-flex-preferred-size: 41.66667%;
@@ -2121,8 +2122,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 50%;
     -moz-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
@@ -2140,8 +2141,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 58.33333%;
     -moz-flex-basis: 58.33333%;
     -ms-flex-preferred-size: 58.33333%;
@@ -2159,8 +2160,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 66.66667%;
     -moz-flex-basis: 66.66667%;
     -ms-flex-preferred-size: 66.66667%;
@@ -2178,8 +2179,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 75%;
     -moz-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
@@ -2197,8 +2198,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 83.33333%;
     -moz-flex-basis: 83.33333%;
     -ms-flex-preferred-size: 83.33333%;
@@ -2216,8 +2217,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 91.66667%;
     -moz-flex-basis: 91.66667%;
     -ms-flex-preferred-size: 91.66667%;
@@ -2235,8 +2236,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     -webkit-flex-basis: 100%;
     -moz-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -2254,8 +2255,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 0; }
 
   .col-lg-offset-1 {
@@ -2269,8 +2270,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 8.33333%; }
 
   .col-lg-offset-2 {
@@ -2284,8 +2285,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 16.66667%; }
 
   .col-lg-offset-3 {
@@ -2299,8 +2300,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 25%; }
 
   .col-lg-offset-4 {
@@ -2314,8 +2315,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 33.33333%; }
 
   .col-lg-offset-5 {
@@ -2329,8 +2330,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 41.66667%; }
 
   .col-lg-offset-6 {
@@ -2344,8 +2345,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 50%; }
 
   .col-lg-offset-7 {
@@ -2359,8 +2360,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 58.33333%; }
 
   .col-lg-offset-8 {
@@ -2374,8 +2375,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 66.66667%; }
 
   .col-lg-offset-9 {
@@ -2389,8 +2390,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 75%; }
 
   .col-lg-offset-10 {
@@ -2404,8 +2405,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 83.33333%; }
 
   .col-lg-offset-11 {
@@ -2419,8 +2420,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 91.66667%; }
 
   .col-lg-offset-12 {
@@ -2434,8 +2435,8 @@ template {
     -moz-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     margin-left: 100%; }
 
   .col-lg {
@@ -2518,15 +2519,16 @@ template {
   padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 300; }
 
 aside {
-  width: 20vw;
-  max-width: 20vw;
+  width: 16.66vw;
+  max-width: 16.66vw;
   color: #fff;
   background: #4a525f;
   position: fixed;
@@ -2539,7 +2541,7 @@ aside {
   aside .brand {
     background: linear-gradient(to left, #5570e7, #805be8);
     padding: 30px 0;
-    width: 20vw; }
+    width: 16.66vw; }
     aside .brand h2 {
       font-weight: 700;
       letter-spacing: -2px;
@@ -2555,7 +2557,7 @@ aside {
       aside ul li a {
         background: #262930;
         padding: 30px 0;
-        width: 20vw; }
+        width: 16.66vw; }
         aside ul li a::after {
           content: '';
           display: block;
@@ -2578,5 +2580,780 @@ aside {
   aside .options p {
     display: flex;
     margin: 6px 0; }
+
+/*!
+ * FullCalendar v2.9.1 Stylesheet
+ * Docs & License: http://fullcalendar.io/
+ * (c) 2016 Adam Shaw
+ */
+.fc-bgevent, .fc-highlight {
+  opacity: .3;
+  filter: alpha(opacity=30); }
+
+.fc-view {
+  padding: 50px 20px; }
+
+.fc-icon, body .fc {
+  font-size: 1em;
+  display: flex; }
+
+.fc-head tr {
+  height: 50px; }
+
+.fc-button-group, .fc-icon {
+  display: inline-flex;
+  flex-direction: row;
+  background: none; }
+
+.fc-bg, .fc-row .fc-bgevent-skeleton, .fc-row .fc-highlight-skeleton {
+  bottom: 0; }
+
+.fc-icon, .fc-unselectable {
+  -khtml-user-select: none;
+  -webkit-touch-callout: none; }
+
+.fc .fc-axis, .fc button, .fc-time-grid-event .fc-time, .fc-time-grid-event.fc-short .fc-content {
+  white-space: nowrap; }
+
+.fc {
+  direction: ltr;
+  text-align: left;
+  color: #f1f1f1; }
+
+.fc-rtl {
+  text-align: right; }
+
+.fc th, .fc-basic-view .fc-week-number, .fc-icon, .fc-toolbar {
+  text-align: center; }
+
+.fc-unthemed .fc-popover {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff; }
+
+.fc-unthemed .fc-divider, .fc-unthemed .fc-popover .fc-header {
+  background: rgba(255, 255, 255, 0.1); }
+
+.fc-unthemed .fc-popover .fc-header .fc-close {
+  color: #fff; }
+
+.fc-unthemed .fc-today a {
+  border: 1px solid #fff;
+  color: #fafafa; }
+
+.fc-highlight {
+  background: #bce8f1; }
+
+.fc-bgevent {
+  background: #8fdf82; }
+
+.fc-nonbusiness {
+  background: #d7d7d7; }
+
+.fc-icon {
+  height: 1em;
+  line-height: 1em;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.fc-icon:after {
+  position: relative; }
+
+.fc-icon-left-single-arrow:after {
+  content: "\02039";
+  font-weight: 700;
+  font-size: 200%;
+  top: -7%; }
+
+.fc-icon-right-single-arrow:after {
+  content: "\0203A";
+  font-weight: 700;
+  font-size: 200%;
+  top: -7%; }
+
+.fc-icon-left-double-arrow:after {
+  content: "\000AB";
+  font-size: 160%;
+  top: -7%; }
+
+.fc-icon-right-double-arrow:after {
+  content: "\000BB";
+  font-size: 160%;
+  top: -7%; }
+
+.fc-icon-left-triangle:after {
+  content: "\25C4";
+  font-size: 125%;
+  top: 3%; }
+
+.fc-icon-right-triangle:after {
+  content: "\25BA";
+  font-size: 125%;
+  top: 3%; }
+
+.fc-icon-down-triangle:after {
+  content: "\25BC";
+  font-size: 125%;
+  top: 2%; }
+
+.fc-icon-x:after {
+  content: "\000D7";
+  font-size: 200%;
+  top: 6%; }
+
+.fc button {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  height: 2.1em;
+  width: 80px;
+  font-size: 1em;
+  cursor: pointer; }
+
+.fc button::-moz-focus-inner {
+  margin: 0;
+  padding: 0; }
+
+.fc-state-default {
+  border: 1px solid #5570e7;
+  background: transparent; }
+
+.fc-next-button.fc-button, .fc-prev-button.fc-button {
+  border: none; }
+
+.fc button .fc-icon {
+  position: relative;
+  top: -.05em;
+  margin: 0 .2em;
+  vertical-align: middle; }
+
+.fc-state-active, .fc-state-disabled, .fc-state-down, .fc-state-hover {
+  color: #333; }
+
+.fc-state-hover {
+  color: #333;
+  text-decoration: none;
+  background-position: 0 -15px;
+  -webkit-transition: background-position .1s linear;
+  -moz-transition: background-position .1s linear;
+  -o-transition: background-position .1s linear;
+  transition: background-position 0.1s linear; }
+
+.fc-state-active, .fc-state-down {
+  background-image: none;
+  background: linear-gradient(to left, #5570e7, #805be8); }
+
+.fc-state-disabled {
+  cursor: default;
+  background-image: none;
+  opacity: .65;
+  filter: alpha(opacity=65);
+  box-shadow: none; }
+
+.fc-event.fc-draggable, .fc-event[href], .fc-popover .fc-header .fc-close {
+  cursor: pointer; }
+
+.fc .fc-button-group > * {
+  float: left;
+  margin: 0 0 0 -1px; }
+
+.fc .fc-button-group > :first-child {
+  margin-left: 0; }
+
+.fc-popover {
+  position: absolute;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); }
+
+.fc-popover .fc-header {
+  padding: 20px 7px; }
+
+.fc-popover .fc-header .fc-title {
+  margin: 0 2px; }
+
+.fc-widget-heading {
+  height: 10px;
+  cursor: pointer; }
+
+.fc-ltr .fc-popover .fc-header .fc-title, .fc-rtl .fc-popover .fc-header .fc-close {
+  float: left; }
+
+.fc-ltr .fc-popover .fc-header .fc-close, .fc-rtl .fc-popover .fc-header .fc-title {
+  float: right; }
+
+.fc-unthemed .fc-popover {
+  border-width: 1px;
+  border-style: solid; }
+
+.fc-unthemed .fc-popover .fc-header .fc-close {
+  font-size: .9em;
+  margin-top: 2px; }
+
+.fc-popover > .ui-widget-header + .ui-widget-content {
+  border-top: 0; }
+
+.fc-divider {
+  border-style: solid;
+  border-width: 1px; }
+
+hr.fc-divider {
+  height: 0;
+  margin: 0;
+  padding: 0 0 2px;
+  border-width: 1px 0; }
+
+.fc-bg table, .fc-row .fc-bgevent-skeleton table, .fc-row .fc-highlight-skeleton table {
+  height: 100%; }
+
+.fc-bg {
+  height: 50px; }
+
+.fc-clear {
+  display: none; }
+
+.fc-bg, .fc-bgevent-skeleton, .fc-helper-skeleton, .fc-highlight-skeleton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+.fc table {
+  width: 100%;
+  box-sizing: border-box;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em; }
+
+.fc td, .fc th {
+  padding: 0;
+  vertical-align: top; }
+
+.fc-row table {
+  border-left: 0 hidden transparent;
+  border-right: 0 hidden transparent;
+  border-bottom: 0 hidden transparent; }
+
+.fc-row:first-child table {
+  border-top: 0 hidden transparent; }
+
+.fc-row {
+  position: relative; }
+
+.fc-row .fc-bg {
+  z-index: 1; }
+
+.fc-row .fc-bgevent-skeleton td, .fc-row .fc-highlight-skeleton td {
+  border-color: transparent; }
+
+.fc-row .fc-bgevent-skeleton {
+  z-index: 2; }
+
+.fc-row .fc-highlight-skeleton {
+  z-index: 3; }
+
+.fc-row .fc-content-skeleton {
+  position: relative;
+  z-index: 4;
+  padding-bottom: 2px; }
+
+.fc-row .fc-helper-skeleton {
+  z-index: 5; }
+
+.fc-row .fc-content-skeleton td, .fc-row .fc-helper-skeleton td {
+  background: 0 0;
+  border-color: transparent;
+  border-bottom: 0;
+  text-align: center; }
+
+.fc-row .fc-content-skeleton tbody td, .fc-row .fc-helper-skeleton tbody td {
+  border-top: 0; }
+
+.fc-scroller {
+  -webkit-overflow-scrolling: touch; }
+  .fc-scroller::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.1); }
+  .fc-scroller::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(255, 255, 255, 0.1); }
+  .fc-scroller::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1); }
+
+.fc-row.fc-rigid, .fc-time-grid-event {
+  overflow: hidden; }
+
+.fc-scroller > .fc-day-grid, .fc-scroller > .fc-time-grid {
+  position: relative;
+  width: 100%; }
+
+.fc-event {
+  position: relative;
+  display: block;
+  font-size: .85em;
+  line-height: 1.3;
+  border-radius: 3px;
+  border: 1px solid #fafafa;
+  background-color: #5570e7;
+  font-weight: 400; }
+
+.fc-event, .fc-event:hover, .ui-widget .fc-event {
+  color: #fff;
+  text-decoration: none; }
+
+.fc-not-allowed, .fc-not-allowed .fc-event {
+  cursor: not-allowed; }
+
+.fc-event .fc-bg {
+  z-index: 1;
+  background: #fff;
+  opacity: .25;
+  filter: alpha(opacity=25); }
+
+.fc-event .fc-content {
+  position: relative;
+  z-index: 2; }
+
+.fc-event .fc-resizer {
+  position: absolute;
+  z-index: 4;
+  display: none; }
+
+.fc-event.fc-allow-mouse-resize .fc-resizer, .fc-event.fc-selected .fc-resizer {
+  display: block; }
+
+.fc-event.fc-selected .fc-resizer:before {
+  content: "";
+  position: absolute;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: -20px;
+  margin-top: -20px; }
+
+.fc-event.fc-selected {
+  z-index: 9999 !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
+
+.fc-event.fc-selected.fc-dragging {
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3); }
+
+.fc-h-event.fc-selected:before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: -10px;
+  bottom: -10px;
+  left: 0;
+  right: 0; }
+
+.fc-ltr .fc-h-event.fc-not-start, .fc-rtl .fc-h-event.fc-not-end {
+  margin-left: 0;
+  border-left-width: 0;
+  padding-left: 1px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.fc-ltr .fc-h-event.fc-not-end, .fc-rtl .fc-h-event.fc-not-start {
+  margin-right: 0;
+  border-right-width: 0;
+  padding-right: 1px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.fc-ltr .fc-h-event .fc-start-resizer, .fc-rtl .fc-h-event .fc-end-resizer {
+  cursor: w-resize;
+  left: -1px; }
+
+.fc-ltr .fc-h-event .fc-end-resizer, .fc-rtl .fc-h-event .fc-start-resizer {
+  cursor: e-resize;
+  right: -1px; }
+
+.fc-h-event.fc-allow-mouse-resize .fc-resizer {
+  width: 7px;
+  top: -1px;
+  bottom: -1px; }
+
+.fc-h-event.fc-selected .fc-resizer {
+  border-radius: 4px;
+  border-width: 1px;
+  width: 6px;
+  height: 6px;
+  border-style: solid;
+  border-color: inherit;
+  background: #fff;
+  top: 50%;
+  margin-top: -4px; }
+
+.fc-ltr .fc-h-event.fc-selected .fc-start-resizer, .fc-rtl .fc-h-event.fc-selected .fc-end-resizer {
+  margin-left: -4px; }
+
+.fc-ltr .fc-h-event.fc-selected .fc-end-resizer, .fc-rtl .fc-h-event.fc-selected .fc-start-resizer {
+  margin-right: -4px; }
+
+.fc-day-grid-event {
+  margin: 1px 2px 0;
+  padding: 2px 3px; }
+
+.fc-day-grid-event.fc-selected:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  background: #000;
+  opacity: .25;
+  filter: alpha(opacity=25); }
+
+.fc-day-grid-event .fc-content {
+  white-space: nowrap;
+  overflow: hidden; }
+
+.fc-day-grid-event .fc-time {
+  font-weight: 700; }
+
+.fc-ltr .fc-day-grid-event.fc-allow-mouse-resize .fc-start-resizer, .fc-rtl .fc-day-grid-event.fc-allow-mouse-resize .fc-end-resizer {
+  margin-left: -2px; }
+
+.fc-ltr .fc-day-grid-event.fc-allow-mouse-resize .fc-end-resizer, .fc-rtl .fc-day-grid-event.fc-allow-mouse-resize .fc-start-resizer {
+  margin-right: -2px; }
+
+a.fc-more {
+  margin: 1px 3px;
+  font-size: .85em;
+  cursor: pointer;
+  text-decoration: none; }
+
+a.fc-more:hover {
+  text-decoration: underline; }
+
+.fc-limited {
+  display: none; }
+
+.fc-day-grid .fc-row {
+  z-index: 1; }
+
+.fc-more-popover {
+  z-index: 2;
+  width: 220px; }
+
+.fc-more-popover .fc-event-container {
+  padding: 10px; }
+
+.fc-now-indicator {
+  position: absolute;
+  border: 0 solid red; }
+
+.fc-unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent; }
+
+.fc-toolbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 40%;
+  padding: 40px 10px; }
+
+.fc-toolbar .fc-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.fc-toolbar .fc-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  letter-spacing: -2px; }
+  .fc-toolbar .fc-right h2 {
+    font-weight: 100;
+    color: #5570e7; }
+
+.fc-toolbar .fc-center {
+  display: flex;
+  justify-content: center; }
+
+.fc .fc-toolbar > * > * {
+  float: left;
+  margin-left: 0.75em; }
+
+.fc .fc-toolbar > * > :first-child {
+  margin-left: 0; }
+
+.fc-toolbar h2 {
+  margin: 0; }
+
+.fc-toolbar button {
+  position: relative; }
+
+.fc-toolbar .fc-state-hover, .fc-toolbar .ui-state-hover {
+  z-index: 2; }
+
+.fc-toolbar .fc-state-down {
+  z-index: 3; }
+
+.fc-toolbar .fc-state-active, .fc-toolbar .ui-state-active {
+  z-index: 4; }
+
+.fc-toolbar button:focus {
+  z-index: 5; }
+
+.fc-view-container *, .fc-view-container :after, .fc-view-container :before {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+
+.fc-view, .fc-view > table {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to left, #5570e7, #805be8); }
+
+.fc-basicDay-view .fc-content-skeleton, .fc-basicWeek-view .fc-content-skeleton {
+  padding-top: 1px;
+  padding-bottom: 1em; }
+
+.fc-row.fc-rigid .fc-content-skeleton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+.fc-week {
+  height: 100px; }
+
+.fc-basic-view .fc-day-number, .fc-basic-view .fc-week-number {
+  padding: 10px;
+  text-align: center; }
+
+.fc-day-number {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid transparent; }
+  .fc-day-number:hover {
+    cursor: pointer;
+    border: 1px solid #fff; }
+
+.fc-basic-view td.fc-day-number, .fc-basic-view td.fc-week-number span {
+  padding-top: 2px;
+  padding-bottom: 2px; }
+
+.fc-basic-view .fc-week-number span {
+  display: inline-block;
+  min-width: 1.25em; }
+
+.fc-ltr .fc-basic-view .fc-day-number {
+  text-align: right; }
+
+.fc-rtl .fc-basic-view .fc-day-number {
+  text-align: left; }
+
+.fc-day-number.fc-other-month {
+  opacity: .3;
+  filter: alpha(opacity=30); }
+
+.fc-agenda-view .fc-day-grid {
+  position: relative;
+  z-index: 2; }
+
+.fc-agenda-view .fc-day-grid .fc-row .fc-content-skeleton {
+  padding-top: 1px;
+  padding-bottom: 1em; }
+
+.fc .fc-axis {
+  vertical-align: middle;
+  padding: 0 4px; }
+
+.fc-ltr .fc-axis {
+  text-align: right; }
+
+.fc-rtl .fc-axis {
+  text-align: left; }
+
+.ui-widget td.fc-axis {
+  font-weight: 400; }
+
+.fc-time-grid, .fc-time-grid-container {
+  position: relative;
+  z-index: 1; }
+
+.fc-time-grid {
+  min-height: 100%; }
+
+.fc-time-grid table {
+  border: 0 hidden transparent; }
+
+.fc-time-grid > .fc-bg {
+  z-index: 1; }
+
+.fc-time-grid .fc-slats, .fc-time-grid > hr {
+  position: relative;
+  z-index: 2; }
+
+.fc-time-grid .fc-content-col {
+  position: relative; }
+
+.fc-time-grid .fc-content-skeleton {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+.fc-time-grid .fc-business-container {
+  position: relative;
+  z-index: 1; }
+
+.fc-time-grid .fc-bgevent-container {
+  position: relative;
+  z-index: 2; }
+
+.fc-time-grid .fc-highlight-container {
+  z-index: 3;
+  position: relative; }
+
+.fc-time-grid .fc-event-container {
+  position: relative;
+  z-index: 4; }
+
+.fc-time-grid .fc-now-indicator-line {
+  z-index: 5; }
+
+.fc-time-grid .fc-helper-container {
+  position: relative;
+  z-index: 6; }
+
+.fc-time-grid .fc-slats td {
+  height: 1.5em;
+  border-bottom: 0; }
+
+.fc-time-grid .fc-slats .fc-minor td {
+  border-top-style: dotted; }
+
+.fc-time-grid .fc-slats .ui-widget-content {
+  background: 0 0; }
+
+.fc-time-grid .fc-highlight {
+  position: absolute;
+  left: 0;
+  right: 0; }
+
+.fc-ltr .fc-time-grid .fc-event-container {
+  margin: 0 2.5% 0 2px; }
+
+.fc-rtl .fc-time-grid .fc-event-container {
+  margin: 0 2px 0 2.5%; }
+
+.fc-time-grid .fc-bgevent, .fc-time-grid .fc-event {
+  position: absolute;
+  z-index: 1; }
+
+.fc-time-grid .fc-bgevent {
+  left: 0;
+  right: 0; }
+
+.fc-v-event.fc-not-start {
+  border-top-width: 0;
+  padding-top: 1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }
+
+.fc-v-event.fc-not-end {
+  border-bottom-width: 0;
+  padding-bottom: 1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.fc-time-grid-event.fc-selected {
+  overflow: visible; }
+
+.fc-time-grid-event.fc-selected .fc-bg {
+  display: none; }
+
+.fc-time-grid-event .fc-content {
+  overflow: hidden; }
+
+.fc-time-grid-event .fc-time, .fc-time-grid-event .fc-title {
+  padding: 0 1px; }
+
+.fc-time-grid-event .fc-time {
+  font-size: 0.85em; }
+
+.fc-time-grid-event.fc-short .fc-time, .fc-time-grid-event.fc-short .fc-title {
+  display: inline-block;
+  vertical-align: top; }
+
+.fc-time-grid-event.fc-short .fc-time span {
+  display: none; }
+
+.fc-time-grid-event.fc-short .fc-time:before {
+  content: attr(data-start); }
+
+.fc-time-grid-event.fc-short .fc-time:after {
+  content: " - "; }
+
+.fc-time-grid-event.fc-short .fc-title {
+  font-size: .85em;
+  padding: 0; }
+
+.fc-time-grid-event.fc-allow-mouse-resize .fc-resizer {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8px;
+  overflow: hidden;
+  line-height: 8px;
+  font-size: 11px;
+  text-align: center;
+  cursor: s-resize; }
+
+.fc-time-grid-event.fc-allow-mouse-resize .fc-resizer:after {
+  content: "="; }
+
+.fc-time-grid-event.fc-selected .fc-resizer {
+  border-radius: 5px;
+  border-width: 1px;
+  width: 8px;
+  height: 8px;
+  border-style: solid;
+  border-color: inherit;
+  background: #fff;
+  left: 50%;
+  margin-left: -5px;
+  bottom: -5px; }
+
+.fc-time-grid .fc-now-indicator-line {
+  border-top-width: 1px;
+  left: 0;
+  right: 0; }
+
+.fc-time-grid .fc-now-indicator-arrow {
+  margin-top: -5px; }
+
+.fc-ltr .fc-time-grid .fc-now-indicator-arrow {
+  left: 0;
+  border-width: 5px 0 5px 6px;
+  border-top-color: transparent;
+  border-bottom-color: transparent; }
+
+.fc-rtl .fc-time-grid .fc-now-indicator-arrow {
+  right: 0;
+  border-width: 5px 6px 5px 0;
+  border-top-color: transparent;
+  border-bottom-color: transparent; }
+
+.bg-calendar {
+  background: #f1f1f1; }
 
 /*# sourceMappingURL=main.css.map */

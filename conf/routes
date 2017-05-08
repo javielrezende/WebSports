@@ -3,9 +3,12 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET         /                    controllers.UsuarioController.index()
+GET         /                    controllers.CalendarioController.index()
+GET         /index               controllers.UsuarioController.index()
 GET         /list                controllers.UsuarioController.list(p:Int ?= 0)
 
+# Essa rota é utilizada apenas no javascript para receber a lista em formato json
+GET         /json                controllers.CalendarioController.json()
 # Fazendo CRUD
 POST        /save                controllers.UsuarioController.save()
 GET         /create              controllers.UsuarioController.create()

@@ -2,25 +2,25 @@ package models;
 
 import com.avaje.ebean.Model;
 import play.data.format.Formats;
+import play.libs.Time;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import java.sql.Date;
-import java.sql.Time;
+import java.util.Calendar;
 
 /**
  * Created by William on 02/05/2017.
  */
 @Entity
-public class Reserva extends Model{
+public class Reserva extends Model {
     @Id
     public Integer id;
     @Formats.DateTime(pattern="dd-MM-yyyy")
-    public Date dataReserva;
+    public Calendar dataReserva;
     @Formats.DateTime(pattern="dd-MM-yyyy")
-    public Date dataEntrada;
+    public Calendar dataEntrada;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
