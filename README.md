@@ -24,4 +24,4 @@ Visando a dificuldade de proprietários de quadras esportivas, com o grande núm
 
 ### Observação
 
-Em caso de erro de UTF-8, fazer uma verificação se o computador está com algum carácter especial (acentos, traços e pontos)no nome de usuário ou na pasta em qual foi colocado o arquivo. Pois o sistema em questão não aceita determinados tipos de caracteres especiais para o funcionamento do próprio.
+Em caso de erro de UTF-8, verificar se o nome do usuário ou o nome da pasta no qual foi colocado o projeto está com algum caracter especial (acentos, traços e pontos). O sistema não aceita esses caracteres nestes locais, impedindo o funcionamento correto.
