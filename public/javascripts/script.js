@@ -22,6 +22,7 @@ $(document).ready(function() {
         editable: true,
         eventLimit: true, // allow "more" link when too many events
         events: '/json'
+
     });
     $('#calendar').find('.fc-view-container').addClass('col-sm');
     var fcViewHeight = $('#calendar').find('.fc-view').Height();

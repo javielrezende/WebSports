@@ -1,5 +1,5 @@
 package controllers;
-
+import play.libs.Json;
 import play.mvc.*;
 import models.Calendario;
 
@@ -22,7 +22,7 @@ public class CalendarioController extends Controller {
      */
     public Result json() throws ParseException {
         List<Calendario> lista = Calendario.find.all();
-        return ok(play.libs.Json.toJson(lista));
+        return ok(Json.toJson(lista));
     }
 
 }
