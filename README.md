@@ -21,3 +21,7 @@ Visando a dificuldade de proprietários de quadras esportivas, com o grande núm
 1. Abra o xampp e rode o mysql e crie o banco de dados com o nome: "websports"
 1. Para windows, no prompt de comando, na raíz do projeto digite <code>sbt run</code>
 1. No navegador  digite [localhost:9000]()
+
+### Observação
+
+Em caso de erro de UTF-8, fazer uma verificação se o computador está com algum carácter especial (acentos, traços e pontos)no nome de usuário ou na pasta em qual foi colocado o arquivo. Pois o sistema em questão não aceita determinados tipos de caracteres especiais para o funcionamento do próprio.
