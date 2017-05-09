@@ -12,6 +12,9 @@ Visando a dificuldade de proprietários de quadras esportivas, com o grande núm
 ### Tecnologias
 1. Para auxílio e diminuição do código, utilizamos o [Play! framework](https://www.playframework.com/).
 1. Para gerenciamento de dependências utilizamos o [Scala - SBT](http://www.scala-sbt.org/).
+1. Ferramenta de Mapeamento Objeto-Relacional [Ebean](http://ebean-orm.github.io/).
+1. Para Front-end [Sass](http://sass-lang.com/libsass) / [jQuery](https://jquery.com/) / [FullCalendar.js](https://fullcalendar.io/).
+1. Para versionamento [GitHub](https://github.com/) e [Git](https://git-scm.com/).
 
 ### Instalação para Teste
 1. Clone o [projeto](https://github.com/javielrezende/WebSports) <code>git clone https://github.com/javielrezende/WebSports</code>
