@@ -12,6 +12,9 @@ Visando a dificuldade de proprietários de quadras esportivas, com o grande núm
 ### Tecnologias
 1. Para auxílio e diminuição do código, utilizamos o [Play! framework](https://www.playframework.com/).
 1. Para gerenciamento de dependências utilizamos o [Scala - SBT](http://www.scala-sbt.org/).
+1. Ferramenta de Mapeamento Objeto-Relacional [Ebean](http://ebean-orm.github.io/).
+1. Para Front-end [Sass](http://sass-lang.com/libsass) / [jQuery](https://jquery.com/) / [FullCalendar.js](https://fullcalendar.io/).
+1. Para versionamento [GitHub](https://github.com/) e [Git](https://git-scm.com/).
 
 ### Instalação para Teste
 1. Clone o [projeto](https://github.com/javielrezende/WebSports) <code>git clone https://github.com/javielrezende/WebSports</code>
@@ -24,4 +27,4 @@ Visando a dificuldade de proprietários de quadras esportivas, com o grande núm
 
 ### Observação
 
-Em caso de erro de UTF-8, fazer uma verificação se o computador está com algum carácter especial (acentos, traços e pontos)no nome de usuário ou na pasta em qual foi colocado o arquivo. Pois o sistema em questão não aceita determinados tipos de caracteres especiais para o funcionamento do próprio.
+Em caso de erro de UTF-8, verificar se o nome do usuário ou o nome da pasta no qual foi colocado o projeto está com algum caracter especial (acentos, traços e pontos). O sistema não aceita esses caracteres nestes locais, impedindo o funcionamento correto.
