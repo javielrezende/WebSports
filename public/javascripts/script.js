@@ -25,8 +25,7 @@ $(document).ready(function() {
 
     });
     $('#calendar').find('.fc-view-container').addClass('col-sm');
-    var fcViewHeight = $('#calendar').find('.fc-view').Height();
-    $('#calendar').find('.fc-scroller').css('height', fcViewHeight - 50 + 'px');
+
 
 
 });
