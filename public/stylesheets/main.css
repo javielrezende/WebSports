@@ -3372,6 +3372,19 @@ a.fc-more:hover {
   border-top-color: transparent;
   border-bottom-color: transparent; }
 
+.fc-widget-header {
+  height: 35px; }
+
+.fc-list-heading-alt {
+  float: right; }
+
+td.fc-list-item-marker.fc-widget-content {
+  display: none; }
+
+tr.fc-list-item {
+  height: 20px;
+  cursor: pointer; }
+
 .bg-calendar {
   background: #f1f1f1; }
 
