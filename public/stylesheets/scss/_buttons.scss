@@ -1,0 +1,23 @@
+.btn {
+  display: block;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+
+.btn-close {
+  border-color: $primary-color;
+  background: transparent;
+  color: $secondary-color;
+  &:hover {
+    color: $terciary-color;
+  }
+}
+
+.btn-save {
+  background: $gradient-primary-color;
+  color: $white-darker;
+  &:hover {
+    color: $white;
+  }
+}

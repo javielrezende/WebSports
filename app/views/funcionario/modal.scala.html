@@ -1,0 +1,54 @@
+@()
+
+
+<div id="modalCalendar" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <div id="header">
+                <h2>Editar reserva</h2>
+            </div>
+        </div>
+        <div class="modal-body">
+            <form action="" method="post">
+
+                <div class="form-control">
+                    <div class="col-sm-2">
+                        <label for="title">Nome</label>
+                    </div>
+                    <div class="col-sm">
+                        <input type="text" name="title" id="title" required>
+                    </div>
+                </div>
+                <div class="form-control data">
+                    <div class="col-sm-2">
+                        <label for="start">Inicio: </label>
+                    </div>
+                    <div class="col-sm">
+                        <input type="datetime-local" name="start" id="start" required>
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="end">Fim:</label>
+                    </div>
+                    <div class="col-sm">
+                        <input type="datetime-local" name="end" id="end" required>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <div class="col-sm-2">
+                        <label for="color">Cor</label>
+                    </div>
+                    <div class="col-sm">
+                        <select name="color" id="color">
+                            <option value="#0000FF">Azul</option>
+                            <option value="#000088">Azul Forte</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn btn-save">Salvar</a>
+            <a href="#" id="btn-close" class="btn btn-close">Fechar</a>
+        </div>
+    </div>
+</div>
