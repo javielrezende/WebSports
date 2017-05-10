@@ -2,6 +2,7 @@
  * Created by Miguel on 04/05/2017.
  */
 $(document).ready(function() {
+    $('#modelCalendar').hide();
     $('#calendar').fullCalendar({
         header: {
             left: 'prev,next today',
@@ -21,11 +22,12 @@ $(document).ready(function() {
         navLinks: true, // can click day/week names to navigate views
         editable: true,
         eventLimit: true, // allow "more" link when too many events
-        events: '/json'
+        events: '/json',
+        eventClick: function (event, jsEvent, view) {
+            $('#modelCalendar').show();
+        }
 
     });
     $('#calendar').find('.fc-view-container').addClass('col-sm');
-
-
 
 });
