@@ -1,7 +1,14 @@
 /**
  * Created by Miguel on 04/05/2017.
  */
-$(document).ready(function() {
+function formatarUTC(event) {
+    var format = moment.utc(event).format();
+    format = format.toString();
+    format = format.substr(0, (format.length - 1));
+    return format;
+}
+
+$(document).ready(function () {
     $('#modalCalendar').hide();
     $('#calendar').fullCalendar({
         header: {
@@ -13,8 +20,8 @@ $(document).ready(function() {
         // customize the button names,
         // otherwise they'd all just say "list"
         views: {
-            listDay: { buttonText: 'Dia' },
-            listWeek: { buttonText: 'Semana' },
+            listDay: {buttonText: 'Dia'},
+            listWeek: {buttonText: 'Semana'},
         },
         handleWindowResize: false,
         defaultView: 'month',
@@ -23,25 +30,44 @@ $(document).ready(function() {
         editable: true,
         eventLimit: true, // allow "more" link when too many events
         events: '/json',
+        eventDrop: function (event, delta, revertFunc) {
+
+            if (!confirm("Deseja mudar?")) {
+                revertFunc();
+            } else {
+                jsRoutes.controllers.CalendarioController.update().ajax({
+                    data : JSON.stringify(event),
+                    contentType : 'application/json'
+                });
+
+                // var r = jsRoutes.controllers.CalendarioController.update();
+                // $.ajax({
+                //     url: r.url,
+                //     method: "POST",
+                //     type: r.type,
+                //     data: json,
+                //     contentType: "application/json; charset=utf-8",
+                //     dataType: "json"
+                // });
+            }
+
+        },
+
         eventClick: function (event, jsEvent, view) {
             $('#modalCalendar').show();
             $('#title').val(event.title);
-            console.log(moment(event.start, moment.ISO_8601).format());
-            var a = moment.utc(event.start).format(),
-                b = moment.utc(event.end).format();
-            a = a.toString();
-            a = a.substr(0,(a.length - 1));
-            b = b.toString();
-            b = b.substr(0,(b.length - 1));
+            //console.log(formatarUTC(event.start));
+            var start = formatarUTC(event.start),
+                end = formatarUTC(event.end);
 
-            $('#start').val(a);
-            $('#end').val(b);
+            $('#start').val(start);
+            $('#end').val(end);
 
         }
 
     });
     $('#calendar').find('.fc-view-container').addClass('col-sm');
     $('#btn-close').on('click', function () {
-       $('#modalCalendar').hide();
+        $('#modalCalendar').hide();
     });
 });

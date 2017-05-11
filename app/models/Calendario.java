@@ -15,8 +15,8 @@ public class Calendario extends Model {
     @Id
     public Integer id;
     public String title;
-    public Calendar start;
-    public Calendar end;
+    public String start;
+    public String end;
     public String color;
     public static Model.Finder<Integer,Calendario> find = new Model.Finder<>(Calendario.class);
 
