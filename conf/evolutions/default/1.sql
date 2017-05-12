@@ -6,8 +6,8 @@
 create table calendario (
   id                            integer auto_increment not null,
   title                         varchar(255),
-  start                         varchar(255),
-  end                           varchar(255),
+  start                         datetime(6),
+  end                           datetime(6),
   color                         varchar(255),
   constraint pk_calendario primary key (id)
 );

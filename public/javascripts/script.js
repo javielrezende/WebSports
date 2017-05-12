@@ -30,8 +30,9 @@ $(document).ready(function () {
         editable: true,
         eventLimit: true, // allow "more" link when too many events
         events: '/json',
+        timezone: 'local',
+        ignoreTimezone: true,
         eventDrop: function (event, delta, revertFunc) {
-
             if (!confirm("Deseja mudar?")) {
                 revertFunc();
             } else {
@@ -39,16 +40,6 @@ $(document).ready(function () {
                     data : JSON.stringify(event),
                     contentType : 'application/json'
                 });
-
-                // var r = jsRoutes.controllers.CalendarioController.update();
-                // $.ajax({
-                //     url: r.url,
-                //     method: "POST",
-                //     type: r.type,
-                //     data: json,
-                //     contentType: "application/json; charset=utf-8",
-                //     dataType: "json"
-                // });
             }
 
         },
