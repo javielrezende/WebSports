@@ -1,9 +1,7 @@
 package controllers;
 
-import com.avaje.ebean.Ebean;
-import com.avaje.ebean.SqlUpdate;
 import com.fasterxml.jackson.databind.JsonNode;
-import models.Usuario;
+
 import play.data.FormFactory;
 import play.libs.Json;
 import play.mvc.*;
@@ -11,12 +9,7 @@ import models.Calendario;
 import play.routing.JavaScriptReverseRouter;
 
 import javax.inject.Inject;
-import java.sql.*;
-import java.sql.Date;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
+
 import java.util.*;
 
 /**
@@ -38,46 +31,63 @@ public class CalendarioController extends Controller {
         List<Calendario> lista = Calendario.find.all();
         return ok(Json.toJson(lista));
     }
+
     public Result update() {
+        // Recebe um JSON contendo os campos do formulário
         JsonNode body = request().body().asJson();
-        String start = body.findPath("start").asText();
-        String end = body.findPath("end").asText();
 
-        List<Calendario> lista = Calendario.find.all();
-        start = start.substring(0,19);
-        end = end.substring(0,19);
+        // Acha a reserva atual através do ID recebido por Json
+        Calendario calendario = Calendario.find.byId(body.findPath("id").asInt());
 
-        System.out.println(start);
-        System.out.println(end);
-
-        String dml = "update calendario set title=:title, start=:start, end=:end, color=:color where id = :id";
-        SqlUpdate update = Ebean.createSqlUpdate(dml)
-                .setParameter("title", body.findPath("title").asText())
-                .setParameter("start", start)
-                .setParameter("end", end)
-                .setParameter("color", body.findPath("color").asText())
-                .setParameter("id", body.findPath("id").asText());
-        update.execute();
-        return ok(Json.toJson(lista));
-
-
-    }
-
-    public Result save() {
-        JsonNode body = request().body().asJson();
-        Calendario calendario = new Calendario();
+        // Muda os valores dos atributos da reserva
+        // body.findPath("Campo do formulario").comoString
         calendario.title = body.findPath("title").asText();
         calendario.setStart(body.findPath("start").asText());
         calendario.setEnd(body.findPath("end").asText());
         calendario.color = body.findPath("color").asText();
+
+        // Realiza o Update
+        calendario.update();
+
+        // Apenas um retorno que não vai ser mostrado na página
+        return ok(Json.toJson(calendario));
+    }
+
+    public Result save() {
+        // Recebe um JSON contendo os campos do formulário
+        JsonNode body = request().body().asJson();
+
+        // Cria uma reserva nova
+        Calendario calendario = new Calendario();
+
+        // Atribui os valores recebidos aos atributos da reserva
+        // body.findPath("Campo do formulario").comoString
+        calendario.title = body.findPath("title").asText();
+        calendario.setStart(body.findPath("start").asText());
+        calendario.setEnd(body.findPath("end").asText());
+        calendario.color = body.findPath("color").asText();
+
+        // Salva um novo registro
         calendario.save();
 
-
+        // Apenas um retorno que não vai ser mostrado na página
         return ok(body);
     }
 
 
-
+    /* Criação de rotas para usar dentro do javascript
+    * Sempre que for usar um dos metodos do controller dentro do javascript,
+    * Precisa adicionar o método dentro desse aqui
+    * Exemplo: Se eu precisasse chamar um metodo delete lá no Javascript
+    * Teria que adicionar uma rota nova para o método e
+    * adicionar uma linha no método abaixo.
+    * Ficaria:
+    * JavaScriptReverseRouter.create("jsRoutes",
+    *      routes.javascript.CalendarioController.update(),
+    *      routes.javascript.CalendarioController.save(),
+    *      routes.javascript.CalendarioController.delete(),
+    * )
+    */
     public Result javascriptRoutes() {
         return ok(
                 JavaScriptReverseRouter.create("jsRoutes",

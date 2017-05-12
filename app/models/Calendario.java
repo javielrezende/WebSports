@@ -5,7 +5,6 @@ import play.data.format.Formats;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.sql.Time;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -28,10 +27,15 @@ public class Calendario extends Model {
 
 
     public void setStart(String start) {
+        // Cria um padrão para formatar uma String em data
         DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        start = start.replace('T', ' ');
-        formatter.setLenient(false);
 
+        // Nas Strings recebidas pelo FullCalendar vem no formato "yyyy-MM-dd 'T' HH:mm"
+        // Aqui só estou retirando o 'T' da String
+        start = start.replace('T', ' ');
+
+        // Quando for realizar o parse uma excessão precisa se tratada
+        // Por isso do try catch
         try {
             this.start = formatter.parse(start);
         } catch (ParseException e) {
@@ -40,9 +44,10 @@ public class Calendario extends Model {
     }
 
     public void setEnd(String end) {
+        // Mesma coisa do de cima, isso podia virar um método né
+
         DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         end = end.replace('T', ' ');
-        formatter.setLenient(false);
         try {
             this.end = formatter.parse(end);
         } catch (ParseException e) {
