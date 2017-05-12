@@ -1,9 +1,16 @@
+$primary-color: #5570e7;
+$gradient-primary-color: linear-gradient(to left, $primary-color, #805be8);
+$secondary-color: #262930;
+$terciary-color: #4a525f;
+
+$white: #fafafa;
+$white-darker: #f1f1f1;
 
 @import "scss/_normalize";
 @import "scss/_scss_flex_mixins";
 @import "scss/_mixins.scss";
 @import "scss/_grid";
+@import "scss/_fullcalendar";
 @import "scss/_geral";
 @import "scss/_aside_funcionario";
 @import "scss/_buttons";
-@import "scss/_fullcalendar";

@@ -3,6 +3,7 @@ package controllers;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.SqlUpdate;
 import com.fasterxml.jackson.databind.JsonNode;
+import models.Usuario;
 import play.data.FormFactory;
 import play.libs.Json;
 import play.mvc.*;
@@ -37,13 +38,11 @@ public class CalendarioController extends Controller {
         List<Calendario> lista = Calendario.find.all();
         return ok(Json.toJson(lista));
     }
-    // TODO
     public Result update() {
         JsonNode body = request().body().asJson();
         String start = body.findPath("start").asText();
-          String end = body.findPath("end").asText();
-//        String start = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(body.findPath("start").asText());
-//        String end = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(body.findPath("end").asText());
+        String end = body.findPath("end").asText();
+
         List<Calendario> lista = Calendario.find.all();
         start = start.substring(0,19);
         end = end.substring(0,19);
@@ -64,10 +63,26 @@ public class CalendarioController extends Controller {
 
     }
 
+    public Result save() {
+        JsonNode body = request().body().asJson();
+        Calendario calendario = new Calendario();
+        calendario.title = body.findPath("title").asText();
+        calendario.setStart(body.findPath("start").asText());
+        calendario.setEnd(body.findPath("end").asText());
+        calendario.color = body.findPath("color").asText();
+        calendario.save();
+
+
+        return ok(body);
+    }
+
+
+
     public Result javascriptRoutes() {
         return ok(
                 JavaScriptReverseRouter.create("jsRoutes",
-                        routes.javascript.CalendarioController.update()
+                        routes.javascript.CalendarioController.update(),
+                        routes.javascript.CalendarioController.save()
                 )
         ).as("text/javascript");
     }

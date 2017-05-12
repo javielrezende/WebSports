@@ -6,22 +6,22 @@ function diminuirTres(event) {
     var format = moment.utc(event).format();
     format = format.toString();
 
-    var date = format.substr(11,13);
+    var date = format.substr(11, 13);
     if (format == 'Invalid date') {
         date = 0;
     } else {
         date = parseInt(date) - 3;
     }
     console.log(date)
-    if(date < 0 ){
+    if (date < 0) {
         date = date + 24;
     }
-    if(date < 10) {
+    if (date < 10) {
         date = "0" + date.toString();
     }
 
     console.log(date)
-    format = format.substr(0,11) + date + format.substr(13, format.length);
+    format = format.substr(0, 11) + date + format.substr(13, format.length);
     console.log(format)
 
     return format;
@@ -38,9 +38,34 @@ function formatarUTC(event) {
 $(document).ready(function () {
     $('#modalCalendar').hide();
     $('#calendar').fullCalendar({
+        customButtons: {
+            novo: {
+                text: 'Nova Reserva',
+                click: function () {
+                    $('#modalCalendar').show();
+                    $('#modalCalendar .btn-save').on('click', function (e) {
+                        e.preventDefault();
+                        jsRoutes.controllers.CalendarioController.save().ajax({
+                            data: JSON.stringify([{
+                                'title': $('#title').val(),
+                                'start': $('#start').val(),
+                                'end' : $('#end').val(),
+                                'color': $('#color').val()
+                            }]),
+                            contentType: 'application/json',
+                            success: function () {
+                                $('#calendar').load();
+                            }
+                        });
+                        $('#modalCalendar').hide();
+
+                    });
+                }
+            }
+        },
         header: {
-            left: 'prev,next today',
-            center: 'month,listWeek,listDay',
+            left: 'prev,next today novo',
+            center: 'month,listWeek,listDay ',
             right: 'title'
         },
 
@@ -63,21 +88,21 @@ $(document).ready(function () {
                 revertFunc();
             } else {
                 jsRoutes.controllers.CalendarioController.update().ajax({
-                    data : JSON.stringify([{
-                        'id' : event.id,
-                        'title' : event.title,
-                        'start' : diminuirTres(event.start),
-                        'end' : diminuirTres(event.end),
-                        'color' : event.color
+                    data: JSON.stringify([{
+                        'id': event.id,
+                        'title': event.title,
+                        'start': diminuirTres(event.start),
+                        'end': diminuirTres(event.end),
+                        'color': event.color
                     }]),
-                    contentType : 'application/json'
+                    contentType: 'application/json'
                 });
             }
 
         },
 
         eventClick: function (event, jsEvent, view) {
-            $('#modalCalendar').show();
+
             $('#title').val(event.title);
             //console.log(formatarUTC(event.start));
             var start = formatarUTC(event.start),
@@ -85,6 +110,7 @@ $(document).ready(function () {
 
             $('#start').val(start);
             $('#end').val(end);
+            $('#modalCalendar').show();
 
         }
 
@@ -93,4 +119,8 @@ $(document).ready(function () {
     $('#btn-close').on('click', function () {
         $('#modalCalendar').hide();
     });
+
+
+
+
 });
