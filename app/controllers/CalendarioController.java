@@ -10,6 +10,8 @@ import models.Calendario;
 import play.routing.JavaScriptReverseRouter;
 
 import javax.inject.Inject;
+import java.sql.*;
+import java.sql.Date;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -38,16 +40,16 @@ public class CalendarioController extends Controller {
     // TODO
     public Result update() {
         JsonNode body = request().body().asJson();
-        Calendario reserva = Calendario.find.byId(body.findPath("id").asInt());
-
-
         String start = body.findPath("start").asText();
-        String end = body.findPath("end").asText();
-        start = start.substring(0, 19);
-        end = end.substring(0, 19);
+          String end = body.findPath("end").asText();
+//        String start = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(body.findPath("start").asText());
+//        String end = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(body.findPath("end").asText());
+        List<Calendario> lista = Calendario.find.all();
+        start = start.substring(0,19);
+        end = end.substring(0,19);
+
         System.out.println(start);
         System.out.println(end);
-
 
         String dml = "update calendario set title=:title, start=:start, end=:end, color=:color where id = :id";
         SqlUpdate update = Ebean.createSqlUpdate(dml)
@@ -57,10 +59,9 @@ public class CalendarioController extends Controller {
                 .setParameter("color", body.findPath("color").asText())
                 .setParameter("id", body.findPath("id").asText());
         update.execute();
+        return ok(Json.toJson(lista));
 
-        Calendario reserva1 = Calendario.find.byId(body.findPath("id").asInt());
 
-        return ok(Json.toJson(reserva1));
     }
 
     public Result javascriptRoutes() {

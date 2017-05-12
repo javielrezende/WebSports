@@ -1,9 +1,36 @@
 /**
  * Created by Miguel on 04/05/2017.
  */
-function formatarUTC(event) {
+
+function diminuirTres(event) {
     var format = moment.utc(event).format();
     format = format.toString();
+
+    var date = format.substr(11,13);
+    if (format == 'Invalid date') {
+        date = 0;
+    } else {
+        date = parseInt(date) - 3;
+    }
+    console.log(date)
+    if(date < 0 ){
+        date = date + 24;
+    }
+    if(date < 10) {
+        date = "0" + date.toString();
+    }
+
+    console.log(date)
+    format = format.substr(0,11) + date + format.substr(13, format.length);
+    console.log(format)
+
+    return format;
+}
+
+function formatarUTC(event) {
+    var format = moment.utc(event).format();
+    var format = format.toString();
+    format = diminuirTres(format);
     format = format.substr(0, (format.length - 1));
     return format;
 }
@@ -31,13 +58,18 @@ $(document).ready(function () {
         eventLimit: true, // allow "more" link when too many events
         events: '/json',
         timezone: 'local',
-        ignoreTimezone: true,
         eventDrop: function (event, delta, revertFunc) {
             if (!confirm("Deseja mudar?")) {
                 revertFunc();
             } else {
                 jsRoutes.controllers.CalendarioController.update().ajax({
-                    data : JSON.stringify(event),
+                    data : JSON.stringify([{
+                        'id' : event.id,
+                        'title' : event.title,
+                        'start' : diminuirTres(event.start),
+                        'end' : diminuirTres(event.end),
+                        'color' : event.color
+                    }]),
                     contentType : 'application/json'
                 });
             }
