@@ -43,23 +43,7 @@ $(document).ready(function () {
                 text: 'Nova Reserva',
                 click: function () {
                     $('#modalCalendar').show();
-                    $('#modalCalendar .btn-save').on('click', function (e) {
-                        e.preventDefault();
-                        jsRoutes.controllers.CalendarioController.save().ajax({
-                            data: JSON.stringify([{
-                                'title': $('#title').val(),
-                                'start': $('#start').val(),
-                                'end' : $('#end').val(),
-                                'color': $('#color').val()
-                            }]),
-                            contentType: 'application/json',
-                            success: function () {
-                                $('#calendar').load();
-                            }
-                        });
-                        $('#modalCalendar').hide();
 
-                    });
                 }
             }
         },
@@ -120,7 +104,23 @@ $(document).ready(function () {
         $('#modalCalendar').hide();
     });
 
+    $('#modalCalendar .btn-save').on('click', function (e) {
+        e.preventDefault();
+        jsRoutes.controllers.CalendarioController.save().ajax({
+            data: JSON.stringify([{
+                'title': $('#title').val(),
+                'start': $('#start').val(),
+                'end' : $('#end').val(),
+                'color': $('#color').val()
+            }]),
+            contentType: 'application/json',
+            success: function () {
+                $('#calendar').load();
+            }
+        });
+        $('#modalCalendar').hide();
 
+    });
 
 
 });
