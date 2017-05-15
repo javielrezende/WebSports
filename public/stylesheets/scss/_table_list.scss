@@ -8,17 +8,18 @@
 }
 table.table {
   background: white;
-  border-radius: 3px;
   border-collapse: collapse;
   padding: 5px;
   width: 90%;
   margin: 1px auto 0 ;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  thead {
+    th {
+      background: linear-gradient(to bottom, $primary-color, #805be8);;
+    }
+  }
   th {
     color: #D5DDE5;
-    background: $secondary-color;
-    border-bottom: 4px solid #9ea7af;
-    border-right: 1px solid #343a45;
     text-align: left;
     padding: 10px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -33,10 +34,13 @@ table.table {
     color: #666B85;
     text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
     &:hover td {
-      background: #4E5066;
+      background: $primary-color;
       color: #FFFFFF;
       border-top: 1px solid #22262e;
       border-bottom: 1px solid #22262e;
+      a{
+        color: $white;
+      }
     }
     &:first-child {
       border-top:none;
@@ -51,16 +55,12 @@ table.table {
     }
 
     &:nth-child(odd):hover td {
-      background:#4E5066;
+      background:$primary-color;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
     }
 
-    &:last-child td:first-child {
-      border-bottom-left-radius:3px;
-    }
 
-    &:last-child td:last-child {
-      border-bottom-right-radius:3px;
-    }
   }
   td {
     background:#FFFFFF;
@@ -69,6 +69,13 @@ table.table {
     vertical-align:middle;
     text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
     border-right: 1px solid #C1C3D1;
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      &:hover {
+        color: lighten($primary-color, 30%);
+      }
+    }
     &:last-child {
       border-right: 0px;
     }
