@@ -1,7 +1,6 @@
 /**
  * Created by Miguel on 04/05/2017.
  */
-
 function diminuirTres(event) {
     var format = moment.utc(event).format();
     format = format.toString();
@@ -115,12 +114,12 @@ $(document).ready(function () {
             }]),
             contentType: 'application/json',
             success: function () {
-                $('#calendar').load();
+                $('#calendar').fullCalendar('removeEvents');
+                $('#calendar').fullCalendar('addEventSource', '/json');
+                $('#calendar').fullCalendar('rerenderEvents' );
             }
         });
         $('#modalCalendar').hide();
-
     });
-
-
 });
+

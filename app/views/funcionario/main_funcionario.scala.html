@@ -34,7 +34,7 @@
                                     </i>
                                 </div>
                                 <div class="col-xs-9">
-                                    <span>Usuarios</span>
+                                    <span>Administração</span>
                                 </div>
                             </div>
                         </a>
@@ -46,7 +46,7 @@
                                             <i class="icon">•</i>
                                         </div>
                                         <div class="col-xs-9">
-                                            <span>Administração</span>
+                                            <span>Usuários</span>
                                         </div>
                                     </div>
                                 </a>
@@ -58,7 +58,19 @@
                                             <i class="icon">•</i>
                                         </div>
                                         <div class="col-xs-9">
-                                            <span>Lorem</span>
+                                            <span>Clientes</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="row">
+                                        <div class="col-xs-3 center-sm">
+                                            <i class="icon">•</i>
+                                        </div>
+                                        <div class="col-xs-9">
+                                            <span>Quadras</span>
                                         </div>
                                     </div>
                                 </a>
@@ -119,14 +131,30 @@
                     </li>
                 </ul>
             </div>
-            <div class="row">
-                <div class="options center-xs">
-                    <p><a href="">Configurações</a></p>
-                    <p><a href="">Ajuda</a></p>
-                    <p><a href="">Sair</a></p>
+            <div class="col-xs-offset-3">
+                <div class="row">
+                    <div class="options">
+                        <p><a href="">Configurações</a></p>
+                        <p><a href="">Ajuda</a></p>
+                        <p><a href="">Sair</a></p>
+                    </div>
                 </div>
             </div>
         </aside>
+        <nav>
+            <div class="col-xs-offset-2 col-xs">
+                <form action="">
+                    <input type="text" id="buscar" name="buscar" placeholder="Digite o nome do cliente">
+                </form>
+            </div>
+            <div class="col-xs end-xs">
+                <div class="usuario ">
+                    <div><a href="#">Usuário</a></div>
+                    <i class="dropdown"></i>
+                    <a class="usuario-img"></a>
+                </div>
+            </div>
+        </nav>
 
         @content
 
