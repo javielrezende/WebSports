@@ -15,11 +15,25 @@ POST        /calendario/update  controllers.CalendarioController.update()
 POST        /calendario/save  controllers.CalendarioController.save()
 
 # Fazendo CRUD
-POST        /save                controllers.UsuarioController.save()
-GET         /create              controllers.UsuarioController.create()
-GET         /edit/:id            controllers.UsuarioController.edit(id:Integer)
-POST        /edit/:id            controllers.UsuarioController.update(id:Integer)
-GET         /delete/:id          controllers.UsuarioController.delete(id:Integer)
+POST        /usuario/save                controllers.UsuarioController.save()
+GET         /usuario/create              controllers.UsuarioController.create()
+GET         /usuario/edit/:id            controllers.UsuarioController.edit(id:Integer)
+POST        /usuario/edit/:id            controllers.UsuarioController.update(id:Integer)
+GET         /usuario/delete/:id          controllers.UsuarioController.delete(id:Integer)
+
+#CRUD Cliente TODO
+POST        /cliente/save                controllers.ClienteController.save()
+GET         /cliente/create              controllers.ClienteController.create()
+GET         /cliente/edit/:id            controllers.ClienteController.edit(id:Integer)
+POST        /cliente/edit/:id            controllers.ClienteController.update(id:Integer)
+GET         /cliente/delete/:id          controllers.ClienteController.delete(id:Integer)
+#CRUD Quadra TODO
+POST        /quadra/save                controllers.QuadraController.save()
+GET         /quadra/create              controllers.QuadraController.create()
+GET         /quadra/edit/:id            controllers.QuadraController.edit(id:Integer)
+POST        /quadra/edit/:id            controllers.QuadraController.update(id:Integer)
+GET         /quadra/delete/:id          controllers.QuadraController.delete(id:Integer)
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file        controllers.Assets.versioned(path="/public", file: Asset)
