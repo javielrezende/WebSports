@@ -4,7 +4,6 @@
 
 # An example controller showing a sample home page
 GET         /                    controllers.CalendarioController.index()
-GET         /index               controllers.UsuarioController.index()
 GET         /list                controllers.UsuarioController.list(p:Int ?= 0)
 
 # Essa rota é utilizada apenas no javascript para receber a lista em formato json
@@ -15,6 +14,7 @@ POST        /calendario/update  controllers.CalendarioController.update()
 POST        /calendario/save  controllers.CalendarioController.save()
 
 # Fazendo CRUD
+GET         /usuario                     controllers.UsuarioController.index()
 POST        /usuario/save                controllers.UsuarioController.save()
 GET         /usuario/create              controllers.UsuarioController.create()
 GET         /usuario/edit/:id            controllers.UsuarioController.edit(id:Integer)
@@ -22,12 +22,14 @@ POST        /usuario/edit/:id            controllers.UsuarioController.update(id
 GET         /usuario/delete/:id          controllers.UsuarioController.delete(id:Integer)
 
 #CRUD Cliente TODO
+GET         /cliente                     controllers.ClienteController.index()
 POST        /cliente/save                controllers.ClienteController.save()
 GET         /cliente/create              controllers.ClienteController.create()
 GET         /cliente/edit/:id            controllers.ClienteController.edit(id:Integer)
 POST        /cliente/edit/:id            controllers.ClienteController.update(id:Integer)
 GET         /cliente/delete/:id          controllers.ClienteController.delete(id:Integer)
 #CRUD Quadra TODO
+GET         /quadra                     controllers.QuadraController.index()
 POST        /quadra/save                controllers.QuadraController.save()
 GET         /quadra/create              controllers.QuadraController.create()
 GET         /quadra/edit/:id            controllers.QuadraController.edit(id:Integer)
