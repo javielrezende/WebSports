@@ -2,8 +2,17 @@
   width:100%;
   text-align: center;
   h1 {
-    font-weight: 300;
-    padding: 15px 0;
+    color: $primary-color;
+    font-weight: 700;
+    padding: 5px 0;
+    &:after {
+      display: block;
+      content: '';
+      width: 17%;
+      height:2px;
+      background: $gradient-primary-color;
+      margin: 7.5px auto;
+    }
   }
 }
 table.table {
@@ -21,8 +30,8 @@ table.table {
   th {
     color: #D5DDE5;
     text-align: left;
-    padding: 10px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 10px 5px;
+   // text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     vertical-align: middle;
     &:last-child {
       border-right: none;
@@ -30,25 +39,19 @@ table.table {
   }
   tr {
     border-top: 1px solid #C1C3D1;
-    border-bottom-: 1px solid #C1C3D1;
+    border-bottom: 1px solid #C1C3D1;
     color: #666B85;
-    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+    //text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
     &:hover td {
       background: $primary-color;
       color: #FFFFFF;
-      border-top: 1px solid #22262e;
-      border-bottom: 1px solid #22262e;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
       a{
         color: $white;
       }
     }
-    &:first-child {
-      border-top:none;
-    }
 
-    &:last-child {
-      border-bottom:none;
-    }
 
     &:nth-child(odd) td {
       background:#EBEBEB;
@@ -56,8 +59,7 @@ table.table {
 
     &:nth-child(odd):hover td {
       background:$primary-color;
-      border-top-color: transparent;
-      border-bottom-color: transparent;
+
     }
 
 
@@ -67,7 +69,7 @@ table.table {
     padding:5px;
     text-align:left;
     vertical-align:middle;
-    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    //text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
     border-right: 1px solid #C1C3D1;
     a {
       color: $primary-color;

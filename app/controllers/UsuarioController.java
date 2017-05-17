@@ -23,9 +23,9 @@ public class UsuarioController extends Controller {
 
 
     public Result index() {
-        return TODO;
-        //return ok(views.html.funcionario.index.render());
+        return ok(views.html.funcionario.usuario_list.render());
     }
+
 
     public Result GO_HOME = Results.redirect(
             routes.UsuarioController.index()

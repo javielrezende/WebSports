@@ -1,4 +1,4 @@
 .cliente {
-  min-height: 90vh;
+  min-height: calc(100vh - 94px);
   background: darken($white-darker, 5%);
 }

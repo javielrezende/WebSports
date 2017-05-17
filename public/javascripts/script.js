@@ -34,6 +34,7 @@ function formatarUTC(event) {
     return format;
 }
 
+
 $(document).ready(function () {
     $('#modalCalendar').hide();
     $('#calendar').fullCalendar({
@@ -120,6 +121,13 @@ $(document).ready(function () {
             }
         });
         $('#modalCalendar').hide();
+
+    });
+
+    $('li.dropdown a.dropdown-toggle').on('click', function () {
+        // $('li.dropdown ul').toggleClass('active');
+        $(this).addClass('active');
+        $(this).next().slideToggle();
     });
 });
 

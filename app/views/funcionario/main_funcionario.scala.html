@@ -1,4 +1,4 @@
-@(titulo: String)(content: Html)
+@(titulo: String, active: String)(content: Html)
 
 
 <!doctype html>
@@ -23,8 +23,8 @@
             </div>
             <div class="row">
                 <ul>
-                    <li>
-                        <a href="@routes.CalendarioController.index()">
+                    <li class="dropdown" >
+                        <a class="dropdown-toggle">
                             <div class="row">
                                 <div class="col-xs-3 center-xs">
                                     <i class="icon usuario">
@@ -34,13 +34,25 @@
                                     </i>
                                 </div>
                                 <div class="col-xs-9">
-                                    <span>Administração</span>
+                                    <span>Administração <i class="dropdown"></i></span>
                                 </div>
                             </div>
                         </a>
                         <ul>
                             <li>
-                                <a href="@routes.ClienteController.index()">
+                                <a href="@routes.CalendarioController.index()" class="@if(active == "Reservas" ) {active}">
+                                    <div class="row">
+                                        <div class="col-xs-3 center-sm">
+                                            <i class="icon">•</i>
+                                        </div>
+                                        <div class="col-xs-9">
+                                            <span>Reservas</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.ClienteController.index()" class="@if(active == "Clientes" ) {active}">
                                     <div class="row">
                                         <div class="col-xs-3 center-sm">
                                             <i class="icon">•</i>
@@ -52,7 +64,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="@routes.UsuarioController.index()">
+                                <a href="@routes.UsuarioController.index()" class="@if(active == "Funcionários" ) {active}">
                                     <div class="row">
                                         <div class="col-xs-3 center-xs">
                                             <i class="icon">•</i>
@@ -64,7 +76,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="@routes.QuadraController.index()" class="@if(active == "Quadras" ) {active}">
                                     <div class="row">
                                         <div class="col-xs-3 center-sm">
                                             <i class="icon">•</i>
@@ -76,23 +88,6 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="row">
-                                <div class="col-xs-3 center-xs">
-                                    <i class="icon reserva">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.857 32.857">
-                                            <path d="M16.4 33C7.4 33 0 25.4 0 16.3 0 7.3 7.4 0 16.4 0 25.4 0 33 7.4 33 16.4c0 9-7.5 16.5-16.6 16.5zm0-32C8 1 1 8 1 16.4 1 25 8 32 16.4 32 25 32 32 25 32 16.3 32 8 25 1 16.3 1z"/>
-                                            <path d="M21.2 22.7s-.3 0-.4-.2L16 16.7v-10s.2-.4.4-.4.5.3.5.5v9.5l4.4 5.6c.2 0 0 .2 0 .4H21z"/>
-                                        </svg>
-                                    </i>
-                                </div>
-                                <div class="col-xs-9">
-                                    <span>Reservas</span>
-                                </div>
-                            </div>
-                        </a>
                     </li>
                     <li>
                         <a href="#">

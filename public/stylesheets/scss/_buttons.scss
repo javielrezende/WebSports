@@ -45,3 +45,10 @@ i.dropdown {
     background: $primary-color;
   }
 }
+
+span i.dropdown {
+  &:before,&:after {
+    background: $white;
+  }
+  display: inline-block;
+}

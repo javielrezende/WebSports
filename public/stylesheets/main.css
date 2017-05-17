@@ -3411,13 +3411,13 @@ aside {
           opacity: 0;
           -webkit-transition: opacity .5s ease-in-out;
           transition: opacity .5s ease-in-out; }
-        aside ul li a:hover::after {
+        aside ul li a:hover::after, aside ul li a.active::after {
           opacity: 1;
           background: linear-gradient(to left, #5570e7, #805be8); }
   aside li li a {
     background: transparent;
     padding: 10px 0; }
-    aside li li a:hover:after {
+    aside li li a:hover:after, aside li li a.active:after {
       height: 40px; }
   aside .options {
     margin: 50px 0; }
@@ -3510,12 +3510,25 @@ i.dropdown {
     transform: rotate(50deg);
     background: #5570e7; }
 
+span i.dropdown {
+  display: inline-block; }
+  span i.dropdown:before, span i.dropdown:after {
+    background: #fafafa; }
+
 .table-title {
   width: 100%;
   text-align: center; }
   .table-title h1 {
-    font-weight: 300;
-    padding: 15px 0; }
+    color: #5570e7;
+    font-weight: 700;
+    padding: 5px 0; }
+    .table-title h1:after {
+      display: block;
+      content: '';
+      width: 17%;
+      height: 2px;
+      background: linear-gradient(to left, #5570e7, #805be8);
+      margin: 7.5px auto; }
 
 table.table {
   background: white;
@@ -3529,39 +3542,30 @@ table.table {
   table.table th {
     color: #D5DDE5;
     text-align: left;
-    padding: 10px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 10px 5px;
     vertical-align: middle; }
     table.table th:last-child {
       border-right: none; }
   table.table tr {
     border-top: 1px solid #C1C3D1;
-    border-bottom-: 1px solid #C1C3D1;
-    color: #666B85;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1); }
+    border-bottom: 1px solid #C1C3D1;
+    color: #666B85; }
     table.table tr:hover td {
       background: #5570e7;
       color: #FFFFFF;
-      border-top: 1px solid #22262e;
-      border-bottom: 1px solid #22262e; }
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent; }
       table.table tr:hover td a {
         color: #fafafa; }
-    table.table tr:first-child {
-      border-top: none; }
-    table.table tr:last-child {
-      border-bottom: none; }
     table.table tr:nth-child(odd) td {
       background: #EBEBEB; }
     table.table tr:nth-child(odd):hover td {
-      background: #5570e7;
-      border-top-color: transparent;
-      border-bottom-color: transparent; }
+      background: #5570e7; }
   table.table td {
     background: #FFFFFF;
     padding: 5px;
     text-align: left;
     vertical-align: middle;
-    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
     border-right: 1px solid #C1C3D1; }
     table.table td a {
       color: #5570e7;
@@ -3572,7 +3576,7 @@ table.table {
       border-right: 0px; }
 
 .cliente {
-  min-height: 90vh;
+  min-height: calc(100vh - 94px);
   background: #e4e4e4; }
 
 /*# sourceMappingURL=main.css.map */

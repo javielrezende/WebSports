@@ -8,7 +8,7 @@ import play.mvc.Result;
  */
 public class QuadraController extends Controller {
     public Result index() {
-        return TODO;
+        return ok(views.html.funcionario.quadra_list.render());
     }
 
     public Result create() {
