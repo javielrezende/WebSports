@@ -15,4 +15,6 @@ public class Cargo extends Model{
     public Integer id;
     public String nome;
     public Double salario;
+
+    public static Finder<Integer,Cargo> find = new Finder<>(Cargo.class);
 }

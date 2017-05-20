@@ -14,13 +14,25 @@ import javax.persistence.ManyToOne;
 public class Endereco extends Model{
     @Id
     public Integer id;
+
     public String rua;
     public int numero;
     public String complemento;
+
     @ManyToOne
     @JoinColumn(name = "cidade_id")
     public Cidade cidade_id;
     public String cep;
+
+    public void setNumero(String numero) {
+
+        this.numero = Integer.parseInt(numero);
+    }
+    public static Finder<Integer,Endereco> find = new Finder<>(Endereco.class);
+
+    public void setCidade_id(String cidade_id) {
+        this.cidade_id = Cidade.find.byId(Integer.parseInt(cidade_id));
+    }
 
 
 }

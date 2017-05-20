@@ -68,14 +68,6 @@ create table estado (
   constraint pk_estado primary key (id)
 );
 
-create table funcionario (
-  id                            integer auto_increment not null,
-  usuario_id                    integer,
-  cargo_id                      integer,
-  constraint uq_funcionario_usuario_id unique (usuario_id),
-  constraint pk_funcionario primary key (id)
-);
-
 create table pagamento (
   id                            integer auto_increment not null,
   valor                         double,
@@ -186,11 +178,6 @@ create index ix_endereco_cidade_id on endereco (cidade_id);
 alter table estado add constraint fk_estado_pais_id foreign key (pais_id) references pais (id) on delete restrict on update restrict;
 create index ix_estado_pais_id on estado (pais_id);
 
-alter table funcionario add constraint fk_funcionario_usuario_id foreign key (usuario_id) references usuario (id) on delete restrict on update restrict;
-
-alter table funcionario add constraint fk_funcionario_cargo_id foreign key (cargo_id) references cargo (id) on delete restrict on update restrict;
-create index ix_funcionario_cargo_id on funcionario (cargo_id);
-
 alter table pagamento add constraint fk_pagamento_tipopagamento_id foreign key (tipopagamento_id) references tipo_pagamento (id) on delete restrict on update restrict;
 create index ix_pagamento_tipopagamento_id on pagamento (tipopagamento_id);
 
@@ -253,11 +240,6 @@ drop index ix_endereco_cidade_id on endereco;
 alter table estado drop foreign key fk_estado_pais_id;
 drop index ix_estado_pais_id on estado;
 
-alter table funcionario drop foreign key fk_funcionario_usuario_id;
-
-alter table funcionario drop foreign key fk_funcionario_cargo_id;
-drop index ix_funcionario_cargo_id on funcionario;
-
 alter table pagamento drop foreign key fk_pagamento_tipopagamento_id;
 drop index ix_pagamento_tipopagamento_id on pagamento;
 
@@ -317,8 +299,6 @@ drop table if exists copa;
 drop table if exists endereco;
 
 drop table if exists estado;
-
-drop table if exists funcionario;
 
 drop table if exists pagamento;
 

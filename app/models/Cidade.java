@@ -18,5 +18,5 @@ public class Cidade extends Model{
     @ManyToOne
     @JoinColumn(name = "estado_id")
     public Estado estado_id;
-
+    public static Finder<Integer,Cidade> find = new Finder<>(Cidade.class);
 }

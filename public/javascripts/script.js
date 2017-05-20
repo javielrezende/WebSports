@@ -34,9 +34,10 @@ function formatarUTC(event) {
     return format;
 }
 
-
+$('#modalCalendar').hide();
+$('#modalFuncionario').hide();
 $(document).ready(function () {
-    $('#modalCalendar').hide();
+
     $('#calendar').fullCalendar({
         customButtons: {
             novo: {
@@ -128,6 +129,15 @@ $(document).ready(function () {
         // $('li.dropdown ul').toggleClass('active');
         $(this).addClass('active');
         $(this).next().slideToggle();
+    });
+
+    $('#modalFuncionarioToggle').on('click', function (e) {
+        e.preventDefault();
+       $('#modalFuncionario').show();
+    });
+
+    $('#modalFuncionario .btn-close').on('click', function() {
+        $('#modalFuncionario').hide();
     });
 });
 

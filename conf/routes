@@ -21,6 +21,14 @@ GET         /usuario/edit/:id            controllers.UsuarioController.edit(id:I
 POST        /usuario/edit/:id            controllers.UsuarioController.update(id:Integer)
 GET         /usuario/delete/:id          controllers.UsuarioController.delete(id:Integer)
 
+# Fazendo CRUD do Funcionario
+GET         /funcionario                     controllers.FuncionarioController.index()
+POST        /funcionario/save                controllers.FuncionarioController.save()
+GET         /funcionario/create              controllers.FuncionarioController.create()
+GET         /funcionario/edit/:id            controllers.FuncionarioController.edit(id:Integer)
+POST        /funcionario/edit/:id            controllers.FuncionarioController.update(id:Integer)
+GET         /funcionario/delete/:id          controllers.FuncionarioController.delete(id:Integer)
+
 #CRUD Cliente TODO
 GET         /cliente                     controllers.ClienteController.index()
 POST        /cliente/save                controllers.ClienteController.save()

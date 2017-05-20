@@ -23,7 +23,7 @@ public class UsuarioController extends Controller {
 
 
     public Result index() {
-        return ok(views.html.funcionario.usuario_list.render());
+        return TODO;
     }
 
 
