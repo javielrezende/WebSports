@@ -1,10 +1,11 @@
-@()
+@(funcionarios: List[Funcionario])
 
-@main_funcionario("WebSports - Clientes", "Clientes") {
+@main_funcionario("WebSports - Clientes", "Funcionarios") {
     <section class="cliente col-xs-offset-2">
         <div class="row">
             <div class="table-title">
-                <h1>Listagem de Clientes <a id="modalFuncionarioToggle" href="@routes.FuncionarioController.create()">Novo</a></h1>
+                <h1>Listagem de Funcionários <a id="modalFuncionarioToggle" href="@routes.FuncionarioController.create()">
+                    Novo</a></h1>
             </div>
             <table class="table">
                 <thead>
@@ -12,19 +13,25 @@
                     <th>Email</th>
                     <th>CPF</th>
                     <th>Endereço</th>
+                    <th>Cargo</th>
                     <th>Ações</th>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Miguel</td>
-                        <td>mgl.deadly@@gmail.com</td>
-                        <td>038.121.140-11</td>
-                        <td>Rua Dr. João Pessoa, 799, APT 201B</td>
-                        <td>
-                            <a href="@routes.FuncionarioController.edit(1)">Editar</a>
-                            <a href="@routes.FuncionarioController.delete(1)">Excluir</a>
-                        </td>
-                    </tr>
+                @for(funcionario <- funcionarios) {
+                <tr>
+                    <td>@funcionario.usuario_id.nome</td>
+                    <td>@funcionario.usuario_id.email</td>
+                    <td>@funcionario.usuario_id.cpf</td>
+                    <td>@funcionario.usuario_id.endereco_id.rua,
+                        @funcionario.usuario_id.endereco_id.numero@if(!funcionario.usuario_id.endereco_id.complemento.isEmpty) {, @funcionario.usuario_id.endereco_id.complemento}
+                    </td>
+                    <td>@funcionario.cargo_id.nome</td>
+                    <td>
+                        <a href="@routes.FuncionarioController.edit(1)">Editar</a>
+                        <a href="@routes.FuncionarioController.delete(1)">Excluir</a>
+                    </td>
+                </tr>
+                }
                 </tbody>
             </table>
         </div>

@@ -156,7 +156,7 @@ $(document).ready(function () {
 
           $('input[name="endereco"]').val(data.logradouro);
           $('input[name="bairro"]').val(data.bairro);
-          $('input[name="cidade"]').val(data.localidade);
+          $('input[name="cidade"]').select(data.localidade);
 
        });
 

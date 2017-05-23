@@ -54,6 +54,7 @@ create table endereco (
   id                            integer auto_increment not null,
   rua                           varchar(255),
   numero                        integer,
+  bairro                        varchar(255),
   complemento                   varchar(255),
   cidade_id                     integer,
   cep                           varchar(255),

@@ -4,14 +4,16 @@ import models.Endereco;
 import models.Funcionario;
 import models.Usuario;
 import play.data.DynamicForm;
-import play.data.Form;
 import play.data.FormFactory;
+import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
+import scala.collection.script.End;
 import views.html.funcionario.*;
 
 import javax.inject.Inject;
+import java.util.List;
 
 /**
  * Created by Roger Rezende on 17/05/2017.
@@ -22,9 +24,13 @@ public class FuncionarioController extends Controller {
     private FormFactory formFactory;
 
 
-
     public Result index() {
-        return ok(funcionario_list.render());
+        List<Funcionario> funcionario = Funcionario.find
+                .fetch("cargo_id")
+                .fetch("usuario_id")
+                .fetch("usuario_id.endereco_id")
+                .findList();
+        return ok(funcionario_list.render(funcionario));
     }
 
     public Result INDEX = Results.redirect(
@@ -42,31 +48,24 @@ public class FuncionarioController extends Controller {
         Usuario usuario = new Usuario();
         Endereco endereco = new Endereco();
 
-        int endereco_id;
-        if(endereco.isEmpty()){
-            endereco_id = 1;
-        } else {
-            endereco_id = Endereco.find.nextId();
-        }
+
         endereco.rua = form.get("endereco");
         endereco.setNumero(form.get("numero"));
         endereco.complemento = form.get("complemento");
         endereco.cep = form.get("cep");
         endereco.setCidade_id(form.get("cidade"));
+        endereco.bairro = form.get("bairro");
         endereco.save();
+        int endereco_id = endereco.id;
 
-        int usuario_id;
-        if(usuario.isEmpty()){
-            usuario_id = 1;
-        } else {
-        usuario_id = Usuario.find.nextId();
-        }
+
         usuario.nome = form.get("nome");
         usuario.email = form.get("email");
         usuario.senha = form.get("senha");
         usuario.cpf = form.get("cpf");
         usuario.setEndereco_id(endereco_id);
         usuario.save();
+        int usuario_id = usuario.id;
 
 
         funcionario.setUsuario_id(usuario_id);
@@ -81,9 +80,11 @@ public class FuncionarioController extends Controller {
     public Result edit(Integer id) {
         return TODO;
     }
+
     public Result update(Integer id) {
         return TODO;
     }
+
     public Result delete(Integer id) {
         return TODO;
     }
