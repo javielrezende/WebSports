@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.br.CPF;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by Miguel on 17/04/2017.
@@ -30,5 +31,11 @@ public class Usuario extends Model {
 
     public void setEndereco_id(int endereco_id) {
         this.endereco_id = Endereco.find.byId(endereco_id);
+    }
+
+    // Retorna true se esta lista estiver vazia e false se contiver algum objeto armazenado
+    public boolean isEmpty(){
+        List<Usuario> listUsuario = Usuario.find.all();
+        return listUsuario.isEmpty();
     }
 }

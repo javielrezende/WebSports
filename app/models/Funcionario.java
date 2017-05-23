@@ -5,6 +5,7 @@ import com.avaje.ebean.Model;
 import javax.persistence.*;
 import java.util.List;
 
+@Entity
 public class Funcionario extends Model{
     @Id
     public Integer id;
@@ -29,7 +30,5 @@ public class Funcionario extends Model{
     public boolean isEmpty(){
         List<Funcionario> listFuncionario = Funcionario.find.all();
         return listFuncionario.isEmpty();
-
-
     }
 }

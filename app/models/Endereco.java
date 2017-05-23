@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import java.util.List;
 
 /**
  * Created by William on 03/05/2017.
@@ -34,5 +35,10 @@ public class Endereco extends Model{
         this.cidade_id = Cidade.find.byId(Integer.parseInt(cidade_id));
     }
 
+    // Retorna true se esta lista estiver vazia e false se contiver algum objeto armazenado
+    public boolean isEmpty(){
+        List<Endereco> listEndereco = Endereco.find.all();
+        return listEndereco.isEmpty();
+    }
 
 }
