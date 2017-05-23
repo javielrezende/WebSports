@@ -3302,60 +3302,6 @@ tr.fc-list-item {
 .bg-calendar {
   background: #f1f1f1; }
 
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  flex-direction: column;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 9000;
-  justify-content: center;
-  align-items: center;
-  flex: 1 100%; }
-
-.modal-content {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  width: 40vw;
-  background: #fafafa; }
-  .modal-content .modal-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    border-bottom: 1px solid #eceeef; }
-  .modal-content .modal-body {
-    position: relative;
-    padding: 15px; }
-  .modal-content .modal-footer {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 15px;
-    border-top: 1px solid #eceeef; }
-
-.form-control {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 15px;
-  flex: 1 100%; }
-  .form-control .col-sm input {
-    width: 100%; }
-  .form-control .col-sm select {
-    width: 100%; }
-  .form-control label {
-    margin-right: 20px; }
-  .form-control label[for=end] {
-    margin-left: 15px; }
-
-.form-control.data {
-  flex-direction: row;
-  align-items: center; }
-  .form-control.data input {
-    margin-bottom: 5px; }
-
 * {
   margin: 0;
   padding: 0;
@@ -3478,7 +3424,9 @@ button.fc-novo-button {
   display: block;
   padding: 10px 15px;
   border: 1px solid transparent;
-  text-decoration: none; }
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px; }
 
 .btn-close {
   border-color: #5570e7;
@@ -3529,6 +3477,8 @@ span i.dropdown {
       height: 2px;
       background: linear-gradient(to left, #5570e7, #805be8);
       margin: 7.5px auto; }
+  .table-title a {
+    display: inline-flex; }
 
 table.table {
   background: white;
@@ -3578,5 +3528,71 @@ table.table {
 .cliente {
   min-height: calc(100vh - 94px);
   background: #e4e4e4; }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9000;
+  justify-content: center;
+  align-items: center;
+  flex: 1 100%; }
+
+.modal-content {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 50vw;
+  background: #fafafa; }
+  .modal-content .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eceeef; }
+  .modal-content .modal-body {
+    position: relative;
+    padding: 15px; }
+  .modal-content .modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px;
+    border-top: 1px solid #eceeef; }
+
+.form-control {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+  align-items: center;
+  flex: 1 100%; }
+  .form-control input, .form-control select {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #262930;
+    font-size: 13px; }
+  .form-control .col-sm input {
+    width: 100%; }
+  .form-control .col-sm select {
+    width: 100%; }
+  .form-control label {
+    margin-right: 20px; }
+  .form-control label[for=end] {
+    margin-left: 15px; }
+
+.form-control.data {
+  flex-direction: row;
+  align-items: center; }
+  .form-control.data input {
+    margin-bottom: 5px; }
+
+#modalFuncionario form select {
+  padding: 14px; }
 
 /*# sourceMappingURL=main.css.map */

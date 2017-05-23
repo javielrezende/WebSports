@@ -86,9 +86,6 @@ public class UsuarioController extends Controller {
     }
 
     public Result list(int page) {
-        return ok(views.html.index.render(
-                Usuario.page(page, 10)
-                )
-        );
+        return ok(views.html.index.render(Usuario.page(page, 10)));
     }
 }

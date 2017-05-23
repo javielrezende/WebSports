@@ -10,15 +10,15 @@
         <form action="@routes.FuncionarioController.save()" method="post">
             <div class="modal-body">
                 <div class="form-control">
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <label for="nome">Nome</label>
                     </div>
                     <div class="col-sm">
                         <input type="text" name="nome" id="nome" required >
                     </div>
                 </div>
-                <div class="form-control data">
-                    <div class="col-sm-3">
+                <div class="form-control">
+                    <div class="col-sm-2">
                         <label for="email">Email</label>
                     </div>
                     <div class="col-sm">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="form-control">
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <label for="senha">Senha</label>
                     </div>
                     <div class="col-sm">
@@ -34,15 +34,16 @@
                     </div>
                 </div>
                 <div class="form-control">
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <label for="cpf">CPF</label>
                     </div>
                     <div class="col-sm">
                         <input type="text" name="cpf" id="cpf" required>
                     </div>
                 </div>
+
                 <div class="form-control">
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <label for="cep">Endereço</label>
                     </div>
                     <div class="col-sm">
@@ -51,17 +52,20 @@
                 </div>
                 <div class="form-control">
 
-                    <div class="col-sm-offset-3 col-sm">
+                    <div class="col-sm-offset-2 col-sm">
                         <input type="text" name="endereco" id="endereco" required placeholder="Endereço">
                     </div>
                     <div class="col-sm">
                         <input type="text" name="bairro" id="bairro" required placeholder="Bairro">
                     </div>
-                    <div class="col-sm">
+
+                </div>
+                <div class="form-control">
+                    <div class="col-sm col-sm-offset-2">
                         <input type="text" name="numero" id="numero" required placeholder="Numero">
                     </div>
                     <div class="col-sm">
-                        <input type="text" name="complemento" id="complemento" required placeholder="Complemento">
+                        <input type="text" name="complemento" id="complemento" placeholder="Complemento">
                     </div>
                     <div class="col-sm">
                         <select name="cidade" id="cidade">
@@ -69,7 +73,6 @@
                         </select>
                     </div>
                 </div>
-
 
             </div>
             <div class="modal-footer">
