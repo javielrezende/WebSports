@@ -18,19 +18,23 @@ public class Calendario extends Model {
     @Id
     public Integer id;
     public String title;
-    @Formats.DateTime(pattern = "yyyy-MM-dd HH:mm")
+    @Formats.DateTime(pattern = "dd/MM/yyyy HH:mm")
     public Date start;
-    @Formats.DateTime(pattern = "yyyy-MM-dd HH:mm")
+    @Formats.DateTime(pattern = "dd/MM/yyyy HH:mm")
     public Date end;
     public String color;
     public static Model.Finder<Integer,Calendario> find = new Model.Finder<>(Calendario.class);
 
-
+    /**
+     * Converte o parametro em Date
+     * @param start
+     *
+     */
     public void setStart(String start) {
         // Cria um padrão para formatar uma String em data
-        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
-        // Nas Strings recebidas pelo FullCalendar vem no formato "yyyy-MM-dd 'T' HH:mm"
+        // Nas Strings recebidas pelo FullCalendar vem no formato "dd/MM/yyyy 'T' HH:mm"
         // Aqui só estou retirando o 'T' da String
         start = start.replace('T', ' ');
 
@@ -43,10 +47,15 @@ public class Calendario extends Model {
         }
     }
 
+    /**
+     * Converte o parametro em Date
+     * @param end
+     *
+     */
     public void setEnd(String end) {
         // Mesma coisa do de cima, isso podia virar um método né
 
-        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         end = end.replace('T', ' ');
         try {
             this.end = formatter.parse(end);

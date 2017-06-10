@@ -1,9 +1,13 @@
 package controllers;
 
+import models.Cliente;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.funcionario.*;
-/**
+
+import java.util.List;
+
+/*
  * Created by Miguel on 14/05/2017.
  *
  *   public Result create() {
@@ -23,7 +27,10 @@ import views.html.funcionario.*;
  *   }
  */
 public class ClienteController extends Controller {
-    public Result index() {return ok(cliente_list.render());}
+    public Result index() {
+        List<Cliente> clientes = Cliente.find.all();
+        return ok(cliente_list.render(clientes));
+    }
     public Result create() {
         return TODO;
     }

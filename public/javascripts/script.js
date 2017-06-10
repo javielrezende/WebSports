@@ -36,6 +36,7 @@ function formatarUTC(event) {
 
 $('#modalCalendar').hide();
 $('#modalFuncionario').hide();
+$('#modalCliente').hide();
 $(document).ready(function () {
 
     $('#calendar').fullCalendar({
@@ -61,7 +62,6 @@ $(document).ready(function () {
         },
         handleWindowResize: false,
         defaultView: 'month',
-        defaultDate: '2017-05-12',
         navLinks: true, // can click day/week names to navigate views
         editable: true,
         eventLimit: true, // allow "more" link when too many events
@@ -132,11 +132,20 @@ $(document).ready(function () {
 
     $('#modalFuncionarioToggle').on('click', function (e) {
         e.preventDefault();
-       $('#modalFuncionario').show();
+        $('#modalFuncionario').show();
     });
 
     $('#modalFuncionario .btn-close').on('click', function() {
         $('#modalFuncionario').hide();
+    });
+
+    $('#modalClienteToggle').on('click', function (e) {
+        e.preventDefault();
+        $('#modalCliente').show();
+    });
+
+    $('#modalCliente .btn-close').on('click', function() {
+        $('#modalCliente').hide();
     });
 
 
@@ -161,6 +170,30 @@ $(document).ready(function () {
 
     });
 
+
+    $('#start').datetimepicker({
+        format:'d/m/Y H:i',
+        onChangeDateTime:function(dp,$input){
+            $('#end').val($input.val());
+        },
+        allowTimes:[
+            '08:00', '09:00', '10:00',
+            '11:00', '12:00', '13:00',
+            '14:00', '15:00', '16:00',
+            '17:00', '18:00', '19:00',
+            '20:00', '21:00'
+        ]
+    });
+    $('#end').datetimepicker({
+        format:'d/m/Y H:i',
+        allowTimes:[
+            '08:00', '09:00', '10:00',
+            '11:00', '12:00', '13:00',
+            '14:00', '15:00', '16:00',
+            '17:00', '18:00', '19:00',
+            '20:00', '21:00'
+        ]
+    });
 
 
 

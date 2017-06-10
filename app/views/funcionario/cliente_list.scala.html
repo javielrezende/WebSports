@@ -1,32 +1,43 @@
-@()
+@(clientes: List[Cliente])
 
 @main_funcionario("WebSports - Clientes", "Clientes") {
     <section class="cliente col-xs-offset-2">
         <div class="row">
             <div class="table-title">
-                <h1>Listagem de Clientes <a href="@routes.ClienteController.create()">Novo</a></h1>
+                <h1>Listagem de Clientes </h1>
+                <a class="btn btn-save" id="modalClienteToggle" href="@routes.ClienteController.create()">Novo</a>
             </div>
-            <table class="table">
-                <thead>
-                    <th>Nome</th>
-                    <th>Email</th>
-                    <th>CPF</th>
-                    <th>Endereço</th>
-                    <th>Ações</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Miguel</td>
-                        <td>mgl.deadly@@gmail.com</td>
-                        <td>038.121.140-11</td>
-                        <td>Rua Dr. João Pessoa, 799, APT 201B</td>
-                        <td>
-                            <a href="@routes.ClienteController.edit(1)">Editar</a>
-                            <a href="@routes.ClienteController.delete(1)">Excluir</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            @if(clientes.isEmpty) {
+                <h2>&nbsp;Não há clientes cadastrados</h2>
+            } else {
+                <table class="table">
+                    <thead>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>CPF</th>
+                        <th>Endereço</th>
+                        <th>Ações</th>
+                    </thead>
+                    <tbody>
+                        @for(cliente <- clientes) {
+                            <tr>
+                                <td>@cliente.usuario_id.nome</td>
+                                <td>@cliente.usuario_id.email</td>
+                                <td>@cliente.usuario_id.cpf</td>
+                                <td>@cliente.usuario_id.endereco_id.rua,
+                                    @cliente.usuario_id.endereco_id.numero @if(!cliente.usuario_id.endereco_id.complemento.isEmpty) {, @cliente.usuario_id.endereco_id.complemento
+                                }
+                                </td>
+                                <td>
+                                    <a href="@routes.ClienteController.edit(1)">Editar</a>
+                                    <a href="@routes.ClienteController.delete(1)">Excluir</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+        </tbody>
+        </table>
         </div>
     </section>
+    @modalCliente()
 }
