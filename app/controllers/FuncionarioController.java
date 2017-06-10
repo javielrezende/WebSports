@@ -5,11 +5,10 @@ import models.Funcionario;
 import models.Usuario;
 import play.data.DynamicForm;
 import play.data.FormFactory;
-import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
-import scala.collection.script.End;
+
 import views.html.funcionario.*;
 
 import javax.inject.Inject;

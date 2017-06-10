@@ -44,7 +44,6 @@ $(document).ready(function () {
                 text: 'Nova Reserva',
                 click: function () {
                     $('#modalCalendar').show();
-
                 }
             }
         },
