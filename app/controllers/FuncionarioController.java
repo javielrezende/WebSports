@@ -16,7 +16,12 @@ import javax.inject.Inject;
 import java.util.List;
 
 /**
- * Created by Roger Rezende on 17/05/2017.
+ * Created by Miguel, Roger, William  on 17/05/2017.
+ *
+ * Controller do funcionario.
+ *
+ * Nesse controller é feito o crud da view do funcionario,
+ * e traz e envia dados para o banco de dados.
  */
 public class FuncionarioController extends Controller {
 
