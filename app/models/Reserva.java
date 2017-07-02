@@ -16,6 +16,16 @@ import java.util.Calendar;
  * Clase para criação do banco de dados
  *
  * Tabela Reserva
+ *
+ * @Entity - para definir o tipo de clase;
+ *
+ * @Id - Id da tabela;
+ *
+ * @ManyToOne - Muitos para Um;
+ *
+ * @JoinColumn - para fazer as ligações entre tabelas;
+ *
+ * @Formats.DataTime - Formato de data;
  */
 @Entity
 public class Reserva extends Model {

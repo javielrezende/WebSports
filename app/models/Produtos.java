@@ -10,6 +10,14 @@ import javax.persistence.*;
  * Clase para criação do banco de dados
  *
  * Tabela Produtos
+ *
+ * @Entity - para definir o tipo de clase;
+ *
+ * @Id - Id da tabela;
+ *
+ * @ManyToOne - Muitos para Um;
+ *
+ * @JoinColumn - para fazer as ligações entre tabelas;
  */
 
 

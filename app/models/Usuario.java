@@ -12,6 +12,16 @@ import java.util.List;
  * Clase para criação do banco de dados
  *
  * Tabela Usuario
+ *
+ *  * @Entity - para definir o tipo de clase;
+ *
+ * @Id - Id da tabela;
+ *
+ * @ManyToOne - Muitos para Um;
+ *
+ * @JoinColumn - para fazer as ligações entre tabelas;
+ *
+ * @CPF - Para trazer o formato CPF;
  */
 
 @Entity

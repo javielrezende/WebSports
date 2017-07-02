@@ -11,6 +11,16 @@ import java.util.List;
  * Clase para criação do banco de dados
  *
  * Tabela Funcionario
+ *
+ * @Entity - para definir o tipo de clase;
+ *
+ * @Id - Id da tabela;
+ *
+ * @ManyToOne - Muitos para Um;
+ *
+ * @OneToOne - Um para Um
+ *
+ * @JoinColumn - para fazer as ligações entre tabelas;
  */
 
 @Entity

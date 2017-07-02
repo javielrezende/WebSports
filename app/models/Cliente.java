@@ -32,5 +32,4 @@ public class Cliente extends Model {
     @OneToOne
     @JoinColumn(name = "usuario_id")
     public Usuario usuario_id;
-
 }

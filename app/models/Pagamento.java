@@ -15,6 +15,16 @@ import java.sql.Date;
  * Clase para criação do banco de dados
  *
  * Tabela Pagamento
+ *
+ * @Entity - para definir o tipo de clase;
+ *
+ * @Id - Id da tabela;
+ *
+ * @ManyToOne - Muitos para Um;
+ *
+ * @JoinColumn - para fazer as ligações entre tabelas;
+ *
+
  */
 @Entity
 public class Pagamento extends Model{
