@@ -6,7 +6,7 @@ import views.html.funcionario.*;
 /**
  * Created by Miguel, Roger, William on 14/05/2017.
  *
- * Controller com as rotas
+ * Crud do cliente.
  */
 public class ClienteController extends Controller {
     public Result index() {return ok(cliente_list.render());}

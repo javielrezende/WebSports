@@ -15,7 +15,11 @@ import javax.inject.Inject;
 
 
 /**
- * Created by Miguel on 17/04/2017.
+ * Created by Miguel, Roger, William on 17/04/2017.
+ *
+ * Crud do usuario, onde é feito o cadastro do usuario e a busca e envio de dados para o banco.
+ *
+ * try catch para ver se foi enviado os dados, se ok aparece a mensagem usuario cadastrado, senão a mensagem de erro.
  */
 public class UsuarioController extends Controller {
     @Inject
