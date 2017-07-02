@@ -14,7 +14,17 @@ import javax.persistence.OneToOne;
  * Clase para criação do banco de dados
  *
  * Tabela Cliente
+ *
+ * @Entity - para definir o tipo de clase;
+ *
+ * @Id - Id da tabela;
+ *
+ * @OneToOne - Um para Um;
+ *
+ * @JoinColumn - para fazer as ligações entre tabelas;
+ *
  */
+
 @Entity
 public class Cliente extends Model {
     @Id

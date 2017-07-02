@@ -12,7 +12,17 @@ import javax.persistence.ManyToOne;
  * Clase para criação do banco de dados
  *
  * Tabela Carrinho
+ *
+ * @Entity - para definir o tipo de clase;
+ *
+ * @Id - Id da tabela;
+ *
+ * @ManyToOne - Muitos para Um;
+ *
+ * @JoinColumn - para fazer as ligações entre tabelas;
+ *
  */
+
 @Entity
 public class Carrinho extends Model{
 

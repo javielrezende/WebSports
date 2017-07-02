@@ -15,6 +15,13 @@ import java.util.*;
  * Clase para criação do banco de dados
  *
  * Tabela Calendario
+ *
+ * @Entity - para definir o tipo de clase;
+ *
+ * @Id - Id da tabela;
+ *
+ * @Format.DateTime - Define tipo de data e formatação;
+ *
  */
 @Entity
 public class Calendario extends Model {
@@ -48,7 +55,7 @@ public class Calendario extends Model {
     }
 
     public void setEnd(String end) {
-        // Mesma coisa do de cima, isso podia virar um método né
+
 
         DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         end = end.replace('T', ' ');
