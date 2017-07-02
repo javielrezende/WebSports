@@ -7,7 +7,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 /**
- * Created by William on 03/05/2017.
+ * Created by Miguel, Roger, William on 03/05/2017.
+ *
+ * Clase para criação do banco de dados
+ *
+ * Tabela Carrinho
  */
 @Entity
 public class Carrinho extends Model{

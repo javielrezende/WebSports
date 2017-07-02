@@ -6,7 +6,11 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
- * Created by William on 03/05/2017.
+ * Created by Miguel, Roger, William on 03/05/2017.
+ *
+ * Clase para criação do banco de dados
+ *
+ * Tabela Endereco
  */
 @Entity
 public class Endereco extends Model{

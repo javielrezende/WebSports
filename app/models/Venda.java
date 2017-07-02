@@ -7,7 +7,11 @@ import javax.persistence.*;
 import java.sql.Date;
 
 /**
- * Created by William on 03/05/2017.
+ * Created by Miguel, Roger, William on 03/05/2017.
+ *
+ * Clase para criação do banco de dados
+ *
+ * Tabela Venda
  */
 @Entity
 public class Venda extends Model{

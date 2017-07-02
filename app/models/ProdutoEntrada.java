@@ -10,9 +10,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import java.sql.Date;
-
 /**
- * Created by William on 01/05/2017.
+ * Created by Miguel, Roger, William on 03/05/2017.
+ *
+ * Clase para criação do banco de dados
+ *
+ * Tabela ProdutoEntrada
  */
 @Entity
 public class ProdutoEntrada extends Model{

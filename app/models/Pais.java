@@ -6,7 +6,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * Created by William on 03/05/2017.
+ * Created by Miguel, Roger, William on 03/05/2017.
+ *
+ * Clase para criação do banco de dados
+ *
+ * Tabela Pais
  */
 @Entity
 public class Pais extends Model{
