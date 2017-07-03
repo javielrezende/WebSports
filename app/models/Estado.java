@@ -14,13 +14,13 @@ import javax.persistence.ManyToOne;
  *
  * Tabela Estado
  *
- * @Entity - para definir o tipo de clase;
+ * Entity - para definir o tipo de clase;
  *
- * @Id - Id da tabela;
+ * Id - Id da tabela;
  *
- * @ManyToOne - Muitos para Um;
+ * ManyToOne - Muitos para Um;
  *
- * @JoinColumn - para fazer as ligações entre tabelas;
+ * JoinColumn - para fazer as ligações entre tabelas;
  */
 @Entity
 public class Estado extends Model{

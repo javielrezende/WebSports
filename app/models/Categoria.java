@@ -12,9 +12,9 @@ import javax.persistence.Id;
  *
  * Tabela Categoria
  *
- * @Entity - para definir o tipo de clase;
+ * Entity - para definir o tipo de clase;
  *
- * @Id - Id da tabela;
+ * Id - Id da tabela;
  *
  */
 

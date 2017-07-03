@@ -16,11 +16,11 @@ import java.util.*;
  *
  * Tabela Calendario
  *
- * @Entity - para definir o tipo de clase;
+ * Entity - para definir o tipo de clase;
  *
- * @Id - Id da tabela;
+ * Id - Id da tabela;
  *
- * @Format.DateTime - Define tipo de data e formatação;
+ * Format.DateTime - Define tipo de data e formatação;
  *
  */
 @Entity

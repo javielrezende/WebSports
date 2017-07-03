@@ -15,13 +15,13 @@ import java.util.List;
  *
  *  * @Entity - para definir o tipo de clase;
  *
- * @Id - Id da tabela;
+ * Id - Id da tabela;
  *
- * @ManyToOne - Muitos para Um;
+ * ManyToOne - Muitos para Um;
  *
- * @JoinColumn - para fazer as ligações entre tabelas;
+ * JoinColumn - para fazer as ligações entre tabelas;
  *
- * @CPF - Para trazer o formato CPF;
+ * CPF - Para trazer o formato CPF;
  */
 
 @Entity

@@ -11,9 +11,10 @@ import javax.persistence.Id;
  * Clase para criação do banco de dados
  *
  * Tabela Cargo
- * @Entity - para definir o tipo de clase;
  *
- * @Id - Id da tabela;
+ * Entity - para definir o tipo de clase;
+ *
+ * Id - Id da tabela;
  *
  */
 

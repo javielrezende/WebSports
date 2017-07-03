@@ -15,13 +15,13 @@ import javax.persistence.OneToOne;
  *
  * Tabela Cliente
  *
- * @Entity - para definir o tipo de clase;
+ * Entity - para definir o tipo de clase;
  *
- * @Id - Id da tabela;
+ * Id - Id da tabela;
  *
- * @OneToOne - Um para Um;
+ * OneToOne - Um para Um;
  *
- * @JoinColumn - para fazer as ligações entre tabelas;
+ * JoinColumn - para fazer as ligações entre tabelas;
  *
  */
 

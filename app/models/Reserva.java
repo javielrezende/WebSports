@@ -17,15 +17,15 @@ import java.util.Calendar;
  *
  * Tabela Reserva
  *
- * @Entity - para definir o tipo de clase;
+ * Entity - para definir o tipo de clase;
  *
- * @Id - Id da tabela;
+ * Id - Id da tabela;
  *
- * @ManyToOne - Muitos para Um;
+ * ManyToOne - Muitos para Um;
  *
- * @JoinColumn - para fazer as ligações entre tabelas;
+ * JoinColumn - para fazer as ligações entre tabelas;
  *
- * @Formats.DataTime - Formato de data;
+ * Formats.DataTime - Formato de data;
  */
 @Entity
 public class Reserva extends Model {
