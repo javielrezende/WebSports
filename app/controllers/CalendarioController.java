@@ -77,7 +77,7 @@ public class CalendarioController extends Controller {
         calendario.title = body.findPath("title").asText();
         calendario.setStart(body.findPath("start").asText());
         calendario.setEnd(body.findPath("end").asText());
-        calendario.color = body.findPath("color").asText();
+        calendario.color = "#990000";
 
         // Salva um novo registro
         calendario.save();
@@ -107,7 +107,9 @@ public class CalendarioController extends Controller {
                         routes.javascript.CalendarioController.update(),
                         routes.javascript.CalendarioController.save(),
                         routes.javascript.FuncionarioController.edit(),
-                        routes.javascript.ClienteController.edit()
+                        routes.javascript.ClienteController.edit(),
+                        routes.javascript.ClienteController.indexJson()
+
                 )
         ).as("text/javascript");
     }

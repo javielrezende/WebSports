@@ -31,6 +31,7 @@ GET         /funcionario/delete/:id          controllers.FuncionarioController.d
 
 #CRUD Cliente TODO
 GET         /cliente                     controllers.ClienteController.index()
+GET         /cliente/json                controllers.ClienteController.indexJson()
 POST        /cliente/save                controllers.ClienteController.save()
 GET         /cliente/create              controllers.ClienteController.create()
 GET         /cliente/edit/:id            controllers.ClienteController.edit(id:Integer)

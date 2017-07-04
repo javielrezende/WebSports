@@ -3314,6 +3314,9 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 300; }
 
+#ui-id-1 {
+  z-index: 9999; }
+
 aside {
   width: 16.66vw;
   max-width: 16.66vw;

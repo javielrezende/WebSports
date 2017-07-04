@@ -1,7 +1,7 @@
 /**
  * Created by Miguel on 04/05/2017.
  */
-
+var clientes = [];
 function diminuirTres(event) {
     var format = moment.utc(event).format();
     format = format.toString();
@@ -233,4 +233,19 @@ $(document).ready(function () {
         $('#modalCliente').show();
 
     });
+    jsRoutes.controllers.ClienteController.indexJson().ajax({
+        contentType: 'application/json',
+        success: function (data) {
+            var cl;
+            data.forEach(function (value) {
+                clientes.push(value.usuario_id.nome);
+            })
+
+        }
+    });
+    $('#modalCalendar #title').on('focus', function () {
+        $('#modalCalendar #title').autocomplete({
+            source: clientes
+        });
+    })
 });

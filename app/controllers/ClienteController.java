@@ -34,6 +34,14 @@ public class ClienteController extends Controller {
                 .fetch("usuario_id.endereco_id").findList();
         return ok(cliente_list.render(clientes));
     }
+
+    public Result indexJson() {
+        List<Cliente> clientes = Cliente.find
+                .fetch("usuario_id")
+                .fetch("usuario_id.endereco_id").findList();
+        return ok(Json.toJson(clientes));
+    }
+
     public Result create() {
         return TODO;
     }
