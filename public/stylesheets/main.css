@@ -3529,6 +3529,9 @@ table.table {
   min-height: calc(100vh - 94px);
   background: #e4e4e4; }
 
+.cliente h2 {
+  margin: 10px; }
+
 .modal {
   position: fixed;
   top: 0;

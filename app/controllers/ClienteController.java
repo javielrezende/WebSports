@@ -1,6 +1,7 @@
 package controllers;
 
 import models.Cliente;
+import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.funcionario.*;
@@ -28,7 +29,9 @@ import java.util.List;
  */
 public class ClienteController extends Controller {
     public Result index() {
-        List<Cliente> clientes = Cliente.find.all();
+        List<Cliente> clientes = Cliente.find
+                .fetch("usuario_id")
+                .fetch("usuario_id.endereco_id").findList();
         return ok(cliente_list.render(clientes));
     }
     public Result create() {
@@ -38,7 +41,12 @@ public class ClienteController extends Controller {
         return TODO;
     }
     public Result edit(Integer id) {
-        return TODO;
+        List<Cliente> cliente = Cliente.find
+                .fetch("usuario_id")
+                .fetch("usuario_id.endereco_id").findList();
+        Cliente cliente1 = Cliente.find.byId(id);
+        int idCli = cliente.indexOf(cliente1);
+        return ok(Json.toJson(cliente.get(idCli)));
     }
     public Result update(Integer id) {
         return TODO;

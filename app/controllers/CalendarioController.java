@@ -105,7 +105,9 @@ public class CalendarioController extends Controller {
         return ok(
                 JavaScriptReverseRouter.create("jsRoutes",
                         routes.javascript.CalendarioController.update(),
-                        routes.javascript.CalendarioController.save()
+                        routes.javascript.CalendarioController.save(),
+                        routes.javascript.FuncionarioController.edit(),
+                        routes.javascript.ClienteController.edit()
                 )
         ).as("text/javascript");
     }
