@@ -20,4 +20,8 @@ public class Cliente extends Model {
     public Usuario usuario_id;
     public static Model.Finder<Integer,Cliente> find = new Model.Finder<>(Cliente.class);
 
+    public void setUsuario_id(int usuario_id) {
+        this.usuario_id = Usuario.find.byId(usuario_id);
+    }
+
 }
