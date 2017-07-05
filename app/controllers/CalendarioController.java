@@ -101,6 +101,23 @@ public class CalendarioController extends Controller {
     *      routes.javascript.CalendarioController.delete(),
     * )
     */
+
+    public Result delete(){
+        // Recebe um JSON contendo os campos do formulário
+        JsonNode body = request().body().asJson();
+
+        // Recebe o id pelo Json, coloca na variável e transforma em inteiro
+        int del = body.findPath("id").asInt();
+
+        // Busco o id no BD
+        Calendario cal = Calendario.find.byId(del);
+
+        //Deleto o registro
+        cal.delete();
+
+        return ok(Json.toJson(body));
+    }
+
     public Result javascriptRoutes() {
         return ok(
                 JavaScriptReverseRouter.create("jsRoutes",
@@ -108,7 +125,8 @@ public class CalendarioController extends Controller {
                         routes.javascript.CalendarioController.save(),
                         routes.javascript.FuncionarioController.edit(),
                         routes.javascript.ClienteController.edit(),
-                        routes.javascript.ClienteController.indexJson()
+                        routes.javascript.ClienteController.indexJson(),
+                        routes.javascript.CalendarioController.delete()
 
                 )
         ).as("text/javascript");

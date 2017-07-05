@@ -12,6 +12,7 @@ GET         /json                controllers.CalendarioController.json()
 # Calendario CRUD
 POST        /calendario/update  controllers.CalendarioController.update()
 POST        /calendario/save  controllers.CalendarioController.save()
+POST        /calendario/delete  controllers.CalendarioController.delete()
 
 # Fazendo CRUD
 GET         /usuario                     controllers.UsuarioController.index()
