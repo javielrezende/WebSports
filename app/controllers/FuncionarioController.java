@@ -9,7 +9,8 @@ import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
-import scala.collection.script.End;
+
+import play.routing.JavaScriptReverseRouter;
 import views.html.funcionario.*;
 
 import javax.inject.Inject;
@@ -83,7 +84,13 @@ public class FuncionarioController extends Controller {
 
 
     public Result edit(Integer id) {
-        return TODO;
+        List<Funcionario> funcionario = Funcionario.find
+                .fetch("cargo_id")
+                .fetch("usuario_id")
+                .fetch("usuario_id.endereco_id").findList();
+        Funcionario funcionario1 = Funcionario.find.byId(id);
+        int idFunc = funcionario.indexOf(funcionario1);
+        return ok(Json.toJson(funcionario.get(idFunc)));
     }
 
     public Result update(Integer id) {
@@ -93,4 +100,6 @@ public class FuncionarioController extends Controller {
     public Result delete(Integer id) {
         return TODO;
     }
+
+
 }

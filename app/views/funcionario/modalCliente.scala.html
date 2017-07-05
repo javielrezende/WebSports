@@ -1,13 +1,13 @@
 @()
 
-<div id="modalFuncionario" class="modal">
+<div id="modalCliente" class="modal">
     <div class="modal-content">
         <div class="modal-header">
             <div id="header">
-                <h2>Adicionar Funcionario</h2>
+                <h2>Adicionar Cliente</h2>
             </div>
         </div>
-        <form action="@routes.FuncionarioController.save()" method="post">
+        <form action="@routes.ClienteController.save()" method="post">
             <div class="modal-body">
                 <div class="form-control">
                     <div class="col-sm-2">
@@ -76,7 +76,7 @@
 
             </div>
             <div class="modal-footer">
-                <button id="" type="submit" class="btn btn-save">Salvar</button>
+                <button type="submit" class="btn btn-save">Salvar</button>
                 <a href="#" id="btn-close" class="btn btn-close">Fechar</a>
             </div>
         </form>

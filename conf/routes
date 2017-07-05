@@ -11,7 +11,8 @@ GET         /json                controllers.CalendarioController.json()
 
 # Calendario CRUD
 POST        /calendario/update  controllers.CalendarioController.update()
-POST        /calendario/save  controllers.CalendarioController.save()
+POST        /calendario/save    controllers.CalendarioController.save()
+GET         /calendario/delete  controllers.CalendarioController.delete(id:Integer)
 
 # Fazendo CRUD
 GET         /usuario                     controllers.UsuarioController.index()
@@ -31,6 +32,7 @@ GET         /funcionario/delete/:id          controllers.FuncionarioController.d
 
 #CRUD Cliente TODO
 GET         /cliente                     controllers.ClienteController.index()
+GET         /cliente/json                controllers.ClienteController.indexJson()
 POST        /cliente/save                controllers.ClienteController.save()
 GET         /cliente/create              controllers.ClienteController.create()
 GET         /cliente/edit/:id            controllers.ClienteController.edit(id:Integer)
