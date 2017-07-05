@@ -102,20 +102,13 @@ public class CalendarioController extends Controller {
     * )
     */
 
-    public Result delete(){
-        // Recebe um JSON contendo os campos do formulário
-        JsonNode body = request().body().asJson();
-
-        // Recebe o id pelo Json, coloca na variável e transforma em inteiro
-        int del = body.findPath("id").asInt();
-
+    public Result delete(Integer id){
         // Busco o id no BD
-        Calendario cal = Calendario.find.byId(del);
+        // Deleto o registro
+        Calendario.find.ref(id).delete();
 
-        //Deleto o registro
-        cal.delete();
 
-        return ok(Json.toJson(body));
+        return ok();
     }
 
     public Result javascriptRoutes() {

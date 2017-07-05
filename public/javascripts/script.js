@@ -92,7 +92,7 @@ $(document).ready(function () {
             //console.log(formatarUTC(event.start));
             var start = formatarUTC(event.start),
                 end = formatarUTC(event.end);
-
+            $('#modalCalendar #btn-delete').attr('data-id', event.id);
             $('#start').val(start);
             $('#end').val(end);
             $('#modalCalendar').show();
@@ -248,4 +248,20 @@ $(document).ready(function () {
             source: clientes
         });
     })
+
+    $('#modalCalendar #btn-delete').on('click', function (e) {
+        var id = $(this).attr('data-id');
+        if(confirm('Deseja excluir?')) {
+            jsRoutes.controllers.CalendarioController.delete(id).ajax({
+                success: function () {
+                    $('#modalCalendar').hide();
+                    $('#calendar').fullCalendar('removeEvents');
+                    $('#calendar').fullCalendar('addEventSource', '/json');
+                    $('#calendar').fullCalendar('rerenderEvents');
+                }
+            });
+        }
+    })
+
+
 });
