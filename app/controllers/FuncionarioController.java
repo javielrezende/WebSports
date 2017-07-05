@@ -96,35 +96,25 @@ public class FuncionarioController extends Controller {
         //Recebe os dados do formulario
         DynamicForm form = formFactory.form().bindFromRequest();
 
-        Transaction txn = Ebean.beginTransaction();
-        try {
-            Funcionario funcionarioSalvo = Funcionario.find.byId(id);
-            Endereco enderecoSalvo = funcionarioSalvo.usuario_id.endereco_id;
-            Usuario usuarioSalvo = funcionarioSalvo.usuario_id;
+        Funcionario funcionarioSalvo = Funcionario.find.byId(id);
+        Usuario usuarioSalvo = funcionarioSalvo.usuario_id;
+        Endereco enderecoSalvo = usuarioSalvo.endereco_id;
 
-            if (funcionarioSalvo != null) {
-                enderecoSalvo.rua = form.get("endereco");
-                enderecoSalvo.setNumero(form.get("numero"));
-                enderecoSalvo.complemento = form.get("complemento");
-                enderecoSalvo.cep = form.get("cep");
-                enderecoSalvo.setCidade_id(form.get("cidade"));
-                enderecoSalvo.bairro = form.get("bairro");
+        enderecoSalvo.rua = form.get("endereco");
+        enderecoSalvo.setNumero(form.get("numero"));
+        enderecoSalvo.complemento = form.get("complemento");
+        enderecoSalvo.cep = form.get("cep");
+        enderecoSalvo.setCidade_id(form.get("cidade"));
+        enderecoSalvo.bairro = form.get("bairro");
 
-                usuarioSalvo.nome = form.get("nome");
-                usuarioSalvo.email = form.get("email");
-                usuarioSalvo.senha = form.get("senha");
-                usuarioSalvo.cpf = form.get("cpf");
+        usuarioSalvo.nome = form.get("nome");
+        usuarioSalvo.email = form.get("email");
+        usuarioSalvo.senha = form.get("senha");
+        usuarioSalvo.cpf = form.get("cpf");
 
-                funcionarioSalvo.update();
-                flash("success", "Usuario " + usuarioSalvo.email + " foi atualizado");
-                txn.commit();
-            }
-
-        } catch (Exception e) {
-            System.out.println("Erro:" + e);
-        } finally {
-            txn.end();
-        }
+        funcionarioSalvo.update();
+        enderecoSalvo.update();
+        usuarioSalvo.update();
 
         return index();
     }

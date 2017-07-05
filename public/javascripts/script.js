@@ -216,6 +216,7 @@ $(document).ready(function () {
 
 
     $('.btnFuncEdit').on('click', function (e) {
+        var id = $('.btnFuncEdit').attr('data-id');
         jsRoutes.controllers.FuncionarioController.edit($(this).attr('data-id')).ajax({
             contentType: 'application/json',
             success: function (data) {
@@ -230,27 +231,35 @@ $(document).ready(function () {
             }
         });
         $('#modalFuncionario').show();
+        $('#modalFuncionario .btn-save').on('click', function (e) {
+            e.preventDefault();
+
+            $('#modalFuncionario form').attr('action', '/funcionario/edit/' + id);
+            $('#modalFuncionario form').submit();
+        })
     });
 
     $('.btnCliEdit').on('click', function () {
-
-            $('.btn-save').on('click', function (e) {
-                e.preventDefault();
-                jsRoutes.controllers.ClienteController.edit($(this).attr('data-id')).ajax({
-                    contentType: 'application/json',
-                    success: function (data) {
-                        $('#modalCliente #nome').val(data.usuario_id.nome);
-                        $('#modalCliente #email').val(data.usuario_id.email);
-                        $('#modalCliente #cpf').val(data.usuario_id.cpf);
-                        $('#modalCliente #cep').val(data.usuario_id.endereco_id.cep);
-                        $('#modalCliente #endereco').val(data.usuario_id.endereco_id.rua);
-                        $('#modalCliente #bairro').val(data.usuario_id.endereco_id.bairro);
-                        $('#modalCliente #numero').val(data.usuario_id.endereco_id.numero);
-                        $('#modalCliente #complemento').val(data.usuario_id.endereco_id.complemento);
-                    }
-                });
-                $('#modalCliente').show();
-            })
+        var id = $('.btnCliEdit').attr('data-id');
+        jsRoutes.controllers.ClienteController.edit($(this).attr('data-id')).ajax({
+            contentType: 'application/json',
+            success: function (data) {
+                $('#modalCliente #nome').val(data.usuario_id.nome);
+                $('#modalCliente #email').val(data.usuario_id.email);
+                $('#modalCliente #cpf').val(data.usuario_id.cpf);
+                $('#modalCliente #cep').val(data.usuario_id.endereco_id.cep);
+                $('#modalCliente #endereco').val(data.usuario_id.endereco_id.rua);
+                $('#modalCliente #bairro').val(data.usuario_id.endereco_id.bairro);
+                $('#modalCliente #numero').val(data.usuario_id.endereco_id.numero);
+                $('#modalCliente #complemento').val(data.usuario_id.endereco_id.complemento);
+            }
+        });
+        $('#modalCliente').show();
+        $('.btn-save').on('click', function (e) {
+            e.preventDefault();
+            $('#modalCliente form').attr('action', '/cliente/edit/' + id);
+            $('#modalCliente form').submit();
+        })
     });
     jsRoutes.controllers.ClienteController.indexJson().ajax({
         contentType: 'application/json',
