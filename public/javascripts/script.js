@@ -89,6 +89,7 @@ $(document).ready(function () {
         eventClick: function (event, jsEvent, view) {
 
             $('#title').val(event.title);
+            $('#id').val(event.id);
             //console.log(formatarUTC(event.start));
             var start = formatarUTC(event.start),
                 end = formatarUTC(event.end);
@@ -107,20 +108,35 @@ $(document).ready(function () {
 
     $('#modalCalendar .btn-save').on('click', function (e) {
         e.preventDefault();
-        jsRoutes.controllers.CalendarioController.save().ajax({
-            data: JSON.stringify([{
-                'title': $('#title').val(),
-                'start': $('#start').val(),
-                'end': $('#end').val(),
-                'color': $('#color').val()
-            }]),
-            contentType: 'application/json',
-            success: function () {
-                $('#calendar').fullCalendar('removeEvents');
-                $('#calendar').fullCalendar('addEventSource', '/json');
-                $('#calendar').fullCalendar('rerenderEvents');
-            }
-        });
+        if ($('#modalCalendar #acao') == '0') {
+            jsRoutes.controllers.CalendarioController.save().ajax({
+                data: JSON.stringify([{
+                    'title': $('#title').val(),
+                    'start': $('#start').val(),
+                    'end': $('#end').val(),
+                }]),
+                contentType: 'application/json',
+                success: function () {
+                    $('#calendar').fullCalendar('removeEvents');
+                    $('#calendar').fullCalendar('addEventSource', '/json');
+                    $('#calendar').fullCalendar('rerenderEvents');
+                }
+            });
+        } else {
+            jsRoutes.controllers.CalendarioController.update(parseInt($('#id').val())).ajax({
+                data: JSON.stringify([{
+                    'title': $('#title').val(),
+                    'start': $('#start').val(),
+                    'end': $('#end').val(),
+                }]),
+                contentType: 'application/json',
+                success: function () {
+                    $('#calendar').fullCalendar('removeEvents');
+                    $('#calendar').fullCalendar('addEventSource', '/json');
+                    $('#calendar').fullCalendar('rerenderEvents');
+                }
+            });
+        }
         $('#modalCalendar').hide();
 
     });
@@ -216,22 +232,25 @@ $(document).ready(function () {
         $('#modalFuncionario').show();
     });
 
-    $('.btnCliEdit').on('click', function (e) {
-        jsRoutes.controllers.ClienteController.edit($(this).attr('data-id')).ajax({
-            contentType: 'application/json',
-            success: function (data) {
-                $('#modalCliente #nome').val(data.usuario_id.nome);
-                $('#modalCliente #email').val(data.usuario_id.email);
-                $('#modalCliente #cpf').val(data.usuario_id.cpf);
-                $('#modalCliente #cep').val(data.usuario_id.endereco_id.cep);
-                $('#modalCliente #endereco').val(data.usuario_id.endereco_id.rua);
-                $('#modalCliente #bairro').val(data.usuario_id.endereco_id.bairro);
-                $('#modalCliente #numero').val(data.usuario_id.endereco_id.numero);
-                $('#modalCliente #complemento').val(data.usuario_id.endereco_id.complemento);
-            }
-        });
-        $('#modalCliente').show();
+    $('.btnCliEdit').on('click', function () {
 
+            $('.btn-save').on('click', function (e) {
+                e.preventDefault();
+                jsRoutes.controllers.ClienteController.edit($(this).attr('data-id')).ajax({
+                    contentType: 'application/json',
+                    success: function (data) {
+                        $('#modalCliente #nome').val(data.usuario_id.nome);
+                        $('#modalCliente #email').val(data.usuario_id.email);
+                        $('#modalCliente #cpf').val(data.usuario_id.cpf);
+                        $('#modalCliente #cep').val(data.usuario_id.endereco_id.cep);
+                        $('#modalCliente #endereco').val(data.usuario_id.endereco_id.rua);
+                        $('#modalCliente #bairro').val(data.usuario_id.endereco_id.bairro);
+                        $('#modalCliente #numero').val(data.usuario_id.endereco_id.numero);
+                        $('#modalCliente #complemento').val(data.usuario_id.endereco_id.complemento);
+                    }
+                });
+                $('#modalCliente').show();
+            })
     });
     jsRoutes.controllers.ClienteController.indexJson().ajax({
         contentType: 'application/json',
@@ -251,7 +270,7 @@ $(document).ready(function () {
 
     $('#modalCalendar #btn-delete').on('click', function (e) {
         var id = $(this).attr('data-id');
-        if(confirm('Deseja excluir?')) {
+        if (confirm('Deseja excluir?')) {
             jsRoutes.controllers.CalendarioController.delete(id).ajax({
                 success: function () {
                     $('#modalCalendar').hide();

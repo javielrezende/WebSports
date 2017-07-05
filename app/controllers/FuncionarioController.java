@@ -1,5 +1,8 @@
 package controllers;
 
+import com.avaje.ebean.Ebean;
+import com.avaje.ebean.Transaction;
+import models.Cliente;
 import models.Endereco;
 import models.Funcionario;
 import models.Usuario;
@@ -89,11 +92,47 @@ public class FuncionarioController extends Controller {
     }
 
     public Result update(Integer id) {
-        return TODO;
+
+        //Recebe os dados do formulario
+        DynamicForm form = formFactory.form().bindFromRequest();
+
+        Transaction txn = Ebean.beginTransaction();
+        try {
+            Funcionario funcionarioSalvo = Funcionario.find.byId(id);
+            Endereco enderecoSalvo = funcionarioSalvo.usuario_id.endereco_id;
+            Usuario usuarioSalvo = funcionarioSalvo.usuario_id;
+
+            if (funcionarioSalvo != null) {
+                enderecoSalvo.rua = form.get("endereco");
+                enderecoSalvo.setNumero(form.get("numero"));
+                enderecoSalvo.complemento = form.get("complemento");
+                enderecoSalvo.cep = form.get("cep");
+                enderecoSalvo.setCidade_id(form.get("cidade"));
+                enderecoSalvo.bairro = form.get("bairro");
+
+                usuarioSalvo.nome = form.get("nome");
+                usuarioSalvo.email = form.get("email");
+                usuarioSalvo.senha = form.get("senha");
+                usuarioSalvo.cpf = form.get("cpf");
+
+                funcionarioSalvo.update();
+                flash("success", "Usuario " + usuarioSalvo.email + " foi atualizado");
+                txn.commit();
+            }
+
+        } catch (Exception e) {
+            System.out.println("Erro:" + e);
+        } finally {
+            txn.end();
+        }
+
+        return index();
     }
 
     public Result delete(Integer id) {
-        return TODO;
+        Funcionario.find.ref(id).delete();
+
+        return index();
     }
 
 

@@ -10,6 +10,9 @@
         <form action="@routes.ClienteController.save()" method="post">
             <div class="modal-body">
                 <div class="form-control">
+                    <input type="hidden" id="acao" name="acao">
+                    <input type="hidden" id="id" name="id">
+
                     <div class="col-sm-2">
                         <label for="nome">Nome</label>
                     </div>

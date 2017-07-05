@@ -10,7 +10,7 @@ GET         /list                controllers.UsuarioController.list(p:Int ?= 0)
 GET         /json                controllers.CalendarioController.json()
 
 # Calendario CRUD
-POST        /calendario/update  controllers.CalendarioController.update()
+POST        /calendario/update/:id  controllers.CalendarioController.update(id:Integer)
 POST        /calendario/save    controllers.CalendarioController.save()
 GET         /calendario/delete  controllers.CalendarioController.delete(id:Integer)
 
