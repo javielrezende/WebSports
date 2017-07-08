@@ -108,35 +108,20 @@ $(document).ready(function () {
 
     $('#modalCalendar .btn-save').on('click', function (e) {
         e.preventDefault();
-        if ($('#modalCalendar #acao') == '0') {
-            jsRoutes.controllers.CalendarioController.save().ajax({
-                data: JSON.stringify([{
-                    'title': $('#title').val(),
-                    'start': $('#start').val(),
-                    'end': $('#end').val(),
-                }]),
-                contentType: 'application/json',
-                success: function () {
-                    $('#calendar').fullCalendar('removeEvents');
-                    $('#calendar').fullCalendar('addEventSource', '/json');
-                    $('#calendar').fullCalendar('rerenderEvents');
-                }
-            });
-        } else {
-            jsRoutes.controllers.CalendarioController.update(parseInt($('#id').val())).ajax({
-                data: JSON.stringify([{
-                    'title': $('#title').val(),
-                    'start': $('#start').val(),
-                    'end': $('#end').val(),
-                }]),
-                contentType: 'application/json',
-                success: function () {
-                    $('#calendar').fullCalendar('removeEvents');
-                    $('#calendar').fullCalendar('addEventSource', '/json');
-                    $('#calendar').fullCalendar('rerenderEvents');
-                }
-            });
-        }
+        jsRoutes.controllers.CalendarioController.save().ajax({
+            data: JSON.stringify([{
+                'title': $('#title').val(),
+                'start': $('#start').val(),
+                'end': $('#end').val(),
+                'color': $('#color').val()
+            }]),
+            contentType: 'application/json',
+            success: function () {
+                $('#calendar').fullCalendar('removeEvents');
+                $('#calendar').fullCalendar('addEventSource', '/json');
+                $('#calendar').fullCalendar('rerenderEvents');
+            }
+        });
         $('#modalCalendar').hide();
 
     });
