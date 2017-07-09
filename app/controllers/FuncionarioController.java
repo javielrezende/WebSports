@@ -1,5 +1,8 @@
 package controllers;
 
+import com.avaje.ebean.Ebean;
+import com.avaje.ebean.Transaction;
+import models.Cliente;
 import models.Endereco;
 import models.Funcionario;
 import models.Usuario;
@@ -89,11 +92,37 @@ public class FuncionarioController extends Controller {
     }
 
     public Result update(Integer id) {
-        return TODO;
+
+        //Recebe os dados do formulario
+        DynamicForm form = formFactory.form().bindFromRequest();
+
+        Funcionario funcionarioSalvo = Funcionario.find.byId(id);
+        Usuario usuarioSalvo = funcionarioSalvo.usuario_id;
+        Endereco enderecoSalvo = usuarioSalvo.endereco_id;
+
+        enderecoSalvo.rua = form.get("endereco");
+        enderecoSalvo.setNumero(form.get("numero"));
+        enderecoSalvo.complemento = form.get("complemento");
+        enderecoSalvo.cep = form.get("cep");
+        enderecoSalvo.setCidade_id(form.get("cidade"));
+        enderecoSalvo.bairro = form.get("bairro");
+
+        usuarioSalvo.nome = form.get("nome");
+        usuarioSalvo.email = form.get("email");
+        usuarioSalvo.senha = form.get("senha");
+        usuarioSalvo.cpf = form.get("cpf");
+
+        funcionarioSalvo.update();
+        enderecoSalvo.update();
+        usuarioSalvo.update();
+
+        return index();
     }
 
     public Result delete(Integer id) {
-        return TODO;
+        Funcionario.find.ref(id).delete();
+
+        return index();
     }
 
 

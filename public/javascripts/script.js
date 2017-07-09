@@ -91,6 +91,7 @@ $(document).ready(function () {
             $('#modalCalendar #acao').val('1');
             $('#modalCalendar #id').val(event.id)
             $('#title').val(event.title);
+            $('#id').val(event.id);
             //console.log(formatarUTC(event.start));
             var start = formatarUTC(event.start),
                 end = formatarUTC(event.end);
@@ -219,6 +220,7 @@ $(document).ready(function () {
 
 
     $('.btnFuncEdit').on('click', function (e) {
+        var id = $('.btnFuncEdit').attr('data-id');
         jsRoutes.controllers.FuncionarioController.edit($(this).attr('data-id')).ajax({
             contentType: 'application/json',
             success: function (data) {
@@ -233,9 +235,16 @@ $(document).ready(function () {
             }
         });
         $('#modalFuncionario').show();
+        $('#modalFuncionario .btn-save').on('click', function (e) {
+            e.preventDefault();
+
+            $('#modalFuncionario form').attr('action', '/funcionario/edit/' + id);
+            $('#modalFuncionario form').submit();
+        })
     });
 
-    $('.btnCliEdit').on('click', function (e) {
+    $('.btnCliEdit').on('click', function () {
+        var id = $('.btnCliEdit').attr('data-id');
         jsRoutes.controllers.ClienteController.edit($(this).attr('data-id')).ajax({
             contentType: 'application/json',
             success: function (data) {
@@ -251,7 +260,11 @@ $(document).ready(function () {
             }
         });
         $('#modalCliente').show();
-
+        $('.btn-save').on('click', function (e) {
+            e.preventDefault();
+            $('#modalCliente form').attr('action', '/cliente/edit/' + id);
+            $('#modalCliente form').submit();
+        })
     });
 
     jsRoutes.controllers.ClienteController.indexJson().ajax({

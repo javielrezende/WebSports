@@ -58,6 +58,7 @@ public class ClienteController extends Controller {
     public Result create() {
         return TODO;
     }
+
     public Result save() {
         //Recebe os dados do formulario
         DynamicForm form = formFactory.form().bindFromRequest();
@@ -100,40 +101,33 @@ public class ClienteController extends Controller {
         int idCli = cliente.indexOf(cliente1);
         return ok(Json.toJson(cliente.get(idCli)));
     }
+
     public Result update(Integer id) {
 
         //Recebe os dados do formulario
         DynamicForm form = formFactory.form().bindFromRequest();
 
-        Transaction txn = Ebean.beginTransaction();
-        try {
-            Cliente clienteSalvo = Cliente.find.byId(id);
-            Endereco enderecoSalvo = clienteSalvo.usuario_id.endereco_id;
-            Usuario usuarioSalvo = clienteSalvo.usuario_id;
+        Cliente clienteSalvo = Cliente.find.byId(id);
+        Endereco enderecoSalvo = clienteSalvo.usuario_id.endereco_id;
+        Usuario usuarioSalvo = clienteSalvo.usuario_id;
 
-            if (clienteSalvo != null) {
-                enderecoSalvo.rua = form.get("endereco");
-                enderecoSalvo.setNumero(form.get("numero"));
-                enderecoSalvo.complemento = form.get("complemento");
-                enderecoSalvo.cep = form.get("cep");
-                enderecoSalvo.setCidade_id(form.get("cidade"));
-                enderecoSalvo.bairro = form.get("bairro");
+        System.out.println(form.get("numero"));
+        enderecoSalvo.rua = form.get("endereco");
 
-                usuarioSalvo.nome = form.get("nome");
-                usuarioSalvo.email = form.get("email");
-                usuarioSalvo.senha = form.get("senha");
-                usuarioSalvo.cpf = form.get("cpf");
+        enderecoSalvo.setNumero(form.get("numero"));
+        enderecoSalvo.complemento = form.get("complemento");
+        enderecoSalvo.cep = form.get("cep");
+        enderecoSalvo.setCidade_id(form.get("cidade"));
+        enderecoSalvo.bairro = form.get("bairro");
 
-                clienteSalvo.update();
-                flash("success", "Usuario " + usuarioSalvo.email + " foi atualizado");
-                txn.commit();
-            }
+        usuarioSalvo.nome = form.get("nome");
+        usuarioSalvo.email = form.get("email");
+        usuarioSalvo.senha = form.get("senha");
+        usuarioSalvo.cpf = form.get("cpf");
 
-        } catch (Exception e) {
-            System.out.println("Erro:" + e);
-        } finally {
-            txn.end();
-        }
+        clienteSalvo.update();
+        enderecoSalvo.update();
+        usuarioSalvo.update();
 
         return index();
 

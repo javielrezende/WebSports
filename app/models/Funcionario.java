@@ -9,7 +9,7 @@ import java.util.List;
 public class Funcionario extends Model{
     @Id
     public Integer id;
-    @OneToOne(fetch=FetchType.EAGER)
+    @OneToOne
     @JoinColumn(name = "usuario_id")
     public Usuario usuario_id;
     @ManyToOne
