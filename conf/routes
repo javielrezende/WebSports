@@ -46,6 +46,8 @@ GET         /quadra/edit/:id            controllers.QuadraController.edit(id:Int
 POST        /quadra/edit/:id            controllers.QuadraController.update(id:Integer)
 GET         /quadra/delete/:id          controllers.QuadraController.delete(id:Integer)
 
+#Grafico
+GET         /grafico                    controllers.GraficoController.index()
 
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file        controllers.Assets.versioned(path="/public", file: Asset)
