@@ -6,33 +6,41 @@
             <a class="btn btn-save" id="modalFuncionarioToggle" href="@routes.FuncionarioController.create()">
                     Novo</a>
         </div>
-
-        <table class="table">
-            <thead>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>CPF</th>
-                <th>Endereço</th>
-                <th>Cargo</th>
-                <th>Ações</th>
-            </thead>
-            <tbody>
+        @if(funcionarios.length == 0) {
+            <div class="alert alert-warning">
+                <h2>&nbsp;Não há Funcionários cadastrados</h2>
+            </div>
+        } else {
+            <table class="table">
+                <thead>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>CPF</th>
+                    <th>Endereço</th>
+                    <th>Cargo</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody>
                 @for(funcionario
-                <- funcionarios) { <tr>
-                    <td>@funcionario.usuario_id.nome</td>
-                    <td>@funcionario.usuario_id.email</td>
-                    <td>@funcionario.usuario_id.cpf</td>
-                    <td>@funcionario.usuario_id.endereco_id.rua, @funcionario.usuario_id.endereco_id.numero @if(!funcionario.usuario_id.endereco_id.complemento.isEmpty) {, @funcionario.usuario_id.endereco_id.complemento }
-                    </td>
-                    <td>@funcionario.cargo_id.nome</td>
-                    <td>
-                        <a class="btnFuncEdit" href="javascript:;" data-id="@funcionario.id">Editar</a>
-                        <a href="@routes.FuncionarioController.delete(funcionario.id)" onclick="confirm('Deseja excluir este funcionário?')">Excluir</a>
-                    </td>
+                <- funcionarios) {
+                    <tr>
+                        <td>@funcionario.usuario_id.nome</td>
+                        <td>@funcionario.usuario_id.email</td>
+                        <td>@funcionario.usuario_id.cpf</td>
+                        <td>@funcionario.usuario_id.endereco_id.rua
+                            , @funcionario.usuario_id.endereco_id.numero @if(!funcionario.usuario_id.endereco_id.complemento.isEmpty) {, @funcionario.usuario_id.endereco_id.complemento
+                        }
+                        </td>
+                        <td>@funcionario.cargo_id.nome</td>
+                        <td>
+                            <a class="btnFuncEdit" href="javascript:;" data-id="@funcionario.id">Editar</a>
+                            <a href="@routes.FuncionarioController.delete(funcionario.id)" onclick="confirm('Deseja excluir este funcionário?')">Excluir</a>
+                        </td>
                     </tr>
-                    }
-            </tbody>
-        </table>
+                }
+                </tbody>
+            </table>
+        }
     </div>
 </section>
 
