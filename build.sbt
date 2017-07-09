@@ -10,3 +10,6 @@ libraryDependencies += javaJdbc
 libraryDependencies += cache
 libraryDependencies += javaWs
 libraryDependencies += evolutions
+libraryDependencies ++= Seq(
+  "be.objectify" %% "deadbolt-java" % "2.5.0"
+)
