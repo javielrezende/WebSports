@@ -10,6 +10,7 @@
         <form action="@routes.ClienteController.save()" method="post">
             <div class="modal-body">
                 <div class="form-control">
+                    <input type="hidden" id="id">
                     <div class="col-sm-2">
                         <label for="nome">Nome</label>
                     </div>
@@ -82,3 +83,12 @@
         </form>
     </div>
 </div>
+<script>
+        $('#modalClienteToggle').on('click', function () {
+            $('#modalCliente form').attr('action', @routes.ClienteController.save())
+        });
+        function  att() {
+            $('#modalCliente form').attr('action', @routes.ClienteController.update(1))
+
+        }
+</script>

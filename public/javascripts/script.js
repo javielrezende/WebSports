@@ -45,6 +45,7 @@ $(document).ready(function () {
             novo: {
                 text: 'Nova Reserva',
                 click: function () {
+                    $('#modalCalendar #acao').val('0');
                     $('#modalCalendar').show();
                 }
             }
@@ -87,7 +88,8 @@ $(document).ready(function () {
         },
 
         eventClick: function (event, jsEvent, view) {
-
+            $('#modalCalendar #acao').val('1');
+            $('#modalCalendar #id').val(event.id)
             $('#title').val(event.title);
             //console.log(formatarUTC(event.start));
             var start = formatarUTC(event.start),
@@ -107,6 +109,7 @@ $(document).ready(function () {
 
     $('#modalCalendar .btn-save').on('click', function (e) {
         e.preventDefault();
+        if($('#modalCalendar #acao').val() == '0') {
         jsRoutes.controllers.CalendarioController.save().ajax({
             data: JSON.stringify([{
                 'title': $('#title').val(),
@@ -121,8 +124,24 @@ $(document).ready(function () {
                 $('#calendar').fullCalendar('rerenderEvents');
             }
         });
+        } else {
+            jsRoutes.controllers.CalendarioController.update($('#modalCalendar #id').val()).ajax({
+            data: JSON.stringify([{
+                'title': $('#title').val(),
+                'start': $('#start').val(),
+                'end': $('#end').val(),
+                'color': $('#color').val()
+            }]),
+            contentType: 'application/json',
+            success: function () {
+                $('#calendar').fullCalendar('removeEvents');
+                $('#calendar').fullCalendar('addEventSource', '/json');
+                $('#calendar').fullCalendar('rerenderEvents');
+            }
+        });
+        }
         $('#modalCalendar').hide();
-
+    
     });
 
     $('li.dropdown a.dropdown-toggle').on('click', function () {
@@ -220,6 +239,7 @@ $(document).ready(function () {
         jsRoutes.controllers.ClienteController.edit($(this).attr('data-id')).ajax({
             contentType: 'application/json',
             success: function (data) {
+                $('#modalCliente #id').val(data.id);
                 $('#modalCliente #nome').val(data.usuario_id.nome);
                 $('#modalCliente #email').val(data.usuario_id.email);
                 $('#modalCliente #cpf').val(data.usuario_id.cpf);
@@ -233,6 +253,7 @@ $(document).ready(function () {
         $('#modalCliente').show();
 
     });
+
     jsRoutes.controllers.ClienteController.indexJson().ajax({
         contentType: 'application/json',
         success: function (data) {
@@ -251,7 +272,7 @@ $(document).ready(function () {
 
     $('#modalCalendar #btn-delete').on('click', function (e) {
         var id = $(this).attr('data-id');
-        if(confirm('Deseja excluir?')) {
+        if (confirm('Deseja excluir?')) {
             jsRoutes.controllers.CalendarioController.delete(id).ajax({
                 success: function () {
                     $('#modalCalendar').hide();

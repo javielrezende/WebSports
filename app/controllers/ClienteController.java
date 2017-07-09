@@ -145,6 +145,6 @@ public class ClienteController extends Controller {
 
         Cliente.find.ref(id).delete();
 
-        return ok();
+        return index();
     }
 }

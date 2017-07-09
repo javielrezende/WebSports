@@ -41,12 +41,12 @@ public class CalendarioController extends Controller {
      * Faz a atualização de um registro
      * @return OK
      */
-    public Result update() {
+    public Result update(Integer id) {
         // Recebe um JSON contendo os campos do formulário
         JsonNode body = request().body().asJson();
 
         // Acha a reserva atual através do ID recebido por Json
-        Calendario calendario = Calendario.find.byId(body.findPath("id").asInt());
+        Calendario calendario = Calendario.find.byId(id);
 
         // Muda os valores dos atributos da reserva
         // body.findPath("Campo do formulario").comoString
