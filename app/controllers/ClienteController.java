@@ -107,27 +107,28 @@ public class ClienteController extends Controller {
         //Recebe os dados do formulario
         DynamicForm form = formFactory.form().bindFromRequest();
 
-        Cliente clienteSalvo = Cliente.find.byId(id);
-        Endereco enderecoSalvo = clienteSalvo.usuario_id.endereco_id;
-        Usuario usuarioSalvo = clienteSalvo.usuario_id;
+        Cliente clienteSalvo = Cliente.find
+                .fetch("usuario_id")
+                .fetch("usuario_id.endereco_id").where().idEq(id).findUnique();
 
         System.out.println(form.get("numero"));
-        enderecoSalvo.rua = form.get("endereco");
 
-        enderecoSalvo.setNumero(form.get("numero"));
-        enderecoSalvo.complemento = form.get("complemento");
-        enderecoSalvo.cep = form.get("cep");
-        enderecoSalvo.setCidade_id(form.get("cidade"));
-        enderecoSalvo.bairro = form.get("bairro");
+        clienteSalvo.usuario_id.endereco_id.setRua(form.get("endereco"));
 
-        usuarioSalvo.nome = form.get("nome");
-        usuarioSalvo.email = form.get("email");
-        usuarioSalvo.senha = form.get("senha");
-        usuarioSalvo.cpf = form.get("cpf");
+        clienteSalvo.usuario_id.endereco_id.setNumero(form.get("numero"));
+        clienteSalvo.usuario_id.endereco_id.setComplemento(form.get("complemento"));
+        clienteSalvo.usuario_id.endereco_id.setCep(form.get("cep"));
+        clienteSalvo.usuario_id.endereco_id.setCidade_id(form.get("cidade"));
+        clienteSalvo.usuario_id.endereco_id.setBairro(form.get("bairro"));
+
+        clienteSalvo.usuario_id.setNome(form.get("nome"));
+        clienteSalvo.usuario_id.setEmail(form.get("email"));
+        clienteSalvo.usuario_id.setSenha(form.get("senha"));
+        clienteSalvo.usuario_id.setCpf(form.get("cpf"));
 
         clienteSalvo.update();
-        enderecoSalvo.update();
-        usuarioSalvo.update();
+        clienteSalvo.usuario_id.update();
+        clienteSalvo.usuario_id.endereco_id.update();
 
         return index();
 

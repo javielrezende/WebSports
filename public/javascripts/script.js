@@ -244,7 +244,6 @@ $(document).ready(function () {
     });
 
     $('.btnCliEdit').on('click', function () {
-        var id = $('.btnCliEdit').attr('data-id');
         jsRoutes.controllers.ClienteController.edit($(this).attr('data-id')).ajax({
             contentType: 'application/json',
             success: function (data) {
@@ -262,7 +261,7 @@ $(document).ready(function () {
         $('#modalCliente').show();
         $('.btn-save').on('click', function (e) {
             e.preventDefault();
-            $('#modalCliente form').attr('action', '/cliente/edit/' + id);
+            $('#modalCliente form').attr('action', '/cliente/edit/' + $('#modalCliente #id').val());
             $('#modalCliente form').submit();
         })
     });

@@ -85,12 +85,3 @@
         </form>
     </div>
 </div>
-<script>
-        $('#modalClienteToggle').on('click', function () {
-            $('#modalCliente form').attr('action', @routes.ClienteController.save())
-        });
-        function  att() {
-            $('#modalCliente form').attr('action', @routes.ClienteController.update(1))
-
-        }
-</script>

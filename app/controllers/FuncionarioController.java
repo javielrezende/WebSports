@@ -92,29 +92,28 @@ public class FuncionarioController extends Controller {
     }
 
     public Result update(Integer id) {
-
         //Recebe os dados do formulario
         DynamicForm form = formFactory.form().bindFromRequest();
 
-        Funcionario funcionarioSalvo = Funcionario.find.byId(id);
-        Usuario usuarioSalvo = funcionarioSalvo.usuario_id;
-        Endereco enderecoSalvo = usuarioSalvo.endereco_id;
+        Funcionario funcionarioSalvo = Funcionario.find
+                .fetch("usuario_id")
+                .fetch("usuario_id.endereco_id").where().idEq(id).findUnique();
 
-        enderecoSalvo.rua = form.get("endereco");
-        enderecoSalvo.setNumero(form.get("numero"));
-        enderecoSalvo.complemento = form.get("complemento");
-        enderecoSalvo.cep = form.get("cep");
-        enderecoSalvo.setCidade_id(form.get("cidade"));
-        enderecoSalvo.bairro = form.get("bairro");
+        funcionarioSalvo.usuario_id.endereco_id.setRua(form.get("endereco"));
+        funcionarioSalvo.usuario_id.endereco_id.setNumero(form.get("numero"));
+        funcionarioSalvo.usuario_id.endereco_id.setComplemento(form.get("complemento"));
+        funcionarioSalvo.usuario_id.endereco_id.setCep(form.get("cep"));
+        funcionarioSalvo.usuario_id.endereco_id.setCidade_id(form.get("cidade"));
+        funcionarioSalvo.usuario_id.endereco_id.setBairro(form.get("bairro"));
 
-        usuarioSalvo.nome = form.get("nome");
-        usuarioSalvo.email = form.get("email");
-        usuarioSalvo.senha = form.get("senha");
-        usuarioSalvo.cpf = form.get("cpf");
+        funcionarioSalvo.usuario_id.setNome(form.get("nome"));
+        funcionarioSalvo.usuario_id.setEmail(form.get("email"));
+        funcionarioSalvo.usuario_id.setSenha(form.get("senha"));
+        funcionarioSalvo.usuario_id.setCpf(form.get("cpf"));
 
         funcionarioSalvo.update();
-        enderecoSalvo.update();
-        usuarioSalvo.update();
+        funcionarioSalvo.usuario_id.update();
+        funcionarioSalvo.usuario_id.endereco_id.update();
 
         return index();
     }
