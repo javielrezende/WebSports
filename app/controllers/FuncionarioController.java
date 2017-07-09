@@ -1,5 +1,7 @@
 package controllers;
 
+import be.objectify.deadbolt.java.actions.SubjectPresent;
+import be.objectify.deadbolt.java.actions.Unrestricted;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Transaction;
 import models.Cliente;
@@ -22,6 +24,7 @@ import java.util.List;
 /**
  * Created by Roger Rezende on 17/05/2017.
  */
+@Unrestricted
 public class FuncionarioController extends Controller {
 
     @Inject

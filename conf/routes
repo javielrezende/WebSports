@@ -39,18 +39,23 @@ GET         /cliente/edit/:id            controllers.ClienteController.edit(id:I
 POST        /cliente/edit/:id            controllers.ClienteController.update(id:Integer)
 GET         /cliente/delete/:id          controllers.ClienteController.delete(id:Integer)
 #CRUD Quadra TODO
-GET         /quadra                     controllers.QuadraController.index()
-POST        /quadra/save                controllers.QuadraController.save()
-GET         /quadra/create              controllers.QuadraController.create()
-GET         /quadra/edit/:id            controllers.QuadraController.edit(id:Integer)
-POST        /quadra/edit/:id            controllers.QuadraController.update(id:Integer)
-GET         /quadra/delete/:id          controllers.QuadraController.delete(id:Integer)
+GET         /quadra                      controllers.QuadraController.index()
+POST        /quadra/save                 controllers.QuadraController.save()
+GET         /quadra/create               controllers.QuadraController.create()
+GET         /quadra/edit/:id             controllers.QuadraController.edit(id:Integer)
+POST        /quadra/edit/:id             controllers.QuadraController.update(id:Integer)
+GET         /quadra/delete/:id           controllers.QuadraController.delete(id:Integer)
 
 #Grafico
-GET         /grafico                    controllers.GraficoController.index()
+GET         /grafico                     controllers.GraficoController.index()
 
 # Map static resources from the /public folder to the /assets URL path
-GET         /assets/*file        controllers.Assets.versioned(path="/public", file: Asset)
+GET         /assets/*file                controllers.Assets.versioned(path="/public", file: Asset)
+
+#Auth
+GET         /login                       controllers.AuthController.index()
+POST        /login                       controllers.AuthController.login()
+GET         /logoff                      controllers.AuthController.logoff()
 
 #JavaScript Route
-GET        /javascriptRoutes      controllers.CalendarioController.javascriptRoutes
+GET        /javascriptRoutes             controllers.CalendarioController.javascriptRoutes

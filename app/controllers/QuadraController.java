@@ -1,11 +1,13 @@
 package controllers;
 
+import be.objectify.deadbolt.java.actions.SubjectPresent;
 import play.mvc.Controller;
 import play.mvc.Result;
 
 /**
  * Created by Miguel on 15/05/2017.
  */
+@SubjectPresent
 public class QuadraController extends Controller {
     public Result index() {
         return ok(views.html.funcionario.quadra_list.render());

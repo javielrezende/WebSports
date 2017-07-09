@@ -1,9 +1,12 @@
 package controllers;
 
+import be.objectify.deadbolt.java.actions.SubjectPresent;
+import be.objectify.deadbolt.java.actions.Unrestricted;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import play.data.FormFactory;
 import play.libs.Json;
+import play.libs.concurrent.HttpExecutionContext;
 import play.mvc.*;
 import models.Calendario;
 import play.mvc.Controller;
@@ -16,9 +19,18 @@ import java.util.*;
 /**
  * Created by Miguel on 07/05/2017.
  */
+@SubjectPresent
 public class CalendarioController extends Controller {
     @Inject
     private FormFactory formFactory;
+
+    private final HttpExecutionContext ec;
+
+    @Inject
+    public CalendarioController(HttpExecutionContext ec) {
+        this.ec = ec;
+    }
+
 
     /**
      *
@@ -32,6 +44,7 @@ public class CalendarioController extends Controller {
     /**
      * @return a lista de todos registros dentro do calendario em formato JSON
      */
+
     public Result json()  {
         List<Calendario> lista = Calendario.find.all();
         return ok(Json.toJson(lista));

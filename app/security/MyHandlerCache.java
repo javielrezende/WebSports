@@ -12,14 +12,16 @@ import java.util.Map;
 @Singleton
 public class MyHandlerCache implements HandlerCache
 {
-    private final DeadboltHandler defaultHandler = new MyDeadboltHandler();
+    private final DeadboltHandler defaultHandler;
     private final Map<String, DeadboltHandler> handlers = new HashMap<>();
 
     @Inject
-    public MyHandlerCache()
+    public MyHandlerCache(final DeadboltHandler handler)
     {
-        handlers.put(HandlerKeys.DEFAULT.key, defaultHandler);
-        handlers.put(HandlerKeys.ALT.key, new MyAlternativeDeadboltHandler());
+        this.defaultHandler = handler;
+        handlers.put(defaultHandler.handlerName(), defaultHandler);
+        final DeadboltHandler altHandler = new MyAlternativeDeadboltHandler();
+        handlers.put(altHandler.handlerName(), altHandler);
     }
 
     @Override

@@ -3,11 +3,18 @@ package security;
 import be.objectify.deadbolt.java.DeadboltHandler;
 import be.objectify.deadbolt.java.DynamicResourceHandler;
 import be.objectify.deadbolt.java.models.Subject;
+import controllers.AuthController;
+import models.AuthorisedUser;
+import models.Funcionario;
+import play.mvc.Controller;
 import play.mvc.Http;
 import play.mvc.Result;
 
 import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
+
+import static play.mvc.Results.ok;
 
 /**
  * Created by Miguel on 09/07/2017.
@@ -15,17 +22,18 @@ import java.util.concurrent.CompletionStage;
 public class MyDeadboltHandler implements DeadboltHandler {
     @Override
     public CompletionStage<Optional<Result>> beforeAuthCheck(Http.Context context) {
-        return null;
+        return CompletableFuture.completedFuture(Optional.empty());
     }
 
     @Override
     public CompletionStage<Optional<? extends Subject>> getSubject(Http.Context context) {
-        return null;
+        String email = Controller.session("connected");
+        return CompletableFuture.supplyAsync(() -> Optional.ofNullable(Funcionario.findByEmail(email)));
     }
 
     @Override
     public CompletionStage<Result> onAuthFailure(Http.Context context, Optional<String> optional) {
-        return null;
+        return CompletableFuture.completedFuture(new AuthController().index());
     }
 
     @Override
@@ -35,6 +43,6 @@ public class MyDeadboltHandler implements DeadboltHandler {
 
     @Override
     public String handlerName() {
-        return null;
+        return HandlerKeys.DEFAULT.key;
     }
 }

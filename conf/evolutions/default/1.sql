@@ -3,6 +3,25 @@
 
 # --- !Ups
 
+create table authorised_user (
+  id                            bigint auto_increment not null,
+  user_name                     varchar(255),
+  password                      varchar(255),
+  constraint pk_authorised_user primary key (id)
+);
+
+create table authorised_user_security_role (
+  authorised_user_id            bigint not null,
+  security_role_id              bigint not null,
+  constraint pk_authorised_user_security_role primary key (authorised_user_id,security_role_id)
+);
+
+create table authorised_user_user_permission (
+  authorised_user_id            bigint not null,
+  user_permission_id            bigint not null,
+  constraint pk_authorised_user_user_permission primary key (authorised_user_id,user_permission_id)
+);
+
 create table calendario (
   id                            integer auto_increment not null,
   title                         varchar(255),
@@ -77,6 +96,18 @@ create table funcionario (
   constraint pk_funcionario primary key (id)
 );
 
+create table funcionario_security_role (
+  funcionario_id                integer not null,
+  security_role_id              bigint not null,
+  constraint pk_funcionario_security_role primary key (funcionario_id,security_role_id)
+);
+
+create table funcionario_user_permission (
+  funcionario_id                integer not null,
+  user_permission_id            bigint not null,
+  constraint pk_funcionario_user_permission primary key (funcionario_id,user_permission_id)
+);
+
 create table pagamento (
   id                            integer auto_increment not null,
   valor                         double,
@@ -138,6 +169,12 @@ create table reserva (
   constraint pk_reserva primary key (id)
 );
 
+create table security_role (
+  id                            bigint auto_increment not null,
+  name                          varchar(255),
+  constraint pk_security_role primary key (id)
+);
+
 create table tipo_pagamento (
   id                            integer auto_increment not null,
   tipo                          varchar(255),
@@ -148,6 +185,12 @@ create table tipo_quadra (
   id                            integer auto_increment not null,
   descricao                     varchar(255),
   constraint pk_tipo_quadra primary key (id)
+);
+
+create table user_permission (
+  id                            bigint auto_increment not null,
+  permission_value              varchar(255),
+  constraint pk_user_permission primary key (id)
 );
 
 create table usuario (
@@ -170,6 +213,18 @@ create table venda (
   constraint pk_venda primary key (id)
 );
 
+alter table authorised_user_security_role add constraint fk_authorised_user_security_role_authorised_user foreign key (authorised_user_id) references authorised_user (id) on delete restrict on update restrict;
+create index ix_authorised_user_security_role_authorised_user on authorised_user_security_role (authorised_user_id);
+
+alter table authorised_user_security_role add constraint fk_authorised_user_security_role_security_role foreign key (security_role_id) references security_role (id) on delete restrict on update restrict;
+create index ix_authorised_user_security_role_security_role on authorised_user_security_role (security_role_id);
+
+alter table authorised_user_user_permission add constraint fk_authorised_user_user_permission_authorised_user foreign key (authorised_user_id) references authorised_user (id) on delete restrict on update restrict;
+create index ix_authorised_user_user_permission_authorised_user on authorised_user_user_permission (authorised_user_id);
+
+alter table authorised_user_user_permission add constraint fk_authorised_user_user_permission_user_permission foreign key (user_permission_id) references user_permission (id) on delete restrict on update restrict;
+create index ix_authorised_user_user_permission_user_permission on authorised_user_user_permission (user_permission_id);
+
 alter table carrinho add constraint fk_carrinho_produtos_id foreign key (produtos_id) references produtos (id) on delete restrict on update restrict;
 create index ix_carrinho_produtos_id on carrinho (produtos_id);
 
@@ -191,6 +246,18 @@ alter table funcionario add constraint fk_funcionario_usuario_id foreign key (us
 
 alter table funcionario add constraint fk_funcionario_cargo_id foreign key (cargo_id) references cargo (id) on delete restrict on update restrict;
 create index ix_funcionario_cargo_id on funcionario (cargo_id);
+
+alter table funcionario_security_role add constraint fk_funcionario_security_role_funcionario foreign key (funcionario_id) references funcionario (id) on delete restrict on update restrict;
+create index ix_funcionario_security_role_funcionario on funcionario_security_role (funcionario_id);
+
+alter table funcionario_security_role add constraint fk_funcionario_security_role_security_role foreign key (security_role_id) references security_role (id) on delete restrict on update restrict;
+create index ix_funcionario_security_role_security_role on funcionario_security_role (security_role_id);
+
+alter table funcionario_user_permission add constraint fk_funcionario_user_permission_funcionario foreign key (funcionario_id) references funcionario (id) on delete restrict on update restrict;
+create index ix_funcionario_user_permission_funcionario on funcionario_user_permission (funcionario_id);
+
+alter table funcionario_user_permission add constraint fk_funcionario_user_permission_user_permission foreign key (user_permission_id) references user_permission (id) on delete restrict on update restrict;
+create index ix_funcionario_user_permission_user_permission on funcionario_user_permission (user_permission_id);
 
 alter table pagamento add constraint fk_pagamento_tipopagamento_id foreign key (tipopagamento_id) references tipo_pagamento (id) on delete restrict on update restrict;
 create index ix_pagamento_tipopagamento_id on pagamento (tipopagamento_id);
@@ -237,6 +304,18 @@ create index ix_venda_copa_id on venda (copa_id);
 
 # --- !Downs
 
+alter table authorised_user_security_role drop foreign key fk_authorised_user_security_role_authorised_user;
+drop index ix_authorised_user_security_role_authorised_user on authorised_user_security_role;
+
+alter table authorised_user_security_role drop foreign key fk_authorised_user_security_role_security_role;
+drop index ix_authorised_user_security_role_security_role on authorised_user_security_role;
+
+alter table authorised_user_user_permission drop foreign key fk_authorised_user_user_permission_authorised_user;
+drop index ix_authorised_user_user_permission_authorised_user on authorised_user_user_permission;
+
+alter table authorised_user_user_permission drop foreign key fk_authorised_user_user_permission_user_permission;
+drop index ix_authorised_user_user_permission_user_permission on authorised_user_user_permission;
+
 alter table carrinho drop foreign key fk_carrinho_produtos_id;
 drop index ix_carrinho_produtos_id on carrinho;
 
@@ -258,6 +337,18 @@ alter table funcionario drop foreign key fk_funcionario_usuario_id;
 
 alter table funcionario drop foreign key fk_funcionario_cargo_id;
 drop index ix_funcionario_cargo_id on funcionario;
+
+alter table funcionario_security_role drop foreign key fk_funcionario_security_role_funcionario;
+drop index ix_funcionario_security_role_funcionario on funcionario_security_role;
+
+alter table funcionario_security_role drop foreign key fk_funcionario_security_role_security_role;
+drop index ix_funcionario_security_role_security_role on funcionario_security_role;
+
+alter table funcionario_user_permission drop foreign key fk_funcionario_user_permission_funcionario;
+drop index ix_funcionario_user_permission_funcionario on funcionario_user_permission;
+
+alter table funcionario_user_permission drop foreign key fk_funcionario_user_permission_user_permission;
+drop index ix_funcionario_user_permission_user_permission on funcionario_user_permission;
 
 alter table pagamento drop foreign key fk_pagamento_tipopagamento_id;
 drop index ix_pagamento_tipopagamento_id on pagamento;
@@ -301,6 +392,12 @@ drop index ix_venda_pagamento_id on venda;
 alter table venda drop foreign key fk_venda_copa_id;
 drop index ix_venda_copa_id on venda;
 
+drop table if exists authorised_user;
+
+drop table if exists authorised_user_security_role;
+
+drop table if exists authorised_user_user_permission;
+
 drop table if exists calendario;
 
 drop table if exists cargo;
@@ -321,6 +418,10 @@ drop table if exists estado;
 
 drop table if exists funcionario;
 
+drop table if exists funcionario_security_role;
+
+drop table if exists funcionario_user_permission;
+
 drop table if exists pagamento;
 
 drop table if exists pais;
@@ -335,9 +436,13 @@ drop table if exists quadra;
 
 drop table if exists reserva;
 
+drop table if exists security_role;
+
 drop table if exists tipo_pagamento;
 
 drop table if exists tipo_quadra;
+
+drop table if exists user_permission;
 
 drop table if exists usuario;
 

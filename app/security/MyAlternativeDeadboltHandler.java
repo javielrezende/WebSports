@@ -34,6 +34,6 @@ public class MyAlternativeDeadboltHandler implements be.objectify.deadbolt.java.
 
     @Override
     public String handlerName() {
-        return null;
+        return HandlerKeys.ALT.key;
     }
 }

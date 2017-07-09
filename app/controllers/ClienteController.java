@@ -1,5 +1,6 @@
 package controllers;
 
+import be.objectify.deadbolt.java.actions.SubjectPresent;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Transaction;
 import models.Cliente;
@@ -36,6 +37,7 @@ import java.util.List;
  *      return TODO;
  *   }
  */
+@SubjectPresent
 public class ClienteController extends Controller {
 
     @Inject

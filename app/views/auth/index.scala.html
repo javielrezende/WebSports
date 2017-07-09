@@ -1,0 +1,102 @@
+@(session: String = "")
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/scss/auth.css ")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png ")">
+        <title>Document</title>
+    </head>
+    <body>
+        @if(session != "") {
+            <h2>@session</h2>
+        }
+        <div class='login'>
+            <div class='login_title'>
+
+                <span>Logar em sua conta</span>
+            </div>
+            <form action="@routes.AuthController.login()" method="post">
+            <div class='login_fields'>
+                <div class='login_fields__user'>
+                    <div class='icon'>
+                        <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/user_icon_copy.png'>
+                    </div>
+                    <input placeholder='Usuário' type="text" name="email">
+                    <div class='validation'>
+                        <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
+                    </div>
+                </div>
+                <div class='login_fields__password'>
+                    <div class='icon'>
+                        <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/lock_icon_copy.png'>
+                    </div>
+                    <input placeholder='Senha' type='password' name="password">
+                    <div class='validation'>
+                        <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
+                    </div>
+                </div>
+                <div class='login_fields__submit'>
+                    <input type='submit' value='Enviar'>
+                    <div class='forgot'>
+                        <a href='#'>Esqueceu sua senha??</a>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+        <script >
+                $('input[type="submit"]').click(function(){
+                    $('.login').addClass('test')
+                    setTimeout(function(){
+                        $('.login').addClass('testtwo')
+                    },300);
+                    setTimeout(function(){
+                        $(".authent").show().animate({right:-320},{easing : 'easeOutQuint' ,duration: 600, queue: false });
+                        $(".authent").animate({opacity: 1},{duration: 200, queue: false }).addClass('visible');
+                    },500);
+                    setTimeout(function(){
+                        $(".authent").show().animate({right:90},{easing : 'easeOutQuint' ,duration: 600, queue: false });
+                        $(".authent").animate({opacity: 0},{duration: 200, queue: false }).addClass('visible');
+                        $('.login').removeClass('testtwo')
+                    },2500);
+                    setTimeout(function(){
+                        $('.login').removeClass('test')
+                        $('.login div').fadeOut(123);
+                    },2800);
+                    setTimeout(function(){
+                        $('.success').fadeIn();
+                    },3200);
+                });
+
+                $('input[type="text"],input[type="password"]').focus(function(){
+                    $(this).prev().animate({'opacity':'1'},200)
+                });
+                $('input[type="text"],input[type="password"]').blur(function(){
+                    $(this).prev().animate({'opacity':'.5'},200)
+                });
+
+                $('input[type="text"],input[type="password"]').keyup(function(){
+                    if(!$(this).val() == ''){
+                        $(this).next().animate({'opacity':'1','right' : '30'},200)
+                    } else {
+                        $(this).next().animate({'opacity':'0','right' : '20'},200)
+                    }
+                });
+
+                var open = 0;
+                $('.tab').click(function(){
+                    $(this).fadeOut(200,function(){
+                        $(this).parent().animate({'left':'0'})
+                    });
+                });
+
+
+        </script>
+    </body>
+</html>
