@@ -12,6 +12,7 @@ Visando a dificuldade de proprietários de quadras esportivas, com o grande núm
 
 ### Tecnologias
 1. Para auxílio e diminuição do código, utilizamos o [Play! framework](https://www.playframework.com/).
+1. Junto ao Play, para autenticação estamos usando [Deadbolt 2](https://github.com/schaloner/deadbolt-2).
 1. Para gerenciamento de dependências utilizamos o [Scala - SBT](http://www.scala-sbt.org/).
 1. Ferramenta de Mapeamento Objeto-Relacional [Ebean](http://ebean-orm.github.io/).
 1. Para Front-end [Sass](http://sass-lang.com/libsass) / [jQuery](https://jquery.com/) / [FullCalendar.js](https://fullcalendar.io/).
