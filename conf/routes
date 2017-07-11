@@ -56,6 +56,9 @@ GET         /assets/*file                controllers.Assets.versioned(path="/pub
 GET         /login                       controllers.AuthController.index()
 POST        /login                       controllers.AuthController.login()
 GET         /logoff                      controllers.AuthController.logoff()
+GET         /forgotpassword              controllers.AuthController.forgotPassword()
+POST        /forgotpassword              controllers.AuthController.forgotPasswordMail()
 
 #JavaScript Route
 GET        /javascriptRoutes             controllers.CalendarioController.javascriptRoutes
+

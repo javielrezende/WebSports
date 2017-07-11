@@ -13,3 +13,6 @@ libraryDependencies += evolutions
 libraryDependencies ++= Seq(
   "be.objectify" %% "deadbolt-java" % "2.5.0"
 )
+
+libraryDependencies += "com.typesafe.play" %% "play-mailer" % "6.0.0"
+libraryDependencies += "com.typesafe.play" %% "play-mailer-guice" % "6.0.0"
