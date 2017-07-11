@@ -12,7 +12,10 @@ import static play.mvc.Controller.session;
 import static play.mvc.Results.ok;
 
 /**
- * Created by Miguel on 09/07/2017.
+ * Created by Miguel, Roger, William on 09/07/2017.
+ *
+ * Controller para fazer o login do cliente.
+ *
  */
 public class AuthController {
     @Inject

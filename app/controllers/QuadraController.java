@@ -5,7 +5,9 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 /**
- * Created by Miguel on 15/05/2017.
+ * Created by Miguel, Roger, William on 15/05/2017.
+ *
+* Controller do crud da Quadra.
  */
 @SubjectPresent
 public class QuadraController extends Controller {
