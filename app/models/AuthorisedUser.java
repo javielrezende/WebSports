@@ -27,6 +27,8 @@ import java.util.List;
 
 /**
  * @author Steve Chaloner (steve@objectify.be)
+ *
+ * Model da autentificação da tela de login
  */
 @Entity
 public class AuthorisedUser extends Model implements Subject

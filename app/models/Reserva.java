@@ -11,7 +11,9 @@ import javax.persistence.ManyToOne;
 import java.util.Calendar;
 
 /**
- * Created by William on 02/05/2017.
+ * Created by Miguel, Roger, William on 02/05/2017.
+ *
+ * Model criada para tabela Reserva.
  */
 @Entity
 public class Reserva extends Model {

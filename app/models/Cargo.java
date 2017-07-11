@@ -6,7 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * Created by William on 03/05/2017.
+ * Created by Miguerl, Roger, William on 03/05/2017.
+ *
+ * Model do cargo onde cria a tabela de cargos.
  */
 @Entity
 public class Cargo extends Model{

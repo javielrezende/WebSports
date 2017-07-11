@@ -7,7 +7,9 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
- * Created by Miguel on 17/04/2017.
+ * Created by Miguel, Roger, William on 17/04/2017.
+ *
+ * Model criada para tabela Usuario.
  */
 
 @Entity

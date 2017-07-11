@@ -23,6 +23,8 @@ import javax.persistence.Id;
 
 /**
  * @author Steve Chaloner (steve@objectify.be)
+ *
+ * Model para segurança da autentificação.
  */
 @Entity
 public class SecurityRole extends Model implements Role

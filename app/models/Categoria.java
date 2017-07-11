@@ -6,7 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * Created by William on 29/04/2017.
+ * Created by Miguel, Roger, William  on 29/04/2017.
+ *
+ * Model que cria a tabela categoria.
  */
 
 @Entity

@@ -8,6 +8,13 @@ import com.avaje.ebean.Model;
 import javax.persistence.*;
 import java.util.List;
 
+/**
+ * Created by Miguel, Roger, William  on 03/05/2017.
+ *
+ * Model que cria a tabela Funcionario.
+ */
+
+
 @Entity
 public class Funcionario extends Model implements Subject {
     @Id

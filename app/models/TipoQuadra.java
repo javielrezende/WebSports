@@ -6,7 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * Created by William on 02/05/2017.
+ * Created by Miguel, Roger, William on 02/05/2017.
+ *
+ * Model criada para o TipoQuadra.
  */
 @Entity
 public class TipoQuadra extends Model{

@@ -10,7 +10,9 @@ import javax.persistence.ManyToOne;
 import java.sql.Date;
 
 /**
- * Created by William on 02/05/2017.
+ * Created by Miguel, Roger, William on 02/05/2017.
+ *
+ * Model para criar a tabela de Pagamento.
  */
 @Entity
 public class Pagamento extends Model{
