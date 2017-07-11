@@ -132,7 +132,8 @@ public class CalendarioController extends Controller {
                         routes.javascript.FuncionarioController.edit(),
                         routes.javascript.ClienteController.edit(),
                         routes.javascript.ClienteController.indexJson(),
-                        routes.javascript.CalendarioController.delete()
+                        routes.javascript.CalendarioController.delete(),
+                        routes.javascript.ClienteController.grafJson()
 
                 )
         ).as("text/javascript");

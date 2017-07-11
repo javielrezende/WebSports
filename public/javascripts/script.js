@@ -110,39 +110,39 @@ $(document).ready(function () {
 
     $('#modalCalendar .btn-save').on('click', function (e) {
         e.preventDefault();
-        if($('#modalCalendar #acao').val() == '0') {
-        jsRoutes.controllers.CalendarioController.save().ajax({
-            data: JSON.stringify([{
-                'title': $('#title').val(),
-                'start': $('#start').val(),
-                'end': $('#end').val(),
-                'color': $('#color').val()
-            }]),
-            contentType: 'application/json',
-            success: function () {
-                $('#calendar').fullCalendar('removeEvents');
-                $('#calendar').fullCalendar('addEventSource', '/json');
-                $('#calendar').fullCalendar('rerenderEvents');
-            }
-        });
+        if ($('#modalCalendar #acao').val() == '0') {
+            jsRoutes.controllers.CalendarioController.save().ajax({
+                data: JSON.stringify([{
+                    'title': $('#title').val(),
+                    'start': $('#start').val(),
+                    'end': $('#end').val(),
+                    'color': $('#color').val()
+                }]),
+                contentType: 'application/json',
+                success: function () {
+                    $('#calendar').fullCalendar('removeEvents');
+                    $('#calendar').fullCalendar('addEventSource', '/json');
+                    $('#calendar').fullCalendar('rerenderEvents');
+                }
+            });
         } else {
             jsRoutes.controllers.CalendarioController.update($('#modalCalendar #id').val()).ajax({
-            data: JSON.stringify([{
-                'title': $('#title').val(),
-                'start': $('#start').val(),
-                'end': $('#end').val(),
-                'color': $('#color').val()
-            }]),
-            contentType: 'application/json',
-            success: function () {
-                $('#calendar').fullCalendar('removeEvents');
-                $('#calendar').fullCalendar('addEventSource', '/json');
-                $('#calendar').fullCalendar('rerenderEvents');
-            }
-        });
+                data: JSON.stringify([{
+                    'title': $('#title').val(),
+                    'start': $('#start').val(),
+                    'end': $('#end').val(),
+                    'color': $('#color').val()
+                }]),
+                contentType: 'application/json',
+                success: function () {
+                    $('#calendar').fullCalendar('removeEvents');
+                    $('#calendar').fullCalendar('addEventSource', '/json');
+                    $('#calendar').fullCalendar('rerenderEvents');
+                }
+            });
         }
         $('#modalCalendar').hide();
-    
+
     });
 
     $('li.dropdown a.dropdown-toggle').on('click', function () {
@@ -295,6 +295,44 @@ $(document).ready(function () {
             });
         }
     })
+
+    var ctx = document.getElementsByClassName("line-chart");
+    var bairros = [];
+    var qtdClientes = [];
+
+    jsRoutes.controllers.ClienteController.grafJson().ajax({
+        success: function (data) {
+            data.forEach(function (value) {
+                bairros.push("" + value.bairro + "");
+                qtdClientes.push("" + value.qtdclientes + "");
+
+            })
+            var chartGraph = new Chart(ctx,
+                {
+                    "type": "bar",
+                    "data": {
+                        "labels": bairros,
+                        "datasets": [{
+                            "label": "Quantidade de clientes por bairro",
+                            "data": qtdClientes,
+                            "fill": false,
+                            "backgroundColor": ["rgba(255, 99, 132, 0.2)",
+                                "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)",
+                                "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)",
+                                "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"],
+                            "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)",
+                                "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)",
+                                "rgb(153, 102, 255)", "rgb(201, 203, 207)"],
+                            "borderWidth": 1
+                        }]
+                    },
+                    "options": {"scales": {"yAxes": [{"ticks": {"beginAtZero": true},"stacked":true}]}}
+                });
+
+
+        }
+    });
+    console.log(bairros + " " + qtdClientes);
 
 
 });

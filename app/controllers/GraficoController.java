@@ -1,8 +1,14 @@
 package controllers;
 
 import be.objectify.deadbolt.java.actions.SubjectPresent;
+import com.avaje.ebean.Ebean;
+import com.avaje.ebean.SqlQuery;
+import models.Cliente;
+import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
+
+import java.util.List;
 
 /**
  * Created by William on 09/07/2017.
@@ -13,23 +19,7 @@ public class GraficoController extends Controller {
         return ok(views.html.funcionario.grafico.render());
     }
 
-    public Result create() {
-        return TODO;
-    }
 
-    public Result save() {
-        return TODO;
-    }
 
-    public Result edit(Integer id) {
-        return TODO;
-    }
 
-    public Result update(Integer id) {
-        return TODO;
-    }
-
-    public Result delete(Integer id) {
-        return TODO;
-    }
 }

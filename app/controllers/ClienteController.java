@@ -2,6 +2,7 @@ package controllers;
 
 import be.objectify.deadbolt.java.actions.SubjectPresent;
 import com.avaje.ebean.Ebean;
+import com.avaje.ebean.SqlQuery;
 import com.avaje.ebean.Transaction;
 import models.Cliente;
 import models.Endereco;
@@ -50,11 +51,20 @@ public class ClienteController extends Controller {
         return ok(cliente_list.render(clientes));
     }
 
+
+
     public Result indexJson() {
         List<Cliente> clientes = Cliente.find
                 .fetch("usuario_id")
                 .fetch("usuario_id.endereco_id").findList();
         return ok(Json.toJson(clientes));
+    }
+
+    public Result grafJson() {
+        SqlQuery q = Ebean.createSqlQuery("select distinct endereco.bairro, count(cliente.id) as qtdClientes from cliente inner join usuario on cliente.usuario_id = usuario.id inner join endereco on usuario.endereco_id = endereco.id group by bairro");
+        List rows = q.findList();
+        System.out.println(Json.toJson(rows));
+        return ok(Json.toJson(rows));
     }
 
     public Result create() {
