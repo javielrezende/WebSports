@@ -17,7 +17,10 @@ import javax.inject.Inject;
 import java.util.*;
 
 /**
- * Created by Miguel on 07/05/2017.
+ * Created by Miguel, Roger, William on 07/05/2017.
+ *
+ * Controller para funcionamento do calendario.
+ *
  */
 @SubjectPresent
 public class CalendarioController extends Controller {

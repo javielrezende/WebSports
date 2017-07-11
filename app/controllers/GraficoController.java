@@ -11,7 +11,9 @@ import play.mvc.Result;
 import java.util.List;
 
 /**
- * Created by William on 09/07/2017.
+ * Created by Miguel, Roger, William on 09/07/2017.
+ *
+ * Controller do funcionamento do grafico.
  */
 @SubjectPresent
 public class GraficoController extends Controller {

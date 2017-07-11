@@ -13,7 +13,9 @@ import security.MyHandlerCache;
 import javax.inject.Singleton;
 
 /**
- * Created by Miguel on 09/07/2017.
+ * Created by Miguel, Roger, William on 09/07/2017.
+ *
+ *
  */
 public class CustomDeadboltHook extends Module {
     @Override

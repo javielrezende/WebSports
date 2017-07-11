@@ -12,7 +12,9 @@ import javax.persistence.ManyToOne;
 import java.sql.Date;
 
 /**
- * Created by William on 01/05/2017.
+ * Created by Miguel, Roger, William on 01/05/2017.
+ *
+ * Model criada para tabela de ProdutoEntrada.
  */
 @Entity
 public class ProdutoEntrada extends Model{

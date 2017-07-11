@@ -10,7 +10,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 /**
- * Created by Miguel on 08/05/2017.
+ * Created by Miguel, Roger, William on 08/05/2017.
+ *
+ * Model do calendario
  */
 @Entity
 public class Calendario extends Model {

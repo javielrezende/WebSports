@@ -5,7 +5,9 @@ import com.avaje.ebean.Model;
 import javax.persistence.*;
 
 /**
- * Created by William on 29/04/2017.
+ * Created by Miguel, Roger, William on 29/04/2017.
+ *
+ * Model criada para tabela Produtos.
  */
 
 

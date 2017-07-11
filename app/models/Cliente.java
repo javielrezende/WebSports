@@ -9,7 +9,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 /**
- * Created by William on 03/05/2017.
+ * Created by Miguel, Roger, William  on 03/05/2017.
+ *
+ * Model que cria a tabela cliente.
  */
 @Entity
 public class Cliente extends Model {

@@ -24,6 +24,8 @@ import javax.persistence.Id;
 
 /**
  * @author Steve Chaloner (steve@objectify.be)
+ *
+ * Model para Premisão do usuario.
  */
 @Entity
 public class UserPermission extends Model implements Permission

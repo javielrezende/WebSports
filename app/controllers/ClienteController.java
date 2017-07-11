@@ -19,24 +19,10 @@ import views.html.funcionario.*;
 import javax.inject.Inject;
 import java.util.List;
 
-/*
- * Created by Miguel on 14/05/2017.
+/**
+ * Created by Miguel, Roger, William on 14/05/2017.
  *
- *   public Result create() {
- *      return TODO;
- *   }
- *   public Result save() {
- *      return TODO;
- *   }
- *   public Result edit() {
- *      return TODO;
- *   }
- *    public Result update() {
- *      return TODO;
- *   }
- *   public Result delete() {
- *      return TODO;
- *   }
+ *Controller do Crud do funcionario
  */
 @SubjectPresent
 public class ClienteController extends Controller {

@@ -8,7 +8,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 /**
- * Created by William on 03/05/2017.
+ * Created by Miguel, Roger, William  on 03/05/2017.
+ *
+ * Model que cria a tabela Cidade
  */
 @Entity
 public class Cidade extends Model{

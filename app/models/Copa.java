@@ -6,7 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * Created by William on 01/05/2017.
+ * Created by Miguel, Roger, William  on 01/05/2017.
+ *
+ * Model que cria a tabela copa.
  */
 
 @Entity
