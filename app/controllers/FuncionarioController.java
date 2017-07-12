@@ -22,7 +22,9 @@ import javax.inject.Inject;
 import java.util.List;
 
 /**
- * Created by Roger Rezende on 17/05/2017.
+ * Created by Miguel, Roger, William  on 17/05/2017.
+ *
+ * Controller da view funcionanrio para fazer o crud
  */
 @Unrestricted
 public class FuncionarioController extends Controller {
@@ -30,7 +32,10 @@ public class FuncionarioController extends Controller {
     @Inject
     private FormFactory formFactory;
 
-
+    /**
+     *
+     * @return se ok retorna para funcionario_list
+     */
     public Result index() {
         List<Funcionario> funcionario = Funcionario.find
                 .fetch("cargo_id")
@@ -49,6 +54,11 @@ public class FuncionarioController extends Controller {
         return TODO;
     }
 
+
+    /**
+     *
+     * @return retorna para index
+     */
     public Result save() {
         DynamicForm form = formFactory.form().bindFromRequest();
         Funcionario funcionario = new Funcionario();
@@ -83,7 +93,11 @@ public class FuncionarioController extends Controller {
         return INDEX;
     }
 
-
+    /**
+     *
+     * @param id do funcionario
+     * @return retorna um json com id funcionario
+     */
     public Result edit(Integer id) {
         List<Funcionario> funcionario = Funcionario.find
                 .fetch("cargo_id")
@@ -94,6 +108,11 @@ public class FuncionarioController extends Controller {
         return ok(Json.toJson(funcionario.get(idFunc)));
     }
 
+    /**
+     *
+     * @param id do funcionario
+     * @return retorna para index
+     */
     public Result update(Integer id) {
         //Recebe os dados do formulario
         DynamicForm form = formFactory.form().bindFromRequest();
@@ -120,6 +139,12 @@ public class FuncionarioController extends Controller {
 
         return index();
     }
+
+    /**
+     *
+     * @param id do funcionario
+     * @return retorna para index
+     */
 
     public Result delete(Integer id) {
         Funcionario.find.ref(id).delete();

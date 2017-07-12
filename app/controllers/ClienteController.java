@@ -30,6 +30,11 @@ public class ClienteController extends Controller {
     @Inject
     private FormFactory formFactory;
 
+    /**
+     *
+     * @return ok retorna para lista de clientes
+     */
+
     public Result index() {
         List<Cliente> clientes = Cliente.find
                 .fetch("usuario_id")
@@ -37,7 +42,10 @@ public class ClienteController extends Controller {
         return ok(cliente_list.render(clientes));
     }
 
-
+    /**
+     *
+     * @return retorna um json do cliente
+     */
 
     public Result indexJson() {
         List<Cliente> clientes = Cliente.find
@@ -46,6 +54,11 @@ public class ClienteController extends Controller {
         return ok(Json.toJson(clientes));
     }
 
+
+    /**
+     *
+     * @return retorna um json para o grafico
+     */
     public Result grafJson() {
         SqlQuery q = Ebean.createSqlQuery("select distinct endereco.bairro, count(cliente.id) as qtdClientes from cliente inner join usuario on cliente.usuario_id = usuario.id inner join endereco on usuario.endereco_id = endereco.id group by bairro");
         List rows = q.findList();
@@ -57,6 +70,10 @@ public class ClienteController extends Controller {
         return TODO;
     }
 
+    /**
+     *
+     * @return depois de salvar os dados retorna para index
+     */
     public Result save() {
         //Recebe os dados do formulario
         DynamicForm form = formFactory.form().bindFromRequest();
