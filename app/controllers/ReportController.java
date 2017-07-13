@@ -10,7 +10,9 @@ import java.util.List;
 
 
 /**
- * Created by Programador on 12/07/2017.
+ * @author Roger
+ *
+ * Classe para gerar relatório em PDF
  */
 @SubjectPresent
 public class ReportController {
@@ -18,6 +20,12 @@ public class ReportController {
     @Inject
     public PdfGenerator pdfGenerator;
 
+    /**
+     * Método para gerar PDF
+     * <p>
+     * Faz uma busca de todos os clientes com seus bairros ordenados por bairros</p>
+     * @return PDF da view.report
+     */
     public Result document() {
         List<Cliente> cliente = Cliente.find.fetch("usuario_id")
                 .fetch("usuario_id.endereco_id")
