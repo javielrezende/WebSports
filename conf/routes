@@ -60,6 +60,9 @@ GET         /logoff                      controllers.AuthController.logoff()
 GET         /forgotpassword              controllers.AuthController.forgotPassword()
 POST        /forgotpassword              controllers.AuthController.forgotPasswordMail()
 
+#Report
+GET         /report                      controllers.ReportController.document()
+
 #JavaScript Route
 GET        /javascriptRoutes             controllers.CalendarioController.javascriptRoutes
 
