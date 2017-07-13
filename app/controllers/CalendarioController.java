@@ -61,19 +61,19 @@ public class CalendarioController extends Controller {
      * Método para atualizar o registro no banco
      * @return Json com o registro encontrado
      */
-    public Result update() {
+    public Result update(Integer id) {
         // Recebe um JSON contendo os campos do formulário
         JsonNode body = request().body().asJson();
 
         // Acha a reserva atual através do ID recebido por Json
-        Calendario calendario = Calendario.find.byId(body.findPath("id").asInt());
+        Calendario calendario = Calendario.find.byId(id);
 
         // Muda os valores dos atributos da reserva
         // body.findPath("Campo do formulario").comoString
         calendario.title = body.findPath("title").asText();
         calendario.setStart(body.findPath("start").asText());
         calendario.setEnd(body.findPath("end").asText());
-        calendario.color = body.findPath("color").asText();
+        calendario.color = "#880000";
 
         // Realiza o Update
         calendario.update();

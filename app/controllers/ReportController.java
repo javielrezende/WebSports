@@ -1,5 +1,6 @@
 package controllers;
 
+import be.objectify.deadbolt.java.actions.SubjectPresent;
 import it.innove.play.pdf.PdfGenerator;
 import models.Cliente;
 import play.mvc.Result;
@@ -7,11 +8,11 @@ import play.mvc.Result;
 import javax.inject.Inject;
 import java.util.List;
 
-import static play.mvc.Results.ok;
 
 /**
  * Created by Programador on 12/07/2017.
  */
+@SubjectPresent
 public class ReportController {
 
     @Inject

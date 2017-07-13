@@ -131,7 +131,6 @@ $(document).ready(function () {
                     'title': $('#title').val(),
                     'start': $('#start').val(),
                     'end': $('#end').val(),
-                    'color': $('#color').val()
                 }]),
                 contentType: 'application/json',
                 success: function () {

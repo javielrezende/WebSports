@@ -32,7 +32,7 @@
                                 </td>
                                 <td>
                                     <a class="btnCliEdit" href="javascript:;" data-id="@cliente.id">Editar</a>
-                                    <a href="@routes.ClienteController.delete(cliente.id)">Excluir</a>
+                                    <a href="@routes.ClienteController.delete(cliente.id)" onclick="confirm('Deseja mesmo excluir?')">Excluir</a>
                                 </td>
                             </tr>
                         }
