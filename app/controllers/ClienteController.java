@@ -3,13 +3,10 @@ package controllers;
 import be.objectify.deadbolt.java.actions.SubjectPresent;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.SqlQuery;
-import com.avaje.ebean.Transaction;
 import models.Cliente;
 import models.Endereco;
-import models.Funcionario;
 import models.Usuario;
 import play.data.DynamicForm;
-import play.data.Form;
 import play.data.FormFactory;
 import play.libs.Json;
 import play.mvc.Controller;
@@ -20,9 +17,10 @@ import javax.inject.Inject;
 import java.util.List;
 
 /**
- * Created by Miguel, Roger, William on 14/05/2017.
+ * @author Miguel, Roger, William
  *
- *Controller do Crud do funcionario
+ * Controller do Crud do funcionario
+ * <p><b>Só funciona se estiver logado</b></p>
  */
 @SubjectPresent
 public class ClienteController extends Controller {
@@ -31,10 +29,10 @@ public class ClienteController extends Controller {
     private FormFactory formFactory;
 
     /**
-     *
-     * @return ok retorna para lista de clientes
+     * <p>Método para entrar na view</p>
+     * <b>Route: /cliente </b>
+     * @return view.listagemDeClientes com todos clientes achados
      */
-
     public Result index() {
         List<Cliente> clientes = Cliente.find
                 .fetch("usuario_id")
@@ -43,10 +41,10 @@ public class ClienteController extends Controller {
     }
 
     /**
-     *
+     * Método para enviar um JSON para AJAX
+     * <p> Retorna uma lista de clientes em modo JSON para uso com AJAX</p>
      * @return retorna um json do cliente
      */
-
     public Result indexJson() {
         List<Cliente> clientes = Cliente.find
                 .fetch("usuario_id")
@@ -56,7 +54,9 @@ public class ClienteController extends Controller {
 
 
     /**
-     *
+     * Método para enviar dados ao grafico
+     * <p> Retorna qtd de clientes por bairro e os bairros
+     * em modo JSON para uso com AJAX</p>
      * @return retorna um json para o grafico
      */
     public Result grafJson() {
@@ -66,13 +66,19 @@ public class ClienteController extends Controller {
         return ok(Json.toJson(rows));
     }
 
+    /**
+     *
+     * @return TODO
+     */
     public Result create() {
         return TODO;
     }
 
     /**
-     *
-     * @return depois de salvar os dados retorna para index
+     * Método para criar um novo registro de Cliente
+     * <p>
+     * Cria um registro no banco para clientes recebendo os dados por formulario</p>
+     * @return view.cliente_list
      */
     public Result save() {
         //Recebe os dados do formulario
@@ -108,15 +114,31 @@ public class ClienteController extends Controller {
         return index();
     }
 
+    /**
+     * Método para editar um cliente
+     * <p>
+     * Recebe um id como parametro para localizar o registro</p>
+     * @param id
+     * Identifica qual registro e retora um JSON com os valores do registro
+     * @return Objeto de cliente em JSON
+     */
     public Result edit(Integer id) {
         List<Cliente> cliente = Cliente.find
                 .fetch("usuario_id")
-                .fetch("usuario_id.endereco_id").findList();
+                .fetch("usuario_id.endereco_id")
+                .findList();
         Cliente cliente1 = Cliente.find.byId(id);
         int idCli = cliente.indexOf(cliente1);
         return ok(Json.toJson(cliente.get(idCli)));
     }
 
+    /**
+     * Método para atualizar um Cliente
+     * <p>Recebe o parametro ID para localizar o registro</p>
+     * @param id
+     * Faz o atualização no banco de dados recebendo os valores por formulario.
+     * @return view.index
+     */
     public Result update(Integer id) {
 
         //Recebe os dados do formulario
@@ -150,7 +172,13 @@ public class ClienteController extends Controller {
 
     }
 
-
+    /**
+     * Método para deletar um Cliente
+     * <p>Recebe os o parametro ID para localizar o registro</p>
+     * @param id
+     * Deleta o registro
+     * @return view.index()
+     */
     public Result delete(Integer id) {
 
         Cliente.find.ref(id).delete();

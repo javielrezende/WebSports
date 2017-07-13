@@ -17,10 +17,10 @@ import javax.inject.Inject;
 import java.util.*;
 
 /**
- * Created by Miguel, Roger, William on 07/05/2017.
+ * @author Miguel, Roger, William
  *
  * Controller para funcionamento do calendario.
- *
+ * <p><b>Só funciona se estiver logado</b></p>
  */
 @SubjectPresent
 public class CalendarioController extends Controller {
@@ -36,6 +36,9 @@ public class CalendarioController extends Controller {
 
 
     /**
+     * Método para renderizar a view de login.
+     *
+     * <strong><p>Route: / </p></strong>
      *
      * @return view.funcionario.index
      */
@@ -45,17 +48,18 @@ public class CalendarioController extends Controller {
 
 
     /**
-     * @return a lista de todos registros dentro do calendario em formato JSON
+     * <p>Método para o funcionamento do calendario</p>
+     * Retorna todos os registros no banco para preencher o calendario
+     * @return Json com todos os registros do calendario
      */
-
     public Result json()  {
         List<Calendario> lista = Calendario.find.all();
         return ok(Json.toJson(lista));
     }
 
     /**
-     * Faz a atualização de um registro
-     * @return OK
+     * Método para atualizar o registro no banco
+     * @return Json com o registro encontrado
      */
     public Result update() {
         // Recebe um JSON contendo os campos do formulário
@@ -78,8 +82,9 @@ public class CalendarioController extends Controller {
         return ok(Json.toJson(calendario));
     }
     /**
-     * Cria um registro novo
-     * @return OK
+     * <p>Método para salvar os dados recebidos no banco</p>
+     * Recebe os dados através de AJAX com JSON
+     * @return dados recebidos por AJAX em JSON
      */
     public Result save() {
         // Recebe um JSON contendo os campos do formulário
@@ -103,20 +108,7 @@ public class CalendarioController extends Controller {
     }
 
 
-    /**
-    * Criação de rotas para usar dentro do javascript
-    * Sempre que for usar um dos metodos do controller dentro do javascript,
-    * Precisa adicionar o método dentro desse aqui
-    * Exemplo: Se eu precisasse chamar um metodo delete lá no Javascript
-    * Teria que adicionar uma rota nova para o método e
-    * adicionar uma linha no método abaixo.
-    * Ficaria:
-    * JavaScriptReverseRouter.create("jsRoutes",
-    *      routes.javascript.CalendarioController.update(),
-    *      routes.javascript.CalendarioController.save(),
-    *      routes.javascript.CalendarioController.delete(),
-    * )
-    */
+
 
     public Result delete(Integer id){
         // Busco o id no BD
@@ -126,7 +118,24 @@ public class CalendarioController extends Controller {
 
         return ok();
     }
-
+    /**
+     *
+     * <p>Método para criação das javascriptRoutes</p>
+     * @implNote Criação de rotas para usar dentro do javascript
+     *           Sempre que for usar um dos metodos do controller dentro do javascript,
+     *           Precisa adicionar o método dentro desse aqui
+     *           Exemplo: Se eu precisasse chamar um metodo delete lá no Javascript
+     *           Teria que adicionar uma rota nova para o método e
+     *           adicionar uma linha no método abaixo.
+     *           Ficaria:
+     *           JavaScriptReverseRouter.create("jsRoutes",
+     *                routes.javascript.CalendarioController.update(),
+     *                routes.javascript.CalendarioController.save(),
+     *                routes.javascript.CalendarioController.delete(),
+     *           )
+     *
+     * @return Criação de todas javascriptRoutes
+     */
     public Result javascriptRoutes() {
         return ok(
                 JavaScriptReverseRouter.create("jsRoutes",

@@ -7,8 +7,7 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
- * Created by Miguel, Roger, William on 17/04/2017.
- *
+ * @author Miguel, Roger, William *
  * Model criada para tabela Usuario.
  */
 

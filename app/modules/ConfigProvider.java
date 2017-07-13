@@ -7,6 +7,10 @@ import javax.inject.Inject;
 import javax.inject.Provider;
 import javax.inject.Singleton;
 
+/**
+ * @author Miguel, Roger, William
+ * Classe de configuração do Email
+ */
 @Singleton
 public class ConfigProvider implements Provider<Config> {
 

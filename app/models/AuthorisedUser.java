@@ -26,8 +26,9 @@ import javax.persistence.ManyToMany;
 import java.util.List;
 
 /**
- * @author Steve Chaloner (steve@objectify.be)
- *
+ * @author Miguel, Roger, William
+ * @deprecated
+ * @see Funcionario
  * Model da autentificação da tela de login
  */
 @Entity

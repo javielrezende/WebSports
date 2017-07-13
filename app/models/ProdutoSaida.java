@@ -11,8 +11,7 @@ import java.sql.Date;
 
 
 /**
- * Created by Miguel, Roger, William on 01/05/2017.
- *
+ * @author Miguel, Roger, William *
  * Model criada para tabela ProdutoSaida.
  */
 @Entity

@@ -1,10 +1,6 @@
 package controllers;
 
-import be.objectify.deadbolt.java.actions.SubjectPresent;
 import be.objectify.deadbolt.java.actions.Unrestricted;
-import com.avaje.ebean.Ebean;
-import com.avaje.ebean.Transaction;
-import models.Cliente;
 import models.Endereco;
 import models.Funcionario;
 import models.Usuario;
@@ -22,9 +18,10 @@ import javax.inject.Inject;
 import java.util.List;
 
 /**
- * Created by Miguel, Roger, William  on 17/05/2017.
+ * @author Miguel, Roger, William
  *
  * Controller da view funcionanrio para fazer o crud
+ * <p><b>Pode entrar sem estar logado para testes</b></p>
  */
 @Unrestricted
 public class FuncionarioController extends Controller {
@@ -33,8 +30,9 @@ public class FuncionarioController extends Controller {
     private FormFactory formFactory;
 
     /**
-     *
-     * @return se ok retorna para funcionario_list
+     * <p>Método para entrar na view</p>
+     * <b>Route: /funcionario </b>
+     * @return view.listaFuncionario
      */
     public Result index() {
         List<Funcionario> funcionario = Funcionario.find
@@ -49,14 +47,19 @@ public class FuncionarioController extends Controller {
             routes.FuncionarioController.index()
     );
 
-
+    /**
+     *
+     * @return TODO
+     */
     public Result create() {
         return TODO;
     }
 
 
     /**
+     * Método para criar um novo registro de Funcionario
      *
+     * <p>Recebe os dados por formulário</p>
      * @return retorna para index
      */
     public Result save() {
@@ -94,9 +97,10 @@ public class FuncionarioController extends Controller {
     }
 
     /**
-     *
-     * @param id do funcionario
-     * @return retorna um json com id funcionario
+     * Método para editar um Funcionario
+     * <p>Recebe id por parametro para localizar o usuário</p>
+     * @param id
+     * @return Funcionario em JSON
      */
     public Result edit(Integer id) {
         List<Funcionario> funcionario = Funcionario.find
@@ -109,9 +113,11 @@ public class FuncionarioController extends Controller {
     }
 
     /**
-     *
-     * @param id do funcionario
-     * @return retorna para index
+     * Método para atualizar um registro de Funcionário
+     * <p>Recebe o id por parametro</p>
+     * @param id
+     * Recebe os dados por formulario
+     * @return view.index
      */
     public Result update(Integer id) {
         //Recebe os dados do formulario
@@ -141,14 +147,13 @@ public class FuncionarioController extends Controller {
     }
 
     /**
-     *
-     * @param id do funcionario
-     * @return retorna para index
+     * Método para deletar um Funcionário
+     * <p>Recebe o id por parametro</p>
+     * @param id
+     * @return view.index
      */
-
     public Result delete(Integer id) {
         Funcionario.find.ref(id).delete();
-
         return index();
     }
 

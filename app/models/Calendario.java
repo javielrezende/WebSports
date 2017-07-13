@@ -10,8 +10,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 /**
- * Created by Miguel, Roger, William on 08/05/2017.
- *
+ * @author Miguel, Roger, William *
  * Model do calendario
  */
 @Entity
@@ -28,7 +27,7 @@ public class Calendario extends Model {
     public static Model.Finder<Integer,Calendario> find = new Model.Finder<>(Calendario.class);
 
     /**
-     * Converte o parametro em Date
+     * Método para converter uma data em String para Date
      * @param start
      *
      */
@@ -50,7 +49,7 @@ public class Calendario extends Model {
     }
 
     /**
-     * Converte o parametro em Date
+     * Método para converter uma data em String para Date
      * @param end
      *
      */

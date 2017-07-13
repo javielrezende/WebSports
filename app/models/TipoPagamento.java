@@ -6,8 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * Created by Miguel, Roger, William on 02/05/2017.
- *
+ * @author Miguel, Roger, William *
  * Model para tabela de TipoPagamento.
  */
 @Entity

@@ -17,7 +17,8 @@ import java.util.concurrent.CompletionStage;
 import static play.mvc.Results.ok;
 
 /**
- * Created by Miguel on 09/07/2017.
+ * @author Miguel
+ * Classe que cuida da autenticação
  */
 public class MyDeadboltHandler implements DeadboltHandler {
     @Override

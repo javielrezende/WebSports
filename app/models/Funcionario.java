@@ -9,8 +9,7 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
- * Created by Miguel, Roger, William  on 03/05/2017.
- *
+ * @author Miguel, Roger, William *
  * Model que cria a tabela Funcionario.
  */
 

@@ -3,7 +3,9 @@ package security;
 import be.objectify.deadbolt.java.ConfigKeys;
 
 /**
- * Created by Miguel on 09/07/2017.
+ * @author Miguel
+ * ENUM com as keys
+ * Usando apenas a Default
  */
 public enum HandlerKeys {
     DEFAULT(ConfigKeys.DEFAULT_HANDLER_KEY),

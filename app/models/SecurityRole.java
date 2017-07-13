@@ -22,8 +22,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * @author Steve Chaloner (steve@objectify.be)
- *
+ * @author Miguel, Roger, William *
  * Model para segurança da autentificação.
  */
 @Entity

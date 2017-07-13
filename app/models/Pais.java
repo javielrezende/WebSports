@@ -6,8 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * Created by Miguel, Roger, William on 03/05/2017.
- *
+ * @author Miguel, Roger, William *
  * Model criado para tabela Pais.
  */
 @Entity

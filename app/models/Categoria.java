@@ -6,8 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * Created by Miguel, Roger, William  on 29/04/2017.
- *
+ * @author Miguel, Roger, William *
  * Model que cria a tabela categoria.
  */
 

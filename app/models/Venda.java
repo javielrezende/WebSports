@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.sql.Date;
 
 /**
- * Created by Miguel, Roger, William on 03/05/2017.
+ * @author Miguel, Roger, William
  *
  * Model criada para tabela Venda.
  */

@@ -9,6 +9,10 @@ import javax.inject.Singleton;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author Miguel
+ * Classe de configuração de Email
+ */
 @Singleton
 public class MyHandlerCache implements HandlerCache
 {

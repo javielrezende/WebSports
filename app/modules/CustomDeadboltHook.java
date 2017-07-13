@@ -13,8 +13,8 @@ import security.MyHandlerCache;
 import javax.inject.Singleton;
 
 /**
- * Created by Miguel, Roger, William on 09/07/2017.
- *
+ * @author Miguel, Roger, William
+ * Classe de configuração da autenticação
  *
  */
 public class CustomDeadboltHook extends Module {

@@ -8,8 +8,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 /**
- * Created by Miguel, Roger, William  on 03/05/2017.
- *
+ * @author Miguel, Roger, William *
  * Model que cria a tabela Cidade
  */
 @Entity

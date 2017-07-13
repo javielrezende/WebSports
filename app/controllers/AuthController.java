@@ -13,9 +13,9 @@ import static play.mvc.Controller.session;
 import static play.mvc.Results.ok;
 
 /**
- * Created by Miguel, Roger, William on 09/07/2017.
+ * @author Miguel, Roger, William.
  *
- * Controller para fazer o login do cliente.
+ * Controller para fazer o login no sistema.
  *
  */
 public class AuthController {
@@ -23,10 +23,31 @@ public class AuthController {
     private FormFactory formFactory;
     @Inject
     MailerClient mailer;
+
+    /**
+     * Método para renderizar a view de login.
+     *
+     * <strong><p>Route: /login </p></strong>
+     *
+     * @return view.auth
+     */
     public Result index() {
         return ok(views.html.auth.index.render(""));
     }
 
+    /**
+     * <p>Método para realizar o login</p>
+     * Recebe as informações do usuário através do formulario
+     * Confirma se os dados recebidos existem no sistema
+     * Caso sim, renderiza a index com as sessoes
+     * <ul>
+     * <li>connectedName</li>
+     * <li>connected</li>
+     * </ul>
+     * Caso não
+     * @return view.auth
+     *
+     */
     public Result login() {
         DynamicForm form = formFactory.form().bindFromRequest();
 
@@ -48,6 +69,15 @@ public class AuthController {
         }
     }
 
+    /**
+     * <p>Método para recuperação de senha</p>
+     * Recebe os dados por formulario,
+     * acha esses dados através do email,
+     * caso localize
+     *
+     * @return Email com a senha
+     *
+     */
     public Result forgotPasswordMail() {
         DynamicForm form = formFactory.form().bindFromRequest();
         String emailFunc = form.get("email");
@@ -67,9 +97,18 @@ public class AuthController {
         }
     }
 
+    /**
+     * Método para entrar na view de esqueceu sua senha
+     * @return view.forgot
+     */
     public Result forgotPassword() {
         return ok(views.html.auth.forgot.render(""));
     }
+
+    /**
+     * Método para fazer logoff
+     * @return view.auth
+     */
     public Result logoff() {
         session().clear();
         return index();

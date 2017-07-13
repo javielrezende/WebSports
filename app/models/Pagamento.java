@@ -10,8 +10,7 @@ import javax.persistence.ManyToOne;
 import java.sql.Date;
 
 /**
- * Created by Miguel, Roger, William on 02/05/2017.
- *
+ * @author Miguel, Roger, William *
  * Model para criar a tabela de Pagamento.
  */
 @Entity

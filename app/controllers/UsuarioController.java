@@ -17,7 +17,8 @@ import javax.inject.Inject;
 /**
  * Created by Miguel, Roger, William on 17/04/2017.
  *
- * Controller do crudo do usuario.
+ * @deprecated
+ * @see controllers.FuncionarioController
  */
 public class UsuarioController extends Controller {
     @Inject

@@ -8,8 +8,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 /**
- * Created by Miguel, Roger, William on 02/05/2017.
- *
+ * @author Miguel, Roger, William *
  * Model criada para tabela Quadra.
  */
 

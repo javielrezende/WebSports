@@ -40,11 +40,11 @@ POST        /cliente/edit/:id            controllers.ClienteController.update(id
 GET         /cliente/delete/:id          controllers.ClienteController.delete(id:Integer)
 #CRUD Quadra TODO
 GET         /quadra                      controllers.QuadraController.index()
-POST        /quadra/save                 controllers.QuadraController.save()
-GET         /quadra/create               controllers.QuadraController.create()
-GET         /quadra/edit/:id             controllers.QuadraController.edit(id:Integer)
-POST        /quadra/edit/:id             controllers.QuadraController.update(id:Integer)
-GET         /quadra/delete/:id           controllers.QuadraController.delete(id:Integer)
+#POST        /quadra/save                 controllers.QuadraController.save()
+#GET         /quadra/create               controllers.QuadraController.create()
+#GET         /quadra/edit/:id             controllers.QuadraController.edit(id:Integer)
+#POST        /quadra/edit/:id             controllers.QuadraController.update(id:Integer)
+#GET         /quadra/delete/:id           controllers.QuadraController.delete(id:Integer)
 
 #Grafico
 GET         /grafico                     controllers.GraficoController.index()

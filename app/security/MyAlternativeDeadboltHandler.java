@@ -10,6 +10,8 @@ import java.util.concurrent.CompletionStage;
 
 /**
  * Created by Miguel on 09/07/2017.
+ * @deprecated
+ * @see MyDeadboltHandler
  */
 public class MyAlternativeDeadboltHandler implements be.objectify.deadbolt.java.DeadboltHandler {
     @Override
