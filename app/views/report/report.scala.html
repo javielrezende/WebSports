@@ -1,0 +1,49 @@
+@(clientes:List[Cliente])
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <style>
+                table, td, th {
+                    border: 1px solid black;
+                }
+
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+
+                th {
+                    text-align: center;
+                }
+        </style>
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div>
+            <h2 style="text-align: center">Relatório</h2>
+            <h4 style="text-align: center"> Clientes Cadastrados por Bairro </h4>
+            <table style="margin: auto">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Bairro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for(cliente <- clientes){
+                        <tr>
+                            <td>@cliente.usuario_id.nome</td>
+                            <td>@cliente.usuario_id.endereco_id.bairro</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        
+    </body>
+</html>
